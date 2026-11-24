@@ -338,8 +338,22 @@ h1 .it{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.08
 .js .stage.in .phone{transform:none;opacity:1}
 .intro-on .stage .phone{transform:translateY(44px)!important;opacity:0!important}
 @media (prefers-reduced-motion:reduce){.js .stage .lid,.js .stage .phone{transform:none!important;opacity:1!important;transition:none!important}}
+/* mo3 typography layer (2026-11-24 pm): serif display type, ink buttons, mono nav, hairline sections */
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.012em}
+h1{font-size:clamp(50px,8.4vw,104px);line-height:.98;max-width:1040px}
+h2{font-size:clamp(38px,5.6vw,66px);line-height:1.02}
+h1 .it{font-size:1em;letter-spacing:-.012em}
+.logo{font-family:var(--serif);font-weight:400;font-size:23px;letter-spacing:0}
+nav a:not(.btn){font-family:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.btn{border-radius:3px}
+.btn.primary{background:var(--ink);color:#fafaf7}.btn.primary:hover{background:#000}
+.more{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.tile-bg{background:transparent;border-top:1px solid var(--hair)}
+.logo,nav a,nav .btn{white-space:nowrap}
+nav{gap:clamp(14px,2.2vw,28px)}
+h3,.sec h3{font-family:var(--serif);font-weight:400;letter-spacing:.005em!important;font-size:clamp(25px,2.4vw,30px);line-height:1.12}
 </style>
-<script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm||sessionStorage.getItem('csc-intro')){d.classList.add('no-intro')}else{sessionStorage.setItem('csc-intro','1');d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
+<script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;var ref=document.referrer,own=false;try{own=!!ref&&new URL(ref).host===location.host}catch(x){}if(rm||own){d.classList.add('no-intro')}else{d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
 </head>
 <body>
 <div id="intro" aria-hidden="true"><canvas id="intro-c"></canvas><div class="intro-mark"><span class="im">C<i>.</i></span><span class="il"><b></b></span></div></div>
