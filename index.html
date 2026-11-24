@@ -377,9 +377,24 @@ form.qform{background:#fff;border:1px solid var(--line);border-radius:6px;box-sh
 @media (max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-grid .hero-copy{text-align:center;align-items:center}.hero-grid .ctas,.hero-grid .trust{justify-content:center}form.qform{width:100%;max-width:520px;margin:0 auto}}
 @media (max-width:700px){form.qform{display:none}.stats{grid-template-columns:1fr 1fr}.stats>div{padding:20px 14px;border-top:1px solid var(--hair)}.stats>div:nth-child(-n+2){border-top:0}.stats>div:nth-child(odd){border-left:0;padding-left:0}.proof .reg{line-height:1.6}}
 </style>
-<script>document.documentElement.classList.add('no-intro')</script>
+<script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;var ref=document.referrer,own=false;try{own=!!ref&&new URL(ref).host===location.host}catch(x){}if(rm||own){d.classList.add('no-intro')}else{d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
 </head>
 <body>
+<div id="intro" aria-hidden="true"><canvas id="intro-c"></canvas><div class="intro-mark"><span class="im">C<i>.</i></span><span class="il"><b></b></span></div></div>
+<script>(function(){var d=document.documentElement,el=document.getElementById('intro');if(!el)return;if(d.classList.contains('no-intro')){el.remove();return}
+var c=document.getElementById('intro-c'),g=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1),W,H;
+function rs(){W=c.width=innerWidth*dpr;H=c.height=innerHeight*dpr}rs();addEventListener('resize',rs);
+var N=Math.round(Math.min(150,Math.max(60,innerWidth/8))),P=[],M=function(){return Math.hypot(W,H)/2};
+for(var i=0;i<N;i++){P.push({a:Math.random()*Math.PI*2,r:(0.06+Math.random()*0.94)*M(),v:(0.35+Math.random()*1.1)*dpr,l:(3+Math.random()*9)*dpr,o:.12+Math.random()*.32})}
+var t0=performance.now();
+function f(t){var e=(t-t0)/1000;if(e>2.1){el.remove();return}
+if(e>1.45)d.classList.remove('intro-on');
+g.clearRect(0,0,W,H);var cx=W/2,cy=H/2,k=1+e*2.2;g.lineCap='round';g.lineWidth=dpr;
+for(var i=0;i<N;i++){var p=P[i];p.r+=p.v*k;if(p.r>M()*1.15){p.r=(0.04+Math.random()*0.12)*M()}
+var cs=Math.cos(p.a),sn=Math.sin(p.a),x=cx+cs*p.r,y=cy+sn*p.r,l=p.l*(0.6+p.r/M());
+g.strokeStyle='rgba(29,29,31,'+p.o+')';g.beginPath();g.moveTo(x,y);g.lineTo(x-cs*l,y-sn*l);g.stroke()}
+requestAnimationFrame(f)}requestAnimationFrame(f);
+setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
 <header class="nav"><div class="w">
   <a class="logo" href="#top"><svg width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 24V4h20" fill="none" stroke="#0F5F58" stroke-width="4"/><rect x="12" y="12" width="12" height="12" rx="1.5" fill="#F2A93B"/></svg>Corner Site Co.</a>
   <nav aria-label="Main"><a href="#how">How it works</a><a href="#samples">Samples</a><a href="#compare">Compare</a><a href="/website-cost/">What it costs</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="ntel" href="tel:+16139002378">(613) 900-2378</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
