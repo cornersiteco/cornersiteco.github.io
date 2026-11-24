@@ -93,13 +93,37 @@
   .hp{position:absolute;left:-9999px}
   footer{border-top:1px solid var(--line)}
   footer .w{padding-top:32px;padding-bottom:32px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:14px;color:var(--muted)}
+  .trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0;padding:0;list-style:none;font-size:15px;font-weight:500;color:var(--muted)}
+  .trust li{display:inline-flex;gap:8px;align-items:center}
+  .samples{display:flex;flex-wrap:wrap;gap:24px}
+  .sample{flex:1 1 300px;min-width:0;margin:0;display:flex;flex-direction:column;gap:12px}
+  .sample .browser{box-shadow:0 1px 2px rgba(20,24,31,.06)}
+  .site{padding:20px;display:flex;flex-direction:column;gap:10px;min-height:250px}
+  .site .nm{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px}
+  .site .hl{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:22px;line-height:1.15;margin:4px 0 0}
+  .site .tx{font-size:13px;line-height:1.5;margin:0;opacity:.85}
+  .site .row{display:flex;gap:8px;margin-top:auto}
+  .site .row span{flex:1;height:52px;border-radius:8px}
+  .site .cta{align-self:flex-start;font-size:12px;font-weight:600;padding:8px 12px;border-radius:6px}
+  .sample figcaption{font-size:15px;color:var(--muted)}
+  .sample figcaption b{color:var(--ink);font-weight:600}
+  .note{margin:0;font-size:14px;color:var(--muted)}
+  .areas{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+  .mbar{display:none}
+  @media (max-width:600px){
+    .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:10;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(20,24,31,.08);transition:transform .2s}
+    .mbar .btn{flex:1}
+    .mbar.off{transform:translateY(110%)}
+    body{padding-bottom:76px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mbar{transition:none}}
   @media (max-width:600px){h2{font-size:32px}.hero{padding-top:40px;padding-bottom:56px;gap:36px}.sec,.contact{padding-top:56px;padding-bottom:56px}nav{gap:16px}}
 </style>
 </head>
 <body>
 <header><div class="w">
   <a class="logo" href="#top"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 24V4h20" fill="none" stroke="#0F5F58" stroke-width="4"/><rect x="12" y="12" width="12" height="12" fill="#F2A93B"/></svg>Corner Site Co.</a>
-  <nav aria-label="Main"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
+  <nav aria-label="Main"><a href="#how">How it works</a><a href="#samples">Samples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
 </div></header>
 
 <main>
@@ -109,6 +133,11 @@
     <h1>Customers are searching for you. Let them find you.</h1>
     <p class="lead">A clean, fast website for your shop, salon, trade or restaurant, live in 7 days. We build a draft first, so you see it before you pay a cent.</p>
     <div class="ctas"><a class="btn primary" href="#contact">See your free draft</a><a class="btn ghost" href="#pricing">View pricing</a></div>
+    <ul class="trust">
+      <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#0F5F58" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Based in Ottawa</li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#0F5F58" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free draft, no obligation</li>
+      <li><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#0F5F58" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>You own your domain</li>
+    </ul>
   </div>
   <div class="mock" aria-hidden="true">
     <div class="browser"><div class="dots"><span></span><span></span><span></span></div>
@@ -133,6 +162,49 @@
     <div class="step"><span class="n">03</span><h3>Live in 7 days</h3><p>We put it on your own domain, connect it to your Google Business Profile, and hand you the keys.</p></div>
   </div>
 </div></section>
+
+<section id="samples" class="w sec">
+  <div><h2>What your site could look like</h2><p class="sub">Every draft is designed around your business. A few sample styles:</p></div>
+  <div class="samples">
+    <figure class="sample">
+      <div class="browser" aria-hidden="true"><div class="dots"><span></span><span></span><span></span></div>
+        <div class="site" style="background:#FBF5EC;color:#3A2A1C">
+          <span class="nm">Your Café</span>
+          <p class="hl">Fresh coffee and baking, right on the corner.</p>
+          <p class="tx">Open 7 days · Order ahead · Find us on the map</p>
+          <span class="cta" style="background:#3A2A1C;color:#FBF5EC">See the menu</span>
+          <div class="row"><span style="background:#D9A66B"></span><span style="background:#EBD9BF"></span><span style="background:#EBD9BF"></span></div>
+        </div>
+      </div>
+      <figcaption><b>Café or restaurant.</b> Menu, hours, map and online ordering link.</figcaption>
+    </figure>
+    <figure class="sample">
+      <div class="browser" aria-hidden="true"><div class="dots"><span></span><span></span><span></span></div>
+        <div class="site" style="background:#F6F1F4;color:#2B1F2A">
+          <span class="nm">Your Salon</span>
+          <p class="hl">Cuts, colour and style in your neighbourhood.</p>
+          <p class="tx">Services and prices · Meet the team · Book online</p>
+          <span class="cta" style="background:#8A3B6E;color:#fff">Book an appointment</span>
+          <div class="row"><span style="background:#C98BB0"></span><span style="background:#E8D5E1"></span><span style="background:#E8D5E1"></span></div>
+        </div>
+      </div>
+      <figcaption><b>Salon or barber.</b> Services, prices and a link to your booking app.</figcaption>
+    </figure>
+    <figure class="sample">
+      <div class="browser" aria-hidden="true"><div class="dots"><span></span><span></span><span></span></div>
+        <div class="site" style="background:#EEF2F6;color:#14202E">
+          <span class="nm">Your Garage</span>
+          <p class="hl">Honest repairs. Upfront quotes.</p>
+          <p class="tx">Brakes · Tires · Inspections · Call for a quote</p>
+          <span class="cta" style="background:#1F4E8C;color:#fff">Call now</span>
+          <div class="row"><span style="background:#7FA3CF"></span><span style="background:#D3DEEB"></span><span style="background:#D3DEEB"></span></div>
+        </div>
+      </div>
+      <figcaption><b>Trade or repair shop.</b> Services, service area and tap-to-call.</figcaption>
+    </figure>
+  </div>
+  <p class="note">Sample layouts for illustration, not client sites.</p>
+</section>
 
 <section id="pricing" class="w sec">
   <div><h2>Simple pricing</h2><p class="sub">One flat price. No hourly billing, no surprises. Prices in CAD.</p></div>
@@ -164,6 +236,7 @@
     <h2>Get your free draft</h2>
     <p>Tell us about your business. We'll build a draft of your site and send it within 3 business days. No obligation.</p>
     <p style="font-size:16px;color:#14181F">Or email <a href="mailto:streethills@gmail.com">streethills@gmail.com</a></p>
+    <p class="areas">Working with small businesses across Ottawa, including Orléans, Kanata, Barrhaven, Nepean, Vanier, Centretown, Westboro, Hintonburg and the Glebe.</p>
   </div>
   <form action="https://formsubmit.co/streethills@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="New free-draft request — Corner Site Co.">
@@ -181,5 +254,13 @@
 </main>
 
 <footer><div class="w"><span>Corner Site Co. · Ottawa, Ontario</span><span>Websites for local businesses</span></div></footer>
+<div class="mbar" id="mbar"><a class="btn primary" href="#contact">Get your free draft</a></div>
+<script>
+  (function(){
+    var bar=document.getElementById('mbar'),c=document.getElementById('contact');
+    if(!bar||!c||!('IntersectionObserver' in window))return;
+    new IntersectionObserver(function(e){bar.classList.toggle('off',e[0].isIntersecting)}).observe(c);
+  })();
+</script>
 </body>
 </html>
