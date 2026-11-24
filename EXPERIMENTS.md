@@ -32,3 +32,9 @@ One small change per week. Metric: "New free-draft request — Corner Site Co." 
 
 ### 2026-11-24 — Three more prospect drafts (not part of main-site experiments)
 - Added /drafts/rainbow-auto/, /drafts/touchette-autocare/, /drafts/klassik-barbershop/ (noindex, disallowed in robots.txt, not linked from main site).
+
+### 2026-11-24 — Homepage v2: Canada-wide positioning + competitor-gap fixes (owner-delegated, live session)
+- Change (batched): Canada-wide positioning (Ottawa home base); trust line now "Free draft in 1 business day · Pay nothing unless you keep it · Your domain and files are yours"; new See-It-First Guarantee section with promises (draft in 1 business day, pay only if kept, live 7 days after OK, small fixes free 30 days, reply within 1 business day); "Built for businesses like yours" + redesign offer; "Three ways to get a website" comparison table (us vs DIY builder vs typical agency); founding-client offer (first 5 clients: 3 months of Care free for case-study permission); 6 new FAQs; autoresponse now promises 1 business day. Prices unchanged.
+- Why: benchmarked against top competitors (Page Cove, Digital Shift Media, Durable, B12, GoDaddy Built For You). Biggest gaps were proof, speed promise, named guarantee, redesign path, comparison, national positioning.
+- Hypothesis: higher form-request rate from outreach visitors; founding offer should speed up the first 2–3 closes.
+- Result: _pending — measure on next run._

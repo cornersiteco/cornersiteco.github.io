@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Corner Site Co. — Websites for Ottawa small businesses</title>
-<meta name="description" content="Clean, fast websites for Ottawa small businesses, live in 7 days. See a free draft before you pay. $990 one time or $129/month with nothing upfront.">
+<title>Corner Site Co. — Websites for Canadian small businesses, built before you pay</title>
+<meta name="description" content="Clean, fast websites for small businesses across Canada, live in 7 days. See your homepage on your phone before you pay. $990 one time or $129/month with nothing upfront.">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://cornersiteco.github.io/">
 <script type="application/ld+json">
@@ -12,7 +12,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Corner Site Co.",
-  "description": "Website design for Ottawa small businesses. See a free draft before you pay.",
+  "description": "Website design for small businesses across Canada, based in Ottawa. See a free draft before you pay.",
   "url": "https://cornersiteco.github.io/",
   "email": "streethills@gmail.com",
   "address": {
@@ -22,8 +22,8 @@
     "addressCountry": "CA"
   },
   "areaServed": {
-    "@type": "City",
-    "name": "Ottawa"
+    "@type": "Country",
+    "name": "Canada"
   },
   "priceRange": "$$",
   "currenciesAccepted": "CAD",
@@ -211,8 +211,30 @@
   .js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
   .js .rv.in{opacity:1;transform:none}
 
+  /* added: guarantee, compare, who, redesign */
+  .band{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+  .band .k{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);margin:0 0 12px}
+  .band h2{font-size:clamp(30px,4.2vw,46px)}
+  .band p{color:var(--muted);font-size:19px;margin:16px 0 0}
+  .gbox{background:#1d1d1f;color:#f5f5f7;border-radius:28px;padding:clamp(28px,4vw,40px);display:flex;flex-direction:column;gap:16px}
+  .gbox h3{color:#f5f5f7;font-size:22px;letter-spacing:-.02em}
+  .gbox ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px;color:#d2d2d7}
+  .gbox li{display:flex;gap:10px;align-items:flex-start}
+  .gbox li svg{flex:none;margin-top:4px}
+  .tbl-wrap{margin-top:clamp(40px,6vw,64px);overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:28px;background:#fff}
+  table.cmp{width:100%;min-width:640px;border-collapse:collapse;font-size:16px}
+  table.cmp th,table.cmp td{padding:18px 20px;text-align:left;border-bottom:1px solid var(--hair);vertical-align:top}
+  table.cmp thead th{font-size:15px;color:var(--muted);font-weight:600}
+  table.cmp thead th.us{color:var(--accent)}
+  table.cmp td.us{background:rgba(15,95,88,.06);font-weight:500;color:var(--ink)}
+  table.cmp tbody th{font-weight:600;color:var(--ink);width:24%}
+  table.cmp td{color:var(--ink2)}
+  table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:clamp(32px,5vw,48px) auto 0;max-width:860px;padding:0;list-style:none}
+  .chips li{background:var(--tile);border-radius:999px;padding:10px 18px;font-size:16px;color:var(--ink2)}
   .mbar{display:none}
   @media (max-width:900px){
+    .band{grid-template-columns:1fr}
     .samples,.grid3{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}
     .faq{grid-template-columns:1fr}
     .contact{grid-template-columns:1fr}
@@ -238,20 +260,20 @@
 <body>
 <header class="nav"><div class="w">
   <a class="logo" href="#top"><svg width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 24V4h20" fill="none" stroke="#0F5F58" stroke-width="4"/><rect x="12" y="12" width="12" height="12" rx="1.5" fill="#F2A93B"/></svg>Corner Site Co.</a>
-  <nav aria-label="Main"><a href="#how">How it works</a><a href="#samples">Samples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
+  <nav aria-label="Main"><a href="#how">How it works</a><a href="#compare">Compare</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
 </div></header>
 
 <main>
 <section id="top" class="hero">
   <div class="w hero-copy rv">
-    <p class="eyebrow">Websites for Ottawa small businesses</p>
+    <p class="eyebrow">Websites for small businesses across Canada</p>
     <h1>Customers are searching for you. <span class="g">Let them find you.</span></h1>
-    <p class="lead">A clean, fast website for your shop, salon, trade or restaurant, live in 7 days. We build a draft first, so you see it before you pay a cent.</p>
-    <div class="ctas"><a class="btn primary" href="#contact">See your free draft</a><a class="more" href="#pricing">View pricing</a></div>
+    <p class="lead">A clean, fast website for your shop, salon, trade or restaurant, live in 7 days. We build your homepage first, so you see it on your phone before you pay a cent.</p>
+    <div class="ctas"><a class="btn primary" href="#contact">See your free draft</a><a class="more" href="#compare">Compare your options</a></div>
     <ul class="trust">
-      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#147a70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Based in Ottawa</li>
-      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#147a70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free draft, no obligation</li>
-      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#147a70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>You own your domain</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#147a70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Free draft in 1 business day</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#147a70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pay nothing unless you keep it</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#147a70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your domain and files are yours</li>
     </ul>
   </div>
   <div class="stage rv" aria-hidden="true">
@@ -289,10 +311,61 @@
 <section id="how" class="tile-bg"><div class="w sec">
   <div class="head rv"><h2>How it works</h2><p class="sub">From first look to live on your own domain in about a week.</p></div>
   <div class="grid3">
-    <div class="step rv"><span class="n">01</span><h3>We build a free draft</h3><p>Send us your Google listing or a few photos. We design a draft of your new site and show it to you, at no cost.</p></div>
-    <div class="step rv"><span class="n">02</span><h3>You pick the changes</h3><p>Tell us what to adjust: wording, photos, colours. One full round of changes is included.</p></div>
+    <div class="step rv"><span class="n">01</span><h3>We build your homepage</h3><p>Send us your Google listing or a few photos. Within 1 business day you get a link to your new homepage, to open on your phone. Free.</p></div>
+    <div class="step rv"><span class="n">02</span><h3>You pick the changes</h3><p>Tell us what to adjust: wording, photos, colours. We write the words for you. One full round of changes is included.</p></div>
     <div class="step rv"><span class="n">03</span><h3>Live in 7 days</h3><p>We put it on your own domain, connect it to your Google Business Profile, and hand you the keys.</p></div>
   </div>
+</div></section>
+
+<section id="guarantee"><div class="w sec band">
+  <div class="rv">
+    <p class="k">The See-It-First Guarantee</p>
+    <h2>You see it before you pay. Or you don't pay.</h2>
+    <p>Most web designers ask for a deposit before you've seen anything. We do the work first. If your homepage isn't right for you, walk away and owe nothing.</p>
+  </div>
+  <div class="gbox rv">
+    <h3>Our promises</h3>
+    <ul>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your free homepage draft within 1 business day.</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Nothing to pay unless you decide to keep it.</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Live on your own domain within 7 days of your OK.</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Small fixes free for 30 days after launch.</li>
+      <li><svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5l4 4 8-9" fill="none" stroke="#F2A93B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>A reply to every message within 1 business day.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="who" class="tile-bg"><div class="w sec">
+  <div class="head rv"><h2>Built for businesses like yours</h2><p class="sub">Owner-run businesses that customers find on Google Maps, and that have no website yet, or only a Facebook page, a booking link or a site that's showing its age.</p></div>
+  <ul class="chips rv">
+    <li>Auto repair &amp; detailing</li><li>Trades &amp; contractors</li><li>Barbers &amp; salons</li><li>Restaurants &amp; cafés</li><li>Bakeries &amp; grocers</li><li>Nail &amp; beauty studios</li><li>Clinics &amp; wellness</li><li>Shops &amp; repair services</li>
+  </ul>
+  <div class="band" style="margin-top:clamp(56px,8vw,96px)">
+    <div class="rv">
+      <p class="k">Already have a website?</p>
+      <h2 style="font-size:clamp(28px,3.6vw,40px)">We'll redesign it, at the same prices.</h2>
+      <p>We rebuild your homepage from what's on your current site, and you compare old and new side by side on your phone before you decide.</p>
+    </div>
+    <div class="rv" style="text-align:center"><a class="btn primary" href="#contact">Get a free redesign draft</a></div>
+  </div>
+</div></section>
+
+<section id="compare"><div class="w sec">
+  <div class="head rv"><h2>Three ways to get a website</h2><p class="sub">How a done-for-you, see-it-first site compares with building it yourself or hiring a typical agency.</p></div>
+  <div class="tbl-wrap rv" style="background:var(--tile)">
+    <table class="cmp">
+      <thead><tr><th scope="col"></th><th scope="col" class="us">Corner Site Co.</th><th scope="col">Do-it-yourself builder</th><th scope="col">Typical agency</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Who builds it</th><td class="us">We do, including the words</td><td>You do, with templates or AI</td><td>They do</td></tr>
+        <tr><th scope="row">See it before you pay</th><td class="us">Yes, free homepage draft</td><td>Yes, but you built it</td><td>Rarely: a deposit usually comes first</td></tr>
+        <tr><th scope="row">Upfront cost</th><td class="us">$0 on monthly, or $990 once</td><td>Low monthly subscription</td><td>Often $3,000 to $7,000+</td></tr>
+        <tr><th scope="row">Time to go live</th><td class="us">7 days</td><td>Depends on your evenings</td><td>Often several weeks</td></tr>
+        <tr><th scope="row">Changes later</th><td class="us">Care plan: we make them</td><td>You make them</td><td>Usually billed by the hour</td></tr>
+        <tr><th scope="row">Who owns it</th><td class="us">You: domain and files</td><td>Tied to the platform</td><td>Varies by contract</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">General comparison based on published pricing and terms from Canadian web design providers and website builders, November 2026. Individual providers vary.</p>
 </div></section>
 
 <section id="samples"><div class="w sec">
@@ -339,7 +412,8 @@
 </div></section>
 
 <section id="pricing" class="tile-bg"><div class="w sec">
-  <div class="head rv"><h2>Simple pricing</h2><p class="sub">One flat price. No hourly billing, no surprises. Prices in CAD.</p></div>
+  <div class="head rv"><h2>Simple pricing</h2><p class="sub">One flat price. No setup fees, no hourly billing, no surprises. Prices in CAD.</p></div>
+  <div class="rv" style="margin:clamp(28px,4vw,40px) auto 0;max-width:760px;background:#fff;border-radius:20px;padding:20px 24px;text-align:center;box-shadow:0 0 0 1px var(--hair)"><p style="margin:0;font-size:17px;color:var(--ink)"><b style="color:var(--accent)">Founding clients:</b> our first 5 clients get their first 3 months of Care free (a $147 value) in exchange for letting us show their new site as a case study.</p></div>
   <div class="grid3">
     <div class="price rv" style="background:#fff"><h3>Launch</h3><p class="amt"><b>$990</b><span> one time</span></p><p class="d">Your complete website, built and live in 7 days.</p></div>
     <div class="price dark rv"><div class="top"><h3>All-in monthly</h3><span class="tag">Nothing upfront</span></div><p class="amt"><b>$129</b><span> / month</span></p><p class="d">Launch plus Care, spread over a 12-month term.</p></div>
@@ -362,15 +436,21 @@
     <div class="rv"><h3>Who owns the website?</h3><p>You do. The domain is registered in your name, and you get all the files.</p></div>
     <div class="rv"><h3>What do I need to give you?</h3><p>Your logo if you have one, a few photos, and 15 minutes to tell us what makes your business different.</p></div>
     <div class="rv"><h3>Can I cancel the monthly plan?</h3><p>The all-in monthly plan has a 12-month term. The Care plan is month to month and you can cancel any time.</p></div>
+    <div class="rv"><h3>Do you work outside Ottawa?</h3><p>Yes. We're based in Ottawa and work with businesses across English-speaking Canada. Everything happens by email, phone or video, and you review your draft on your phone.</p></div>
+    <div class="rv"><h3>Who writes the words?</h3><p>We do, from your Google listing, your reviews and a short chat. You approve everything before it goes live.</p></div>
+    <div class="rv"><h3>What does the domain cost?</h3><p>Usually about $15 to $25 a year, paid directly to the registrar in your name. We walk you through it step by step.</p></div>
+    <div class="rv"><h3>What if I stop paying the monthly plan?</h3><p>After 30 days unpaid, the site is paused. Your domain and files stay yours.</p></div>
+    <div class="rv"><h3>Will it help me show up on Google?</h3><p>Every page gets proper titles, descriptions, business details search engines can read, and a phone-ready layout, and we connect it to your Google Business Profile. No one can honestly promise rankings, so we don't.</p></div>
+    <div class="rv"><h3>Can my site be in French?</h3><p>Sites are built in English. If you need a bilingual site, ask us and we'll tell you honestly what we can do.</p></div>
   </div>
 </div></section>
 
 <section id="contact" style="border-top:1px solid var(--hair)"><div class="w sec contact">
   <div class="copy rv">
     <h2>Get your free draft</h2>
-    <p>Tell us about your business. We'll build a draft of your site and send it within 3 business days. No obligation.</p>
+    <p>Tell us about your business. We'll build your homepage and send you the link within 1 business day. No obligation.</p>
     <p class="em">Or email <a href="mailto:streethills@gmail.com">streethills@gmail.com</a></p>
-    <p class="areas">Working with small businesses across Ottawa, including Orléans, Kanata, Barrhaven, Nepean, Vanier, Centretown, Westboro, Hintonburg and the Glebe.</p>
+    <p class="areas">Working with small businesses across Canada from our home base in Ottawa.</p>
   </div>
   <form class="rv" action="https://formsubmit.co/streethills@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="New free-draft request — Corner Site Co.">
@@ -378,7 +458,7 @@
     <input type="hidden" name="_next" value="https://cornersiteco.github.io/thanks.html">
     <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_autoresponse" value="Thanks! We got your request. Your free website draft will be ready within 3 business days, and we will email you the link. Questions? Just reply to this email. - Corner Site Co., Ottawa">
+    <input type="hidden" name="_autoresponse" value="Thanks! We got your request. Your free homepage draft will be ready within 1 business day, and we will email you the link. Questions? Just reply to this email. - Corner Site Co., Ottawa">
     <label>Your name<input type="text" name="name" required autocomplete="name"></label>
     <label>Business name<input type="text" name="business" required autocomplete="organization"></label>
     <label>Email<input type="email" name="email" required autocomplete="email"></label>
@@ -389,7 +469,7 @@
 </div></section>
 </main>
 
-<footer><div class="w"><span>Corner Site Co. · Ottawa, Ontario</span><span>Websites for local businesses</span></div></footer>
+<footer><div class="w"><span>Corner Site Co. · Based in Ottawa, Ontario · Serving small businesses across Canada</span><span>Websites built before you pay</span></div></footer>
 <div class="mbar" id="mbar"><a class="btn primary" href="#contact">Get your free draft</a></div>
 <script>
   (function(){
