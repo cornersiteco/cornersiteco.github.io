@@ -140,10 +140,50 @@ footer a{color:var(--ink)}
   header .w{height:64px}
   .brand{font-size:19px}
 }
+/* ---- layout: split ---- */
+.L-split header,.L-editorial header{position:relative;color:var(--ink);border-bottom:1px solid var(--line)}
+.L-split .btn-g,.L-editorial .btn-g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line);-webkit-backdrop-filter:none;backdrop-filter:none}
+.L-split .proof,.L-editorial .proof{background:var(--surface);box-shadow:0 0 0 1px var(--line);color:var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none}
+.proof .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-left:4px}
+.hero2{background:var(--surface);border-bottom:1px solid var(--line)}
+.h2grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.hero2 h1{font-size:clamp(40px,5.6vw,72px);margin:18px 0 20px}
+.hero2 .lead,.hero3 .lead{font-size:clamp(18px,1.9vw,20px);color:var(--muted);margin:0 0 30px;max-width:46ch}
+.h2img{position:relative;border-radius:calc(var(--r) * 1.6);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(0,0,0,.45)}
+.h2img img{width:100%;height:100%;object-fit:cover}
+.h2tag{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--ink);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px}
+.L-split .svc{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.L-split .card{display:grid;grid-template-columns:64px 1fr 1.4fr;align-items:center;gap:24px;background:transparent;box-shadow:none;border-bottom:1px solid var(--line);border-radius:0;padding:26px 4px}
+.L-split .card:hover{transform:none;box-shadow:none;background:color-mix(in srgb,var(--accent) 5%,transparent)}
+.L-split .card .ic{margin:0;width:48px;height:48px;background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.L-split .card h3{margin:0}
+/* ---- layout: editorial ---- */
+.hero3{text-align:center;padding-top:clamp(56px,8vw,110px)}
+.hero3 .kick::before{display:none}
+.hero3 h1{font-size:clamp(46px,7.6vw,108px);max-width:16ch;margin:18px auto 22px;line-height:.98}
+.hero3 .lead{margin-left:auto;margin-right:auto}
+.hero3 .ctas{justify-content:center}
+.hero3 .proof{margin-top:26px}
+.h3img{margin-top:clamp(40px,6vw,72px);border-radius:calc(var(--r) * 1.6);overflow:hidden;aspect-ratio:21/9}
+.h3img img{width:100%;height:100%;object-fit:cover}
+.L-editorial .head{flex-direction:column;align-items:center;text-align:center}
+.L-editorial .head p{text-align:center}
+.L-editorial .card{text-align:center;background:transparent;box-shadow:inset 0 0 0 1.5px var(--line)}
+.L-editorial .card .ic{margin:0 auto 22px;background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent);border-radius:50%}
+.L-editorial .gal{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;height:clamp(240px,28vw,380px)}
+.L-editorial .gal figure:first-child{grid-row:auto}
+.L-editorial .final img{display:none}
+.L-editorial .final::before{background:var(--accent)}
+@media (max-width:860px){
+  .h2grid{grid-template-columns:1fr}.h2img{aspect-ratio:4/3;order:-1}
+  .L-split .card{grid-template-columns:48px 1fr;gap:14px}.L-split .card p{grid-column:2}
+  .h3img{aspect-ratio:4/3}
+  .L-editorial .gal{grid-template-columns:1fr 1fr;height:auto}.L-editorial .gal figure{aspect-ratio:1/1}.L-editorial .gal figure:first-child{grid-column:1/3;aspect-ratio:16/10}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.card,.gal img{transition:none}}
 </style>
 </head>
-<body>
+<body class="L-split">
 <div class="draft"><b>Draft concept</b> made by <a href="https://cornersiteco.github.io/">Corner Site Co.</a> for Walk In Thrift &amp; Spiritual Gifts. Not the official website. Photos are placeholders; details to confirm with the owner.</div>
 
 <header><div class="w">
@@ -152,9 +192,8 @@ footer a{color:var(--ink)}
 </div></header>
 
 <main id="top">
-<section class="hero">
-  <img class="bgimg" src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=2000&q=80" srcset="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=80 1400w, https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=2000&q=80 2000w" sizes="100vw" alt="" fetchpriority="high">
-  <div class="w">
+<section class="hero2"><div class="w h2grid">
+  <div class="h2txt">
     <span class="kick">Thrift &amp; spiritual gifts · The Glebe</span>
     <h1>Thrift finds and spiritual gifts on Bank Street.</h1>
     <p class="lead">A locally owned, family second-hand clothing store in the Glebe, with sizes up to 4X.</p>
@@ -162,9 +201,10 @@ footer a{color:var(--ink)}
       <a class="btn btn-p" href="mailto:walkinthrift@hotmail.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email us</a>
       <a class="btn btn-g" href="https://www.google.com/maps/search/?api=1&query=Walk%20In%20Thrift%20%26%20Spiritual%20Gifts%20889%20Bank%20St%2C%20Ottawa%2C%20ON" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Get directions</a>
     </div>
-    <div class="proof"><span class="g" style="background:var(--accent);color:var(--accent-ink)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span><b>Family-owned · Sizes up to 4X</b></span></div>
+    <div class="proof"><span class="dot"></span><span><b>Family-owned · Sizes up to 4X</b></span></div>
   </div>
-</section>
+  <div class="h2img"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=80" alt="" fetchpriority="high"><span class="h2tag">889 Bank St</span></div>
+</div></section>
 
 <section class="info" aria-label="Quick info"><div class="w">
   <a class="it" href="mailto:walkinthrift@hotmail.com"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>Email</small><strong>walkinthrift@hotmail.com</strong></span></a>
