@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /drafts/
 
-Sitemap: https://iamapod123.github.io/sitemap.xml
+Sitemap: https://cornersiteco.github.io/sitemap.xml
