@@ -14,7 +14,7 @@
   "name": "Corner Site Co.",
   "description": "Website design for small businesses across Canada, based in Ottawa. See a free draft before you pay.",
   "url": "https://cornersiteco.github.io/",
-  "email": "streethills@gmail.com",
+  "email": "cornersiteco@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Ottawa",
@@ -232,6 +232,18 @@
   table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:clamp(32px,5vw,48px) auto 0;max-width:860px;padding:0;list-style:none}
   .chips li{background:var(--tile);border-radius:999px;padding:10px 18px;font-size:16px;color:var(--ink2)}
+/* sample cards v2 */
+a.sample{color:inherit;padding-bottom:26px}
+a.sample .cap{font-size:17px;line-height:1.45;color:var(--muted);letter-spacing:-.015em;margin-bottom:22px;display:block}
+a.sample .cap b{display:block;color:var(--ink);font-weight:600;font-size:21px;letter-spacing:-.025em;margin-bottom:4px}
+a.sample .win{display:block;aspect-ratio:16/10;border-radius:14px;margin-top:0}
+a.sample .win img{width:100%;height:calc(100% - 28px);object-fit:cover;object-position:top;display:block;transition:transform .6s}
+a.sample:hover .win img{transform:scale(1.03)}
+a.sample .bar{display:flex}
+a.sample .go{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;color:var(--accent2)}
+a.sample .go::after{content:"";width:7px;height:7px;border-right:1.6px solid currentColor;border-top:1.6px solid currentColor;transform:rotate(45deg)}
+a.sample:hover .go{text-decoration:underline}
+.stage .screen img{display:block}
   .mbar{display:none}
   @media (max-width:900px){
     .band{grid-template-columns:1fr}
@@ -260,7 +272,7 @@
 <body>
 <header class="nav"><div class="w">
   <a class="logo" href="#top"><svg width="22" height="22" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 24V4h20" fill="none" stroke="#0F5F58" stroke-width="4"/><rect x="12" y="12" width="12" height="12" rx="1.5" fill="#F2A93B"/></svg>Corner Site Co.</a>
-  <nav aria-label="Main"><a href="#how">How it works</a><a href="#compare">Compare</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
+  <nav aria-label="Main"><a href="#how">How it works</a><a href="#samples">Samples</a><a href="#compare">Compare</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn primary" href="#contact">Get a free draft</a></nav>
 </div></header>
 
 <main>
@@ -280,32 +292,15 @@
     <div class="glow"></div>
     <div class="laptop">
       <div class="lid"><div class="screen">
-        <div class="ms cafe">
-          <div class="mn"><b>Your Café</b><span><em>Menu</em><em>Visit</em><em>Catering</em></span><i>Order ahead</i></div>
-          <div class="hr">
-            <div>
-              <div class="k">Open 7 days</div>
-              <div class="t">Fresh coffee and baking, right on the corner.</div>
-              <p class="s">Small-batch pastries every morning, espresso all day, and a seat by the window.</p>
-              <div class="b"><span class="pill p1">See the menu</span><span class="pill p2">Get directions</span></div>
-            </div>
-            <div class="art"><span class="chip">Baked fresh every morning</span></div>
-          </div>
-        </div>
+        <img src="/assets/samples/maple-and-main-desktop.jpg" alt="" width="1440" height="900" style="width:100%;height:100%;object-fit:cover;object-position:top" fetchpriority="high">
       </div></div>
       <div class="base"></div>
     </div>
     <div class="phone"><div class="screen">
-      <div class="ms cafe m">
-        <div class="mn"><b>Your Café</b><s></s></div>
-        <div class="art"></div>
-        <div class="t">Fresh coffee and baking, right on the corner.</div>
-        <p class="s">Open 7 days · Order ahead</p>
-        <span class="pill">See the menu</span>
-      </div>
+      <img src="/assets/samples/maple-and-main-mobile.jpg" alt="" width="600" height="1299" style="width:100%;height:100%;object-fit:cover;object-position:top">
     </div></div>
   </div>
-  <p class="caption w">Mobile-friendly, Google-ready, and yours to keep.</p>
+  <p class="caption w">A sample site we built: <a href="/samples/maple-and-main/">see it live</a>. Mobile-friendly, Google-ready, and yours to keep.</p>
 </section>
 
 <section id="how" class="tile-bg"><div class="w sec">
@@ -315,6 +310,28 @@
     <div class="step rv"><span class="n">02</span><h3>You pick the changes</h3><p>Tell us what to adjust: wording, photos, colours. We write the words for you. One full round of changes is included.</p></div>
     <div class="step rv"><span class="n">03</span><h3>Live in 7 days</h3><p>We put it on your own domain, connect it to your Google Business Profile, and hand you the keys.</p></div>
   </div>
+</div></section>
+
+<section id="samples"><div class="w sec">
+  <div class="head rv"><h2>See what we build</h2><p class="sub">Real, working sample sites. Open one on your phone: this is the quality your free draft starts at.</p></div>
+  <div class="samples" style="margin-top:clamp(40px,6vw,64px)">
+    <a class="sample rv" href="/samples/maple-and-main/" style="text-decoration:none">
+      <span class="cap"><b>Café or restaurant.</b> Menu, hours, map and an order-ahead button.</span>
+      <span class="win"><span class="bar"><i></i><i></i><i></i><u></u></span><img src="/assets/samples/maple-and-main-desktop.jpg" alt="Maple &amp; Main Café sample site" loading="lazy" width="1440" height="900"></span>
+      <span class="go">View live sample</span>
+    </a>
+    <a class="sample rv" href="/samples/sharp-and-co/" style="text-decoration:none">
+      <span class="cap"><b>Barber or salon.</b> Services, prices and a book-your-chair button.</span>
+      <span class="win"><span class="bar"><i></i><i></i><i></i><u></u></span><img src="/assets/samples/sharp-and-co-desktop.jpg" alt="Sharp &amp; Co. Barbers sample site" loading="lazy" width="1440" height="900"></span>
+      <span class="go">View live sample</span>
+    </a>
+    <a class="sample rv" href="/samples/northside-auto/" style="text-decoration:none">
+      <span class="cap"><b>Auto, trades and repair.</b> Services, reviews, tap-to-call and a map.</span>
+      <span class="win"><span class="bar"><i></i><i></i><i></i><u></u></span><img src="/assets/samples/northside-auto-desktop.jpg" alt="Northside Auto Care sample site" loading="lazy" width="1440" height="900"></span>
+      <span class="go">View live sample</span>
+    </a>
+  </div>
+  <p class="note">Sample sites for fictional businesses. Photos via Unsplash. Your draft uses your real business details.</p>
 </div></section>
 
 <section id="guarantee"><div class="w sec band">
@@ -368,48 +385,6 @@
   <p class="note">General comparison based on published pricing and terms from Canadian web design providers and website builders, November 2026. Individual providers vary.</p>
 </div></section>
 
-<section id="samples"><div class="w sec">
-  <div class="head rv"><h2>What your site could look like</h2><p class="sub">Every draft is designed around your business. A few sample styles:</p></div>
-  <div class="samples" style="margin-top:clamp(40px,6vw,64px)">
-    <figure class="sample rv">
-      <figcaption><b>Café or restaurant.</b> Menu, hours, map and online ordering link.</figcaption>
-      <div class="win" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><u></u></div>
-        <div class="ms cafe sc">
-          <div class="mn"><b>Your Café</b><span></span><i>Order ahead</i></div>
-          <div class="t">Fresh coffee and baking, right on the corner.</div>
-          <p class="s">Open 7 days · Order ahead · Find us on the map</p>
-          <div class="art"></div>
-        </div>
-      </div>
-    </figure>
-    <figure class="sample rv">
-      <figcaption><b>Salon or barber.</b> Services, prices and a link to your booking app.</figcaption>
-      <div class="win" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><u></u></div>
-        <div class="ms salon">
-          <div class="mn"><span>Services</span><b>Your Salon</b><span>Team</span></div>
-          <div class="k">Book online</div>
-          <div class="t">Cuts, colour and style <em>in your neighbourhood.</em></div>
-          <span class="pill">Book an appointment</span>
-          <div class="art"></div>
-        </div>
-      </div>
-    </figure>
-    <figure class="sample rv">
-      <figcaption><b>Trade or repair shop.</b> Services, service area and tap-to-call.</figcaption>
-      <div class="win" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><u></u></div>
-        <div class="ms garage">
-          <div class="mn"><b>Your Garage</b><i>Call now</i></div>
-          <div class="k">Service &amp; repair</div>
-          <div class="t">Honest repairs. Upfront quotes.</div>
-          <p class="s">Brakes · Tires · Inspections · Call for a quote</p>
-          <div class="r"><span class="pill p1">Call now</span><span class="pill p2">Our services</span></div>
-          <div class="art"></div>
-        </div>
-      </div>
-    </figure>
-  </div>
-  <p class="note">Sample layouts for illustration, not client sites.</p>
-</div></section>
 
 <section id="pricing" class="tile-bg"><div class="w sec">
   <div class="head rv"><h2>Simple pricing</h2><p class="sub">One flat price. No setup fees, no hourly billing, no surprises. Prices in CAD.</p></div>
@@ -449,10 +424,10 @@
   <div class="copy rv">
     <h2>Get your free draft</h2>
     <p>Tell us about your business. We'll build your homepage and send you the link within 1 business day. No obligation.</p>
-    <p class="em">Or email <a href="mailto:streethills@gmail.com">streethills@gmail.com</a></p>
+    <p class="em">Or email <a href="mailto:cornersiteco@gmail.com">cornersiteco@gmail.com</a></p>
     <p class="areas">Working with small businesses across Canada from our home base in Ottawa.</p>
   </div>
-  <form class="rv" action="https://formsubmit.co/streethills@gmail.com" method="POST">
+  <form class="rv" action="https://formsubmit.co/cornersiteco@gmail.com" method="POST">
     <input type="hidden" name="_subject" value="New free-draft request — Corner Site Co.">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_next" value="https://cornersiteco.github.io/thanks.html">
