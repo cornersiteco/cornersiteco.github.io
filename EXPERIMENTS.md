@@ -6,7 +6,7 @@ One small change per week. Metric: "New free-draft request — Corner Site Co." 
 
 | Week starting | Requests | Notes |
 |---|---|---|
-| 2026-11-23 (partial, site launched 2026-11-24 00:32 ET) | 0 (as of 2026-11-24) | Launch week. No FormSubmit activation email found yet, so no submission has been made. |
+| 2026-11-23 (partial, site launched 2026-11-24 00:32 ET) | 0 real (1 owner test on 2026-11-24) | Launch week. Owner test submission sent and FormSubmit activated 2026-11-24; form now delivers to the inbox. Do not count the test as a lead. |
 
 ## Log
 
@@ -24,3 +24,11 @@ One small change per week. Metric: "New free-draft request — Corner Site Co." 
 - Why batched: with ~0 visitors a week, one-at-a-time tests can't be measured anyway. Fix the obvious gaps now, go back to single-change tests once traffic reaches ~20+ visitors/week (outreach starts driving prospects to the site).
 - Hypothesis: prospects who hear from us by phone/DM/walk-in will check the site; showing what they'd get, plus true trust signals and an always-visible CTA on phones, should raise the share who request a draft.
 - Result: _pending — measure on next run._
+
+### 2026-11-24 — Form friction fix (live session, desktop app)
+- Change: added `_captcha=false` (removes FormSubmit's reCAPTCHA interstitial; spam is still caught by the existing `_honey` field) and `_autoresponse` (instant "we got your request, draft within 3 business days" email to the submitter). No visible page change, no price/offer change.
+- Hypothesis: the captcha page is an extra step after clicking submit, where some visitors drop off. Removing it should raise completed requests per visitor. The autoresponse builds trust and sets expectations.
+- Result: _pending — measure on next run. If spam submissions appear, re-enable captcha.
+
+### 2026-11-24 — Three more prospect drafts (not part of main-site experiments)
+- Added /drafts/rainbow-auto/, /drafts/touchette-autocare/, /drafts/klassik-barbershop/ (noindex, disallowed in robots.txt, not linked from main site).
