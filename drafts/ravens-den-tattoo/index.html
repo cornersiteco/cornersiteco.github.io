@@ -4,57 +4,95 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f0d10">
 <title>The Raven&#x27;s Den Tattoo — draft concept by Corner Site Co.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-  :root{--bg:#F6F3F0;--ink:#1F1B24;--a:#7A2E3A;--soft:#E9E2DD;--muted:color-mix(in srgb,var(--ink) 72%,var(--bg))}
+  @font-face{font-family:"Inter";src:url(/assets/fonts/inter-var.woff2) format("woff2");font-weight:100 900;font-display:swap}
+  @font-face{font-family:"Instrument Serif";src:url(/assets/fonts/instrument-serif.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Instrument Serif";src:url(/assets/fonts/instrument-serif-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+  :root{--sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;--grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    --bg:#0f0d10;--ink:#f3efe9;--tile:#1a161b;--acc:#b23a48;--on:#fff;
+    --muted:color-mix(in srgb,var(--ink) 62%,var(--bg));--line:color-mix(in srgb,var(--ink) 14%,var(--bg));--card:color-mix(in srgb,var(--ink) 10%,var(--bg));--navbg:color-mix(in srgb,var(--bg) 78%,transparent)}
   *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
-  .w{max-width:1080px;margin:0 auto;padding:0 20px}
-  .draft{background:var(--ink);color:var(--bg);font-size:14px;line-height:1.45}
-  .draft .w{padding-top:10px;padding-bottom:10px}
+  html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);font-optical-sizing:auto;background:var(--bg);color:var(--ink);font-size:17px;line-height:1.47;letter-spacing:-.011em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  a{color:inherit}
+  .w{max-width:1120px;margin:0 auto;padding:0 22px}
+  :focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+  .draft{background:#000;color:#d2d2d7;font-size:13px;line-height:1.45;text-align:center}
+  .draft .w{padding-top:9px;padding-bottom:9px}
   .draft a{color:inherit;font-weight:600}
-  header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:20px;padding-bottom:20px;flex-wrap:wrap}
-  .nm{font-family:'Young Serif',Georgia,serif;font-size:22px;font-weight:700;text-decoration:none;color:var(--ink)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font-weight:600;font-size:16px;text-decoration:none}
-  .btn.p{background:var(--a);color:#fff}
-  .btn.p.dark{color:var(--ink)}
-  .btn.g{border:1.5px solid color-mix(in srgb,var(--ink) 30%,var(--bg));color:var(--ink)}
-  :focus-visible{outline:3px solid var(--a);outline-offset:2px}
-  .hero{display:flex;flex-wrap:wrap;gap:40px;align-items:center;padding-top:48px;padding-bottom:72px}
-  .hero .c{flex:999 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px}
-  .eb{margin:0;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:.02em}
-  h1{margin:0;font-family:'Young Serif',Georgia,serif;font-size:clamp(36px,6vw,60px);line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
-  .lead{margin:0;font-size:19px;line-height:1.55;color:var(--muted);max-width:520px}
-  .ctas{display:flex;flex-wrap:wrap;gap:12px}
-  .art{flex:1 1 260px;min-width:0;aspect-ratio:1/1;max-width:360px;background:var(--soft);border-radius:28px;display:flex;align-items:center;justify-content:center}
-  .art svg{width:56%;height:auto}
-  .band{background:var(--soft)}
-  .sec{padding-top:64px;padding-bottom:64px;display:flex;flex-direction:column;gap:28px}
-  h2{margin:0;font-family:'Young Serif',Georgia,serif;font-size:34px}
-  .cards{display:flex;flex-wrap:wrap;gap:20px}
-  .card{flex:1 1 240px;background:var(--bg);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:8px}
-  .card h3{margin:0;font-size:19px}
-  .card p{margin:0;font-size:16px;line-height:1.55;color:var(--muted)}
-  .visit{display:flex;flex-wrap:wrap;gap:32px}
-  .visit > div{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:10px;font-size:18px;line-height:1.5}
-  .visit .k{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-  .visit a{color:var(--ink);overflow-wrap:anywhere}
-  footer{border-top:1px solid color-mix(in srgb,var(--ink) 15%,var(--bg))}
-  footer .w{padding-top:24px;padding-bottom:24px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:var(--muted)}
-  .owner{background:var(--ink);color:var(--bg)}
-  .owner .w{padding-top:40px;padding-bottom:40px;display:flex;flex-direction:column;gap:12px}
-  .owner h2{font-size:26px;color:var(--bg)}
-  .owner p{margin:0;font-size:17px;line-height:1.6;max-width:640px}
-  .owner a{color:var(--bg)}
-  @media (max-width:600px){.hero{padding-top:28px;padding-bottom:48px}.sec{padding-top:48px;padding-bottom:48px}h2{font-size:28px}.art{max-width:200px}}
+  .nav{position:sticky;top:0;z-index:20;background:var(--navbg);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+  .nav .w{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:58px}
+  .nm{font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:0;text-decoration:none;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:500;font-size:17px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap;transition:filter .2s,transform .2s}
+  .btn:active{transform:scale(.98)}
+  .btn.p{background:var(--acc);color:var(--on)}.btn.p:hover{filter:brightness(1.08)}
+  .btn.g{box-shadow:inset 0 0 0 1px var(--line);color:var(--ink)}.btn.g:hover{background:color-mix(in srgb,var(--ink) 5%,transparent)}
+  .nav .btn{min-height:36px;padding:0 16px;font-size:14px;flex:none}
+  .hero{padding-top:clamp(52px,9vw,112px)}
+  .hero .c{display:flex;flex-direction:column;align-items:flex-start;gap:20px;max-width:900px}
+  .eb{margin:0;font-size:15px;font-weight:600;letter-spacing:.01em;color:var(--acc)}
+  .rating{display:inline-flex;align-items:center;gap:8px;margin:0;padding:6px 14px;border-radius:999px;background:var(--tile);font-size:14px;font-weight:500}
+  .rating span{color:var(--acc);letter-spacing:1px}
+  h1{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(48px,8.6vw,104px);line-height:.98;letter-spacing:-.02em;text-wrap:balance}
+  .lead{margin:0;font-size:clamp(19px,2.2vw,23px);line-height:1.42;color:var(--muted);letter-spacing:-.018em;max-width:620px}
+  .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .art{position:relative;overflow:hidden;margin-top:clamp(44px,6vw,72px);border-radius:28px;aspect-ratio:21/9;background:radial-gradient(45% 60% at 75% 30%,rgba(178,58,72,.85) 0,transparent 62%),radial-gradient(55% 70% at 20% 80%,#2a1f2e 0,transparent 70%),radial-gradient(30% 40% at 30% 25%,rgba(243,239,233,.18) 0,transparent 70%),linear-gradient(160deg,#2b2030,#140f16 60%,#060507)}
+  .art::after{content:"";position:absolute;inset:0;background-image:var(--grain);opacity:.35;mix-blend-mode:overlay;pointer-events:none}
+  .chip{position:absolute;z-index:1;left:clamp(14px,2.4vw,28px);bottom:clamp(14px,2.4vw,28px);max-width:calc(100% - 28px);display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%);color:#1d1d1f;font-size:14px;font-weight:500}
+  .chip i{width:8px;height:8px;border-radius:50%;background:var(--acc);flex:none}
+  .sec{padding-top:clamp(72px,10vw,128px);padding-bottom:clamp(72px,10vw,128px)}
+  .band{background:var(--tile)}
+  h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-.015em}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;margin-top:clamp(32px,5vw,52px)}
+  .card{background:var(--card);border-radius:28px;padding:30px 28px 32px;display:flex;flex-direction:column;gap:10px}
+  .card .n{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--acc);margin-bottom:22px}
+  .card h3{margin:0;font-size:22px;font-weight:600;letter-spacing:-.025em;line-height:1.2}
+  .card p{margin:0;font-size:17px;color:var(--muted)}
+  .tbc{color:var(--muted);font-style:italic}
+  .note{margin:22px 0 0;font-size:15px}
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,48px);margin-top:clamp(32px,5vw,52px);align-items:stretch}
+  .info{margin:0;display:flex;flex-direction:column}
+  .info div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+  .info div:last-child{border-bottom:1px solid var(--line)}
+  .info dt{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+  .info dd{margin:0;font-size:19px;letter-spacing:-.015em;overflow-wrap:anywhere}
+  .info dd a{text-decoration:none;border-bottom:1px solid var(--line)}
+  .info dd small{display:block;font-size:15px;color:var(--muted);margin-top:4px}
+  .map{position:relative;display:flex;align-items:flex-end;min-height:300px;border-radius:28px;overflow:hidden;text-decoration:none;color:var(--ink);background:
+     linear-gradient(32deg,transparent 47%,color-mix(in srgb,var(--ink) 12%,transparent) 47.5% 50.5%,transparent 51%),
+     linear-gradient(118deg,transparent 60%,color-mix(in srgb,var(--ink) 9%,transparent) 60.4% 62.4%,transparent 62.8%),
+     repeating-linear-gradient(0deg,transparent 0 46px,color-mix(in srgb,var(--ink) 6%,transparent) 46px 48px),
+     repeating-linear-gradient(90deg,transparent 0 58px,color-mix(in srgb,var(--ink) 6%,transparent) 58px 60px),var(--tile)}
+  .map .pin{position:absolute;left:50%;top:42%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 8px color-mix(in srgb,var(--acc) 22%,transparent),0 0 0 22px color-mix(in srgb,var(--acc) 10%,transparent)}
+  .map span{position:relative;margin:20px;padding:12px 18px;border-radius:999px;background:var(--card);font-weight:500;font-size:16px;box-shadow:0 8px 24px -12px rgba(0,0,0,.3)}
+  .map:hover span{text-decoration:underline}
+  .rev{margin-top:clamp(28px,4vw,40px);background:var(--card);border-radius:28px;padding:30px 28px;display:flex;flex-direction:column;gap:8px;font-size:19px}
+  .rev p{margin:0}
+  .rev .tbc{font-size:15px}
+  .owner{background:#f5f5f7;color:#1d1d1f}
+  .owner .w{padding-top:clamp(64px,9vw,104px);padding-bottom:clamp(64px,9vw,104px);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+  .owner h2{font-family:var(--sans);font-weight:600;letter-spacing:-.035em;font-size:clamp(30px,4.4vw,46px);max-width:760px;color:inherit}
+  .owner p{margin:0;font-size:19px;line-height:1.5;max-width:640px;color:#424245;letter-spacing:-.015em}
+  .owner a{color:#1d1d1f;font-weight:500}
+  footer .w{padding-top:22px;padding-bottom:22px;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between;font-size:12px;color:var(--muted)}
+  footer a{color:inherit}
+  @media (max-width:760px){.visit{grid-template-columns:1fr}.map{min-height:220px}}
+  @media (max-width:600px){
+    .art{aspect-ratio:4/3.4;border-radius:22px}
+    .nav .btn{padding:0 14px}
+    .ctas{align-self:stretch}.ctas .btn{flex:1 1 100%}
+    .info div{grid-template-columns:1fr;gap:4px}
+    .card,.rev{border-radius:22px;padding:26px 22px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 </style>
 </head>
 <body>
 <div class="draft" role="note"><div class="w"><strong>Draft concept</strong> made by <a href="https://iamapod123.github.io/">Corner Site Co.</a> for The Raven&#x27;s Den Tattoo. This is not the official website. Details are placeholders until confirmed with the owner.</div></div>
-<header><div class="w">
+<header class="nav"><div class="w">
   <a class="nm" href="#top">The Raven&#x27;s Den Tattoo</a>
   <a class="btn p" href="tel:+16132967336">Call 613-296-7336</a>
 </div></header>
@@ -66,25 +104,26 @@
     <p class="lead">A private, appointment-only studio run by Brittany and James, each with over 10 years in the tattoo industry.</p>
     <div class="ctas"><a class="btn p" href="tel:+16132967336">Call us</a><a class="btn g" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Raven%27s%20Den%20Tattoo%2C%20Bank%20St%2C%20Ottawa%2C%20ON" rel="noopener">Get directions</a></div>
   </div>
-  <div class="art" aria-hidden="true"><svg viewBox="0 0 96 96"><path d="M70 12C46 18 30 40 26 74l8 2c4-26 16-44 36-56z" fill="var(--a)" stroke="var(--ink)" stroke-width="4" stroke-linejoin="round"/><path d="M26 74l-6 12" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/><path d="M40 52l10 4M46 40l10 3" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/></svg></div>
+  <div class="art" aria-hidden="true"><span class="chip"><i></i>Bank St, the Glebe, Ottawa, ON</span></div>
 </section>
-<section class="band"><div class="w sec">
+<section class="band" id="offer"><div class="w sec">
   <h2>What we offer</h2>
-  <div class="cards"><div class="card"><h3>Styles</h3><p>Custom lettering, ornamental and geometric, realism, and illustrative black and grey.</p></div><div class="card"><h3>By appointment</h3><p>A private studio. Call or email to book your session.</p></div><div class="card"><h3>Experienced artists</h3><p>Brittany and James each bring over 10 years in the tattoo industry.</p></div></div>
+  <div class="cards"><div class="card"><span class="n">01</span><h3>Styles</h3><p>Custom lettering, ornamental and geometric, realism, and illustrative black and grey.</p></div><div class="card"><span class="n">02</span><h3>By appointment</h3><p>A private studio. Call or email to book your session.</p></div><div class="card"><span class="n">03</span><h3>Experienced artists</h3><p>Brittany and James each bring over 10 years in the tattoo industry.</p></div></div>
+
 </div></section>
 <section class="w sec" id="visit">
   <h2>Visit or get in touch</h2>
   <div class="visit">
-    <div><span class="k">Address</span><span>Bank St, the Glebe, Ottawa, ON</span><span>Appointment only. Call or email to book.</span><a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Raven%27s%20Den%20Tattoo%2C%20Bank%20St%2C%20Ottawa%2C%20ON" rel="noopener">Open in Google Maps</a></div>
-    <div><span class="k">Phone</span><a href="tel:+16132967336">613-296-7336</a><span class="k" style="margin-top:12px">Email</span><a href="mailto:theravensdentattoo@gmail.com">theravensdentattoo@gmail.com</a><span class="k" style="margin-top:12px">Hours</span><span>By appointment.</span></div>
+    <dl class="info"><div><dt>Address</dt><dd>Bank St, the Glebe, Ottawa, ON<small>Appointment only. Call or email to book.</small></dd></div><div><dt>Phone</dt><dd><a href="tel:+16132967336">613-296-7336</a></dd></div><div><dt>Email</dt><dd><a href="mailto:theravensdentattoo@gmail.com">theravensdentattoo@gmail.com</a></dd></div><div><dt>Hours</dt><dd>By appointment.</dd></div></dl>
+    <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Raven%27s%20Den%20Tattoo%2C%20Bank%20St%2C%20Ottawa%2C%20ON" rel="noopener"><i class="pin" aria-hidden="true"></i><span>Open in Google Maps</span></a>
   </div>
 </section>
 </main>
 <section class="owner"><div class="w">
   <h2>Own The Raven&#x27;s Den Tattoo? This draft is yours, free.</h2>
-  <p>Corner Site Co. built this as a sample of what your site could look like. We'll swap in your real photos, services and hours, and put it live on your own domain within 7 days. You only pay if you want to keep it.</p>
+  <p>Corner Site Co. built this as a sample of what your site could look like. We&#x27;ll swap in your real photos, services and hours, and put it live on your own domain within 7 days. You only pay if you want to keep it.</p>
   <p><a href="https://iamapod123.github.io/#contact">Get it set up</a> · or email <a href="mailto:streethills@gmail.com?subject=Draft%20website%20for%20The%20Raven%27s%20Den%20Tattoo">streethills@gmail.com</a></p>
 </div></section>
-<footer><div class="w"><span>The Raven&#x27;s Den Tattoo · Bank St, the Glebe, Ottawa, ON</span><span>Draft by Corner Site Co., Ottawa</span></div></footer>
+<footer><div class="w"><span>The Raven&#x27;s Den Tattoo · Bank St, the Glebe, Ottawa, ON</span><span>Draft by <a href="https://iamapod123.github.io/">Corner Site Co.</a>, Ottawa</span></div></footer>
 </body>
 </html>
