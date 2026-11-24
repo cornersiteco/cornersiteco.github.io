@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /drafts/
+Disallow: /tools/
 
 Sitemap: https://cornersiteco.github.io/sitemap.xml
