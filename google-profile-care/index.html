@@ -264,6 +264,58 @@ a.sample:hover .go{text-decoration:underline}
     .inc{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}.mbar,.btn{transition:none}}
+/* ===== redesign 2026-11-24 ===== */
+/* intro: serif monogram, filling hairline, streaks flying outward */
+#intro{position:fixed;inset:0;z-index:9999;background:#fafaf7;display:grid;place-items:center;animation:introOut .55s cubic-bezier(.4,0,.2,1) 1.45s forwards}
+.no-intro #intro{display:none}
+#intro canvas{position:absolute;inset:0;width:100%;height:100%}
+.intro-mark{position:relative;display:flex;flex-direction:column;align-items:center;gap:20px;animation:markIn .8s cubic-bezier(.2,.7,.2,1) both}
+.intro-mark .im{font-family:var(--serif);font-size:clamp(68px,9vw,104px);line-height:.9;color:#1d1d1f;letter-spacing:-.01em}
+.intro-mark .im i{font-style:normal;color:#c8852a}
+.intro-mark .il{width:clamp(72px,9vw,104px);height:1px;background:rgba(0,0,0,.12);overflow:hidden}
+.intro-mark .il b{display:block;height:100%;background:#1d1d1f;transform:scaleX(0);transform-origin:left;animation:ilFill 1.2s cubic-bezier(.65,0,.35,1) .1s forwards}
+@keyframes ilFill{to{transform:scaleX(1)}}
+@keyframes markIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes introOut{to{opacity:0;visibility:hidden}}
+
+/* paper, mono labels, italic serif accent */
+:root{--tile:#f3f2ed}
+body{background:#fafaf7}
+.nav{background:rgba(250,250,247,.8)}
+.eyebrow{font-family:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+h1 .it{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-.015em;color:var(--accent)}
+.step .n{font-family:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;font-weight:500;letter-spacing:.2em;line-height:1;background:none;-webkit-text-fill-color:currentColor;color:var(--muted);margin-bottom:10px;padding-bottom:14px;border-bottom:1px solid var(--hair)}
+.glow{display:none}
+
+/* MacBook */
+.laptop{position:relative;perspective:2400px}
+.laptop::after{content:"";position:absolute;left:-3%;right:-3%;bottom:-16px;height:28px;background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.24),rgba(0,0,0,0) 72%);filter:blur(5px);z-index:-1}
+.lid{background:linear-gradient(180deg,#e4e5e7,#c3c4c7);padding:.42%;border-radius:clamp(12px,2vw,22px) clamp(12px,2vw,22px) 3px 3px;box-shadow:0 0 0 .5px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.75);transform-origin:50% 100%}
+.bezel{position:relative;background:#060607;border-radius:clamp(10px,1.8vw,19px) clamp(10px,1.8vw,19px) 2px 2px;padding:2% 2% 2.5%}
+.lid .screen{position:relative;border-radius:clamp(2px,.35vw,4px)}
+.lid .screen::after{content:"";position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 36%);pointer-events:none}
+.notch{position:absolute;z-index:2;top:0;left:50%;transform:translateX(-50%);width:11%;height:0;padding-top:3.4%;background:#060607;border-radius:0 0 clamp(4px,.8vw,9px) clamp(4px,.8vw,9px)}
+.notch::after{content:"";position:absolute;left:50%;top:42%;width:clamp(3px,.42vw,5px);height:clamp(3px,.42vw,5px);border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle at 35% 35%,#41506e,#0a0d14 65%)}
+.hinge{height:clamp(5px,.75vw,9px);margin:0 .9%;background:linear-gradient(180deg,#141416,#3a3a3e 55%,#121214);border-radius:0 0 3px 3px}
+.base{height:clamp(9px,1.35vw,15px);margin:0 -6.8%;background:linear-gradient(180deg,#f5f5f7 0%,#dedfe2 22%,#c6c7cb 62%,#9b9ca0 100%);border-radius:2px 2px 7% 7% / 2px 2px 100% 100%;box-shadow:inset 0 1px 0 #fff,0 1px 1px rgba(0,0,0,.14)}
+.base::before{display:none}
+.scoop{position:absolute;top:0;left:50%;transform:translateX(-50%);width:12%;height:52%;background:linear-gradient(180deg,#aeafb3,#d5d6d9);border-radius:0 0 50% 50% / 0 0 100% 100%;box-shadow:inset 0 1px 1.5px rgba(0,0,0,.22)}
+
+/* iPhone */
+.phone{background:linear-gradient(140deg,#eceef0,#a7a9ad 28%,#e2e3e5 50%,#8e9094 78%,#d6d7d9);padding:clamp(2px,.3vw,4px);border-radius:clamp(20px,4.4vw,48px);box-shadow:0 34px 60px -24px rgba(0,0,0,.45),0 0 0 .5px rgba(0,0,0,.25)}
+.phone .frame{background:#060607;border-radius:clamp(18px,4.1vw,45px);padding:clamp(4px,.7vw,8px)}
+.phone .screen{border-radius:clamp(14px,3.4vw,37px)}
+.phone::before{content:"";position:absolute;left:-2px;top:24%;width:3px;height:8%;background:linear-gradient(90deg,#8c8e92,#d2d3d5);border-radius:2px 0 0 2px}
+.phone::after{content:"";position:absolute;right:-2px;top:30%;width:3px;height:11%;background:linear-gradient(270deg,#8c8e92,#d2d3d5);border-radius:0 2px 2px 0}
+
+/* Apple-style entrance: lid swings open, phone rises */
+.js .stage .lid{transform:rotateX(-58deg);transition:transform 1.5s cubic-bezier(.16,.84,.24,1) .1s}
+.js .stage.in .lid{transform:none}
+.intro-on .stage .lid{transform:rotateX(-58deg)!important}
+.js .stage .phone{transform:translateY(44px);opacity:0;transition:transform 1.1s cubic-bezier(.16,.84,.24,1) .75s,opacity .8s ease .75s}
+.js .stage.in .phone{transform:none;opacity:1}
+.intro-on .stage .phone{transform:translateY(44px)!important;opacity:0!important}
+@media (prefers-reduced-motion:reduce){.js .stage .lid,.js .stage .phone{transform:none!important;opacity:1!important;transition:none!important}}
 .prose{max-width:760px;margin:0 auto}
 .prose h2{font-size:clamp(28px,3.6vw,38px);margin:48px 0 12px}
 .prose h3{font-size:21px;margin:26px 0 8px;letter-spacing:-.01em}
@@ -320,7 +372,7 @@ a.sample:hover .go{text-decoration:underline}
 
   <h2>What we fix</h2>
   <ul>
-    <li>Your primary and secondary categories, so you show up for the right searches</li>
+    <li>Your categories: the fewest, most accurate ones, as Google recommends</li>
     <li>Your description, services and service areas, in plain language</li>
     <li>Regular and holiday hours, checked with you</li>
     <li>Your website or booking link, pointed somewhere that works</li>
@@ -361,17 +413,6 @@ a.sample:hover .go{text-decoration:underline}
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px"><span>Corner Site Co. · Based in Ottawa, Ontario · <a href="tel:+16139002378">(613) 900-2378</a> · <a href="mailto:cornersiteco@gmail.com">cornersiteco@gmail.com</a></span><span>Google is a trademark of Google LLC. Not affiliated with Google.</span></div>
     <div class="foot-links"><a href="/">Websites</a><a href="/website-cost/">What a website costs</a><a href="/google-profile-care/">Google Profile Care</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
   </div></footer>
-  <script>
-  (function(){
-    var d=document.documentElement;
-    if('IntersectionObserver' in window){
-      d.classList.add('js');
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
-      document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-      var bar=document.getElementById('mbar'),c=document.getElementById('contact');
-      if(bar&&c)new IntersectionObserver(function(e){bar.classList.toggle('off',e[0].isIntersecting)}).observe(c);
-    }
-  })();
-</script>
+  <script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm||sessionStorage.getItem('csc-intro')){d.classList.add('no-intro')}else{sessionStorage.setItem('csc-intro','1');d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
   </body>
   </html>
