@@ -6722,5 +6722,54 @@
       "1785456283212-338f5bc44d50",
       "1600948836101-f9ffda59d250"
     ]
+  },
+  {
+    "slug": "2-brothers-barbershop-orleans",
+    "dir": "drafts",
+    "name": "2 Brothers Barbershop",
+    "theme": "barber",
+    "layout": "editorial",
+    "kicker": "Barbershop · St Joseph Blvd, Orléans",
+    "h1": "Fades, kids' cuts and a warm welcome in Orléans.",
+    "h1_proof": true,
+    "sub": "Walk-in friendly barbering on St Joseph Blvd. Rated 4.7 on Google by 456 clients, and patient with first haircuts.",
+    "phone": "(613) 552-2000",
+    "tel": "+16135522000",
+    "address": "2095 St Joseph Blvd #3, Orléans, ON K1C 1E2",
+    "rating": "4.7",
+    "reviews": 456,
+    "cta": "call",
+    "cta_label": "Call the shop",
+    "hours": "Open daily · call for today's hours",
+    "services": [
+      [
+        "Fades & cuts",
+        "Clean fades and classic cuts.",
+        "razor"
+      ],
+      [
+        "Kids' cuts",
+        "Patient with little ones, even their first haircut.",
+        "scissors"
+      ],
+      [
+        "Waxing",
+        "Ask us when you book.",
+        "sparkle"
+      ],
+      [
+        "Walk-ins welcome",
+        "Drop by on St Joseph Blvd.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.7 stars from 456 clients.",
+    "about": "2 Brothers Barbershop is rated 4.7 on Google by 456 clients. Reviews mention a welcoming atmosphere, great fades and how patient the barbers are with toddlers getting their first haircut.",
+    "photos": [
+      "1503951914875-452162b0f3f1",
+      "1585747860715-2ba37e788b70",
+      "1621605815971-fbc98d665033",
+      "1517832606299-7ae9b720a186"
+    ]
   }
 ]
