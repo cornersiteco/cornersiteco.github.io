@@ -407,6 +407,7 @@
 <script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;var ref=document.referrer,own=false;try{own=!!ref&&new URL(ref).host===location.host}catch(x){}if(rm||own){d.classList.add('no-intro')}else{d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
 </head>
 <body>
+<div class="promo-bar" style="background:#1d1d1f;color:#f5f5f7;text-align:center;font:500 14px/1.45 Inter,-apple-system,BlinkMacSystemFont,system-ui,sans-serif;padding:10px 16px">New in Ottawa: our first 3 Ottawa clients get their website free. <a href="/#free" style="color:#F2A93B;text-decoration:none;font-weight:600;white-space:nowrap">See how &rsaquo;</a></div>
 <div id="intro" aria-hidden="true"><canvas id="intro-c"></canvas><div class="intro-mark"><span class="im">C<i>.</i></span><span class="il"><b></b></span></div></div>
 <script>(function(){var d=document.documentElement,el=document.getElementById('intro');if(!el)return;if(d.classList.contains('no-intro')){el.remove();return}
 var c=document.getElementById('intro-c'),g=c.getContext('2d'),dpr=Math.min(2,window.devicePixelRatio||1),W,H;
@@ -430,6 +431,7 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
 <main>
 <section id="top" class="hero">
   <div class="w hero-copy rv">
+    <a href="#free" style="display:inline-block;margin:0 0 16px;padding:7px 15px;border-radius:999px;background:rgba(242,169,59,.16);color:#1d1d1f;font:500 14px/1.3 Inter,-apple-system,system-ui,sans-serif;text-decoration:none">Ottawa: our first 3 clients get their website free <span style="color:#b26b00">&rsaquo;</span></a>
     <p class="eyebrow">Websites for small businesses across Canada</p>
     <h1><span class="a">Customers are searching for you.</span> <span>Let them find you.</span></h1>
     <p class="lead">A clean, fast website for your shop, salon, trade or restaurant, live in 7 days. We build your homepage first, so you see it on your phone before you pay a cent.</p>
@@ -660,9 +662,10 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
       <p>$990 once, with hosting included and no monthly fees. The only ongoing cost is your web address, about $20 a year, paid directly so it's always registered in your name. Many studios charge $1,000 to $2,500 to build, then $59 to $150 a month.</p>
       <a class="more" href="/website-cost/">See the 3-year math</a>
     </div>
-    <div class="tile rv">
-      <h3>Free for our first 3 Ottawa clients.</h3>
-      <p>We&rsquo;re new, so the first three Ottawa businesses that say yes get their site finished and live for free (normally $990). You pay only for your web address, about $20 a year, in your name. All we ask is to show your site as an example of our work.</p>
+    <div class="tile rv" id="free">
+      <h3>Free website for our first 3 Ottawa clients.</h3>
+      <p>We&rsquo;re new, so the first three Ottawa businesses that say yes get their website built and put online for free (normally $990). You only pay for your web address, about $20 a year, in your name. All we ask is that we can show your business on our site as an example of our work.</p>
+      <a class="more" href="#start">Claim a spot</a>
     </div>
     <div class="tile rv d1">
       <h3>Add-on: Google Profile Care.</h3>
