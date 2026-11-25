@@ -6771,5 +6771,302 @@
       "1621605815971-fbc98d665033",
       "1517832606299-7ae9b720a186"
     ]
+  },
+  {
+    "slug": "moda-hair-salon-sarnia",
+    "dir": "drafts",
+    "name": "Moda Hair Salon",
+    "theme": "salon",
+    "layout": "editorial",
+    "kicker": "Hair salon · Exmouth St, Sarnia",
+    "h1": "Colour, highlights and cuts in Sarnia.",
+    "h1_proof": true,
+    "sub": "A busy, friendly Sarnia salon known for colour work and highlights. Rated 4.5 on Google by 289 clients.",
+    "phone": "(519) 542-8077",
+    "tel": "+15195428077",
+    "address": "1330 Exmouth St, Sarnia, ON N7S 3Y9",
+    "rating": "4.5",
+    "reviews": 289,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Fri 9 am – 7 pm · Sat 9 am – 4 pm · Closed Sun",
+    "services": [
+      [
+        "Colour",
+        "From subtle to calico and colour correction.",
+        "drop"
+      ],
+      [
+        "Highlights",
+        "Bright, blended highlights.",
+        "sparkle"
+      ],
+      [
+        "Cuts",
+        "Kids and adults.",
+        "scissors"
+      ],
+      [
+        "Consultations",
+        "Plan big colour changes ahead.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.5 stars from 289 clients.",
+    "about": "Moda Hair Salon on Exmouth St is rated 4.5 on Google by 289 clients. Reviews mention friendly, kind staff (56 and 12 reviews), highlights and colour work, and stylists Blayne and Lana by name.",
+    "photos": [
+      "1634449571010-02389ed0f9b0",
+      "1761839256791-6a93f89fb8b0",
+      "1521590832167-7bcbfaa6381f",
+      "1585747860715-2ba37e788b70"
+    ]
+  },
+  {
+    "slug": "kula-spa-salon-owen-sound",
+    "dir": "drafts",
+    "name": "Kula Spa and Salon",
+    "theme": "clinic",
+    "layout": "split",
+    "kicker": "Hair & esthetics · Owen Sound",
+    "h1": "Hair, esthetics and pedicures on 10th Street West.",
+    "h1_proof": true,
+    "sub": "An award-winning Owen Sound salon and spa for over 30 years. Rated 4.6 on Google by 38 clients.",
+    "phone": "(519) 371-3551",
+    "tel": "+15193713551",
+    "address": "669 10th St W, Owen Sound, ON N4K 3R8",
+    "rating": "4.6",
+    "reviews": 38,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Tue–Fri 9 am – 7 pm · Sat 9 am – 1 pm · Closed Sun–Mon",
+    "services": [
+      [
+        "Haircuts",
+        "Gentle, patient stylists.",
+        "scissors"
+      ],
+      [
+        "Pedicures & manicures",
+        "Room for friends to go together.",
+        "sparkle"
+      ],
+      [
+        "Esthetics",
+        "Organic Phyt's skin care.",
+        "drop"
+      ],
+      [
+        "Book online",
+        "Pick a time.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.6 stars from 38 clients.",
+    "about": "Kula Spa and Salon has served Owen Sound for over 30 years and is rated 4.6 on Google by 38 clients. Reviews mention gentle haircuts, a welcoming team and pedicures for friends side by side.",
+    "photos": [
+      "1522337360788-8b13dee7a37e",
+      "1695527081848-1e46c06e6458",
+      "1785456283212-338f5bc44d50",
+      "1600948836101-f9ffda59d250"
+    ],
+    "book_url": "https://ks.setmore.com/"
+  },
+  {
+    "slug": "the-good-men-barbershop-st-catharines",
+    "dir": "drafts",
+    "name": "The Good Men Barbershop",
+    "theme": "barber",
+    "layout": "editorial",
+    "kicker": "Barbershop · Glenridge Ave, St. Catharines",
+    "h1": "Hot-towel finishes and sharp cuts, rated 5.0.",
+    "h1_proof": true,
+    "sub": "A St. Catharines barbershop open 7 days, known for attention to detail and hot towels. Rated 5.0 on Google by 219 clients.",
+    "phone": "(905) 327-9154",
+    "tel": "+19053279154",
+    "address": "224 Glenridge Ave, St. Catharines, ON L2T 3J9",
+    "rating": "5.0",
+    "reviews": 219,
+    "cta": "call",
+    "cta_label": "Call or book online",
+    "hours": "Mon–Fri 10 am – 7 pm · Sat 10 am – 6 pm · Sun 10 am – 5 pm",
+    "services": [
+      [
+        "Haircuts",
+        "Real attention to detail.",
+        "scissors"
+      ],
+      [
+        "Hot towel",
+        "A hot-towel finish.",
+        "sparkle"
+      ],
+      [
+        "Kids' cuts",
+        "Patient with kids.",
+        "razor"
+      ],
+      [
+        "Open 7 days",
+        "Evenings until 7 on weekdays.",
+        "clock"
+      ]
+    ],
+    "about_h": "5.0 stars from 219 clients.",
+    "about": "The Good Men Barbershop on Glenridge Ave is rated a perfect 5.0 on Google by 219 clients. Review topics include attention to detail (21), hot towels (11) and kids' cuts (5).",
+    "photos": [
+      "1585747860715-2ba37e788b70",
+      "1621605815971-fbc98d665033",
+      "1503951914875-452162b0f3f1",
+      "1517832606299-7ae9b720a186"
+    ],
+    "book_url": "https://my-site-105730-104116.square.site/s/appointments"
+  },
+  {
+    "slug": "young-sparrow-parlour-sarnia",
+    "dir": "drafts",
+    "name": "The Young Sparrow Parlour",
+    "theme": "salon",
+    "layout": "bold",
+    "kicker": "Hair & barbering · George St, Sarnia",
+    "h1": "Cuts, colour and fades by Aly in Sarnia.",
+    "h1_proof": true,
+    "sub": "A small Sarnia parlour for stylist cuts, colour and barbering. Rated 5.0 on Google by 44 clients.",
+    "phone": "(519) 491-1978",
+    "tel": "+15194911978",
+    "address": "477 George St, Sarnia, ON N7T 4P8",
+    "rating": "5.0",
+    "reviews": 44,
+    "cta": "call",
+    "cta_label": "Book online",
+    "hours": "Mon 9:30 am – 3:30 pm · Tue–Wed 9:30 am – 3 pm · Thu–Fri 10 am – 7 pm · Sat 9 am – 3 pm · Closed Sun",
+    "services": [
+      [
+        "Stylist cuts",
+        "Short, medium and long, with shampoo options.",
+        "scissors"
+      ],
+      [
+        "Colour",
+        "Cut and colour, done to your photo.",
+        "drop"
+      ],
+      [
+        "Barbering",
+        "Fades, undercuts, beard trims, hot shaves.",
+        "sparkle"
+      ],
+      [
+        "Kids' cuts",
+        "Short cuts for kids.",
+        "drop"
+      ]
+    ],
+    "about_h": "5.0 stars from 44 clients.",
+    "about": "The Young Sparrow Parlour on George St is rated 5.0 on Google by 44 clients. Reviews talk about Aly listening carefully, cut-and-colour that matches the photo, and leaving with a real confidence boost.",
+    "photos": [
+      "1600948836101-f9ffda59d250",
+      "1522337360788-8b13dee7a37e",
+      "1785456411888-c2e842552820",
+      "1764448726322-2abd2bdd6c68"
+    ],
+    "book_url": "https://theyoungsparrowparlour.square.site/s/appointments"
+  },
+  {
+    "slug": "elegance-nail-spa-windsor",
+    "dir": "drafts",
+    "name": "Elegance Nail Spa",
+    "theme": "clinic",
+    "layout": "bold",
+    "kicker": "Nail salon · Walker Rd, Windsor",
+    "h1": "Nail designs and deluxe pedicures, open 7 days in Windsor.",
+    "h1_proof": true,
+    "sub": "A friendly Windsor nail spa with regulars of five years and counting. Rated 4.8 on Google by 264 clients.",
+    "phone": "(519) 969-2327",
+    "tel": "+15199692327",
+    "address": "4050 Walker Rd, Windsor, ON N8W 3T5",
+    "rating": "4.8",
+    "reviews": 264,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Fri 9 am – 7 pm · Sat–Sun 9 am – 5 pm",
+    "services": [
+      [
+        "Nail designs",
+        "Bring a design and we'll do it.",
+        "sparkle"
+      ],
+      [
+        "Bio gel",
+        "Long-lasting sets.",
+        "drop"
+      ],
+      [
+        "Deluxe pedicures",
+        "A client favourite.",
+        "drop"
+      ],
+      [
+        "Waxing",
+        "Quick and tidy.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.8 stars from 264 clients.",
+    "about": "Elegance Nail Spa on Walker Rd is rated 4.8 on Google by 264 clients. Reviews mention friendly staff (103 reviews), nail designs and deluxe pedicures, with clients who've come for five years.",
+    "photos": [
+      "1632345031435-8727f6897d53",
+      "1604654894610-df63bc536371",
+      "1630843599725-32ead7671867",
+      "1787651344170-c2f81514934d"
+    ]
+  },
+  {
+    "slug": "rebel-barbers-company-thunder-bay",
+    "dir": "drafts",
+    "name": "Rebel Barbers & Company",
+    "theme": "barber",
+    "layout": "split",
+    "kicker": "Barbershop · Edward St N, Thunder Bay",
+    "h1": "Traditional and modern barbering in Thunder Bay.",
+    "h1_proof": true,
+    "sub": "Traditional and modern barbering for adults and kids, with appointments daily. Rated 4.7 on Google by 184 clients.",
+    "phone": "(807) 622-3022",
+    "tel": "+18076223022",
+    "address": "509 Edward St N #3, Thunder Bay, ON P7C 4R1",
+    "rating": "4.7",
+    "reviews": 184,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Fri 10 am – 6 pm · Sat 10 am – 2 pm · Closed Sun",
+    "services": [
+      [
+        "Men's cuts",
+        "Traditional and modern.",
+        "scissors"
+      ],
+      [
+        "Kids' cuts",
+        "Patient with kids.",
+        "razor"
+      ],
+      [
+        "Same-day appointments",
+        "Often available.",
+        "clock"
+      ],
+      [
+        "Beard work",
+        "Clean lines.",
+        "sparkle"
+      ]
+    ],
+    "about_h": "4.7 stars from 184 clients.",
+    "about": "Rebel Barbers & Company on Edward St N is rated 4.7 on Google by 184 clients. Reviews mention kids' haircuts, personable barbers and same-day appointments.",
+    "photos": [
+      "1621605815971-fbc98d665033",
+      "1503951914875-452162b0f3f1",
+      "1517832606299-7ae9b720a186",
+      "1585747860715-2ba37e788b70"
+    ]
   }
 ]
