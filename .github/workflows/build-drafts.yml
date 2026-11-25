@@ -1,0 +1,42 @@
+# Rebuilds every draft and sample page from _build/ (template + data).
+# _build/ is not published: Jekyll skips folders that start with "_".
+name: Build drafts
+on:
+  push:
+    branches: [main]
+    paths: ['_build/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: build-drafts
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+      - name: Build
+        run: ruby _build/build.rb
+      - name: Sync built pages
+        run: |
+          for d in drafts samples; do
+            if [ -d "_build/out/$d" ]; then mkdir -p "$d"; rsync -a "_build/out/$d/" "$d/"; fi
+          done
+          rm -rf _build/out
+      - name: Commit
+        run: |
+          git config user.name "corner-site-build"
+          git config user.email "cornersiteco@gmail.com"
+          git add drafts samples
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Rebuild drafts and samples from _build"
+          git push
+      - name: Request Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
