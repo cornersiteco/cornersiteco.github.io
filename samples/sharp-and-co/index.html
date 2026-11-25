@@ -6,6 +6,11 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Sharp &amp; Co. Barbers — sample site by Corner Site Co.</title>
 <meta name="description" content="Haircuts, fades and beard work. Book your chair online in seconds.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sharp &amp; Co. Barbers">
+<meta property="og:description" content="Haircuts, fades and beard work. Book your chair online in seconds.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0d0d0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +60,9 @@ nav .btn{min-height:42px;padding:0 18px;font-size:15px}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
 .proof{display:inline-flex;align-items:center;gap:12px;margin-top:34px;padding:10px 16px 10px 12px;border-radius:999px;background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);font-size:14px}
 .proof .g{width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;flex:none}
-.stars{color:#fbbf24;letter-spacing:1px;font-size:15px}.stars .off{opacity:.35}
+.stars{color:#fbbf24;letter-spacing:1px;font-size:15px}.stars .off{opacity:.35}.stars .st{background:linear-gradient(90deg,#fbbf24 var(--f),rgba(150,150,150,.45) var(--f));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.gal .yours{display:grid;place-items:center;text-align:center;border:2px dashed currentColor;opacity:.75;padding:18px}.gal .yours b{display:block;font-size:18px;margin-bottom:6px}.gal .yours span{font-size:14px;line-height:1.4}
+.offer .ol{margin:0 0 22px;font-size:18px;line-height:1.5;color:#1d1d1f}
 .proof b{font-weight:700}
 
 /* info bar */
@@ -101,6 +108,7 @@ nav .btn{min-height:42px;padding:0 18px;font-size:15px}
 /* visit */
 .visit{display:grid;grid-template-columns:1fr 1.3fr;gap:18px;align-items:stretch}
 .vcard{background:var(--surface);border-radius:var(--r);padding:clamp(28px,4vw,44px);box-shadow:0 0 0 1px var(--line);display:flex;flex-direction:column;gap:24px}
+.vcard .row>div{min-width:0}.vcard a{overflow-wrap:anywhere}
 .row{display:flex;gap:16px;align-items:flex-start}
 .row .ic{color:var(--accent);flex:none;margin-top:2px}
 .row small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
@@ -120,6 +128,22 @@ footer{padding:36px 0 120px;font-size:14px;color:var(--muted);border-top:1px sol
 footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 footer a{color:var(--ink)}
 .own{background:var(--accent);color:var(--accent-ink);text-align:center;padding:16px 22px;font-weight:600;font-size:15px}
+.offer{background:#fafaf7;color:#1d1d1f;padding:clamp(56px,8vw,96px) 0;border-top:1px solid rgba(0,0,0,.08);font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.offer .ow{max-width:760px;margin:0 auto;padding:0 22px}
+.offer .oe{margin:0 0 14px;font:500 11px/1.4 ui-monospace,'SF Mono',Menlo,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;color:#6e6e73}
+.offer h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;text-transform:none;letter-spacing:-.01em;font-size:clamp(30px,4.6vw,46px);line-height:1.08;color:#1d1d1f;margin:0 0 26px}
+.offer ol{list-style:none;margin:0 0 30px;padding:0;counter-reset:s}
+.offer li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:12px;padding:16px 0;border-top:1px solid rgba(0,0,0,.08);font-size:16.5px;line-height:1.5;color:#424245}
+.offer li::before{content:'0' counter(s);font:500 12px/1.9 ui-monospace,'SF Mono',Menlo,monospace;letter-spacing:.12em;color:#6e6e73}
+.offer li b{color:#1d1d1f}
+.offer .oc{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.offer .ob{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:3px;font-weight:600;font-size:15.5px;text-decoration:none;color:#1d1d1f;box-shadow:inset 0 0 0 1px rgba(0,0,0,.2)}
+.offer .ob.p{background:#1d1d1f;color:#fafaf7;box-shadow:none}
+.offer .who{display:flex;align-items:center;gap:14px;margin:0;font-size:14.5px;line-height:1.5;color:#6e6e73}
+.offer .who img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
+.offer .who a{color:#1d1d1f}
+@media (max-width:560px){.offer .ob{flex:1 1 100%}}
+.draft .dl{color:#fff;font-weight:600;margin-left:6px;white-space:nowrap}
 .own a{color:inherit}
 
 /* mobile bar */
@@ -140,11 +164,51 @@ footer a{color:var(--ink)}
   header .w{height:64px}
   .brand{font-size:19px}
 }
+/* ---- layout: split ---- */
+.L-split header,.L-editorial header{position:relative;color:var(--ink);border-bottom:1px solid var(--line)}
+.L-split .btn-g,.L-editorial .btn-g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line);-webkit-backdrop-filter:none;backdrop-filter:none}
+.L-split .proof,.L-editorial .proof{background:var(--surface);box-shadow:0 0 0 1px var(--line);color:var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none}
+.proof .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-left:4px}
+.hero2{background:var(--surface);border-bottom:1px solid var(--line)}
+.h2grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.hero2 h1{font-size:clamp(40px,5.6vw,72px);margin:18px 0 20px}
+.hero2 .lead,.hero3 .lead{font-size:clamp(18px,1.9vw,20px);color:var(--muted);margin:0 0 30px;max-width:46ch}
+.h2img{position:relative;border-radius:calc(var(--r) * 1.6);overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(0,0,0,.45)}
+.h2img img{width:100%;height:100%;object-fit:cover}
+.h2tag{position:absolute;left:16px;bottom:16px;background:var(--surface);color:var(--ink);font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px}
+.L-split .svc{grid-template-columns:1fr;gap:0;border-top:1px solid var(--line)}
+.L-split .card{display:grid;grid-template-columns:64px 1fr 1.4fr;align-items:center;gap:24px;background:transparent;box-shadow:none;border-bottom:1px solid var(--line);border-radius:0;padding:26px 4px}
+.L-split .card:hover{transform:none;box-shadow:none;background:color-mix(in srgb,var(--accent) 5%,transparent)}
+.L-split .card .ic{margin:0;width:48px;height:48px;background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.L-split .card h3{margin:0}
+/* ---- layout: editorial ---- */
+.hero3{text-align:center;padding-top:clamp(56px,8vw,110px)}
+.hero3 .kick::before{display:none}
+.hero3 h1{font-size:clamp(46px,7.6vw,108px);max-width:16ch;margin:18px auto 22px;line-height:.98}
+.hero3 .lead{margin-left:auto;margin-right:auto}
+.hero3 .ctas{justify-content:center}
+.hero3 .proof{margin-top:26px}
+.h3img{margin-top:clamp(40px,6vw,72px);border-radius:calc(var(--r) * 1.6);overflow:hidden;aspect-ratio:21/9}
+.h3img img{width:100%;height:100%;object-fit:cover}
+.L-editorial .head{flex-direction:column;align-items:center;text-align:center}
+.L-editorial .head p{text-align:center}
+.L-editorial .card{text-align:center;background:transparent;box-shadow:inset 0 0 0 1.5px var(--line)}
+.L-editorial .card .ic{margin:0 auto 22px;background:transparent;color:var(--accent);box-shadow:inset 0 0 0 1.5px var(--accent);border-radius:50%}
+.L-editorial .gal{grid-template-columns:repeat(3,1fr);grid-template-rows:1fr;height:clamp(240px,28vw,380px)}
+.L-editorial .gal figure:first-child{grid-row:auto}
+.L-editorial .final img{display:none}
+.L-editorial .final::before{background:var(--accent)}
+@media (max-width:860px){
+  .h2grid{grid-template-columns:1fr}.h2img{aspect-ratio:4/3;order:-1}
+  .L-split .card{grid-template-columns:48px 1fr;gap:14px}.L-split .card p{grid-column:2}
+  .h3img{aspect-ratio:4/3}
+  .L-editorial .gal{grid-template-columns:1fr 1fr;height:auto}.L-editorial .gal figure{aspect-ratio:1/1}.L-editorial .gal figure:first-child{grid-column:1/3;aspect-ratio:16/10}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.card,.gal img{transition:none}}
 </style>
 </head>
-<body>
-<div class="draft">This is a <b>sample site</b> for a fictional business, made by <a href="https://cornersiteco.github.io/">Corner Site Co.</a> to show the kind of site we build. Photos via Unsplash.</div>
+<body class="L-bold">
+<div class="draft">This is a <b>sample site</b> for a fictional business, made by <a href="https://cornersiteco.ca/">Corner Site Co.</a> to show the kind of site we build. Photos via Unsplash.</div>
 
 <header><div class="w">
   <a class="brand" href="#top">Sharp &amp; Co. Barbers</a>
@@ -153,7 +217,7 @@ footer a{color:var(--ink)}
 
 <main id="top">
 <section class="hero">
-  <img class="bgimg" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=2000&q=80" srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1400&q=80 1400w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=2000&q=80 2000w" sizes="100vw" alt="" fetchpriority="high">
+  <img class="bgimg" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=2000&q=80" srcset="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1400&q=80 1400w, https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=2000&q=80 2000w" sizes="100vw" alt="Sample photo" fetchpriority="high">
   <div class="w">
     <span class="kick">Barbershop · Sample site</span>
     <h1>Fresh cuts. No waiting around.</h1>
@@ -183,7 +247,7 @@ footer a{color:var(--ink)}
 </div></section>
 
 <section id="about" class="sec" style="padding-top:0"><div class="w split">
-  <div class="ph rv"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy">
+  <div class="ph rv"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" alt="Sample photo" loading="lazy">
   </div>
   <div class="rv">
     <span class="kick">About</span>
@@ -195,9 +259,9 @@ footer a{color:var(--ink)}
 
 <section class="sec" style="padding-top:0"><div class="w">
   <div class="gal rv">
-    <figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy"></figure>
-    <figure><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></figure>
-    <figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1400&q=80" alt="Sample photo" loading="lazy"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80" alt="Sample photo" loading="lazy"></figure>
+    <figure><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Sample photo" loading="lazy"></figure>
   </div>
   <p class="gal-note">Photos via Unsplash.</p>
 </div></section>
@@ -216,7 +280,7 @@ footer a{color:var(--ink)}
 </div></section>
 
 <section class="final sec">
-  <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1800&q=80" alt="Sample photo" loading="lazy">
   <div class="w rv">
     <h2>Ready when you are.</h2>
     <p>Give us a call and we'll take it from there.</p>
@@ -225,7 +289,7 @@ footer a{color:var(--ink)}
 </section>
 </main>
 
-<footer><div class="w"><span>&copy; Sharp &amp; Co. Barbers · 200 Sample Ave, Your City</span><span>Sample site by <a href="https://cornersiteco.github.io/">Corner Site Co.</a></span></div></footer>
+<footer><div class="w"><span>Sharp &amp; Co. Barbers · 200 Sample Ave, Your City</span><span>Sample site by <a href="https://cornersiteco.ca/">Corner Site Co.</a></span></div></footer>
 
 <div class="mbar"><a class="btn btn-p" href="tel:+15550100144"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Call</a><a class="btn btn-s" href="https://www.google.com/maps/search/?api=1&query=Sharp%20%26%20Co.%20Barbers%20200%20Sample%20Ave%2C%20Your%20City" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Directions</a></div>
 
@@ -233,5 +297,6 @@ footer a{color:var(--ink)}
 (function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)});})();
 </script>
+<script data-goatcounter="https://cornersiteco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
