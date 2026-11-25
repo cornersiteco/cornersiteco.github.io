@@ -6428,5 +6428,299 @@
       "1761718210089-ba3bb5ccb54f"
     ],
     "book_url": "https://valleyhairartistry.square.site/s/appointments"
+  },
+  {
+    "slug": "quattro-hair-studio-belleville",
+    "dir": "drafts",
+    "name": "Quattro Hair Studio",
+    "theme": "salon",
+    "layout": "split",
+    "kicker": "Hair salon & barbering · Downtown Belleville",
+    "h1": "Cuts, colour and curly cuts on Dundas St E.",
+    "h1_proof": true,
+    "sub": "A friendly downtown Belleville studio for cuts, colour, highlights and curly cuts. Rated 4.7 on Google by 44 clients.",
+    "phone": "(613) 968-3022",
+    "tel": "+16139683022",
+    "address": "191 Dundas St E, Belleville, ON K8N 1C9",
+    "rating": "4.7",
+    "reviews": 44,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Fri 9 am – 5:30 pm · Sat 9 am – 4 pm · Closed Sun",
+    "services": [
+      [
+        "Cuts & styling",
+        "Unhurried cuts that are done right the first time.",
+        "scissors"
+      ],
+      [
+        "Curly cuts",
+        "Cuts for natural curl patterns.",
+        "sparkle"
+      ],
+      [
+        "Colour & highlights",
+        "Colour, highlights and perms.",
+        "drop"
+      ],
+      [
+        "Barbering",
+        "Men's cuts too.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.7 stars from 44 clients.",
+    "about": "Quattro Hair Studio is a downtown Belleville salon rated 4.7 on Google by 44 clients. Reviews name Wendy, Iris and Lorna and mention friendly staff, attention to detail and good value, plus first curly cuts that clients love.",
+    "photos": [
+      "1600948836101-f9ffda59d250",
+      "1522337360788-8b13dee7a37e",
+      "1785456411888-c2e842552820",
+      "1764448726322-2abd2bdd6c68"
+    ]
+  },
+  {
+    "slug": "saigon-nails-spa-kingston",
+    "dir": "drafts",
+    "name": "Saigon Nails & Spa",
+    "theme": "clinic",
+    "layout": "editorial",
+    "kicker": "Nail salon & spa · Bath Rd, Kingston",
+    "h1": "Nail art and manicures, rated 5.0 in Kingston.",
+    "h1_proof": true,
+    "sub": "Shellac, nail art, wedding nails and pedicures with massage chairs on Bath Rd. Rated 5.0 on Google by 101 clients.",
+    "phone": "(613) 634-3434",
+    "tel": "+16136343434",
+    "address": "1786 Bath Rd, Kingston, ON K7M 4Y2",
+    "rating": "5.0",
+    "reviews": 101,
+    "cta": "call",
+    "cta_label": "Call or DM to book",
+    "hours": "Mon–Fri 9:30 am – 7 pm · Sat 9:30 am – 6 pm · Closed Sun",
+    "services": [
+      [
+        "Nail art",
+        "Custom designs from your inspiration photo.",
+        "sparkle"
+      ],
+      [
+        "Shellac manicures",
+        "Long-wearing colour.",
+        "drop"
+      ],
+      [
+        "Pedicures",
+        "With leg massage and massage chairs.",
+        "clock"
+      ],
+      [
+        "Wedding nails",
+        "Bridal and event sets.",
+        "drop"
+      ]
+    ],
+    "about_h": "5.0 stars from 101 clients.",
+    "about": "Saigon Nails & Spa on Bath Rd is rated 5.0 on Google by 101 clients. Reviews mention a welcoming atmosphere (20 reviews), detailed nail art (11) and technicians Lilli and Nikki by name.",
+    "photos": [
+      "1632345031435-8727f6897d53",
+      "1571290274554-6a2eaa771e5f",
+      "1787651344170-c2f81514934d",
+      "1604654894610-df63bc536371"
+    ]
+  },
+  {
+    "slug": "trevisanuts-barbershop-sault-ste-marie",
+    "dir": "drafts",
+    "name": "Trevisanut's Barbershop",
+    "theme": "barber",
+    "layout": "bold",
+    "kicker": "Traditional barbershop · Steelton, Sault Ste. Marie",
+    "h1": "A traditional barbershop in the Steelton district.",
+    "h1_proof": true,
+    "sub": "Danny's traditional barbershop on Wellington St W, with good conversation and your choice of music. Rated 4.8 on Google by 142 clients.",
+    "phone": "(705) 450-7750",
+    "tel": "+17054507750",
+    "address": "352 Wellington St W, Sault Ste. Marie, ON P6A 1J1",
+    "rating": "4.8",
+    "reviews": 142,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Tue & Thu 11 am – 6 pm · Wed & Fri 10:30 am – 5 pm · Sat 10:30 am – 3 pm · Closed Sun–Mon",
+    "services": [
+      [
+        "Haircuts",
+        "Clean cuts with real attention to detail.",
+        "scissors"
+      ],
+      [
+        "Your music",
+        "Pick the genre, and it goes on the speaker.",
+        "sparkle"
+      ],
+      [
+        "Walk-ins & bookings",
+        "Call ahead or drop by.",
+        "clock"
+      ],
+      [
+        "Steelton local",
+        "On Wellington St W.",
+        "razor"
+      ]
+    ],
+    "about_h": "4.8 stars from 142 clients.",
+    "about": "Trevisanut's Barbershop is a traditional barbershop in Sault Ste. Marie's Steelton district, rated 4.8 on Google by 142 clients. Reviews talk about Danny's pride in his work, his attention to detail and the music.",
+    "photos": [
+      "1585747860715-2ba37e788b70",
+      "1503951914875-452162b0f3f1",
+      "1621605815971-fbc98d665033",
+      "1517832606299-7ae9b720a186"
+    ]
+  },
+  {
+    "slug": "elite-kingston-barbershop",
+    "dir": "drafts",
+    "name": "Elite Kingston Barbershop",
+    "theme": "barber",
+    "layout": "split",
+    "kicker": "Family barbershop · Division St, Kingston",
+    "h1": "Fades, beard trims and kids' cuts on Division St.",
+    "h1_proof": true,
+    "sub": "A family-run barbershop near downtown Kingston, with walk-ins welcome. Rated 4.5 on Google by 418 clients.",
+    "phone": "(613) 545-7715",
+    "tel": "+16135457715",
+    "address": "172 Division St, Kingston, ON K7L 3M8",
+    "rating": "4.5",
+    "reviews": 418,
+    "cta": "call",
+    "cta_label": "Call or walk in",
+    "hours": "Mon–Fri 9 am – 6 pm · Sat 9 am – 4:30 pm · Closed Sun",
+    "services": [
+      [
+        "Fades",
+        "Modern fades and shags.",
+        "scissors"
+      ],
+      [
+        "Haircut & beard trim",
+        "Done in one visit.",
+        "sparkle"
+      ],
+      [
+        "Kids' cuts",
+        "Patient with kids, including kids with special needs.",
+        "razor"
+      ],
+      [
+        "Walk-ins",
+        "No appointment needed.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.5 stars from 418 clients.",
+    "about": "Elite Kingston Barbershop on Division St is rated 4.5 on Google by 418 clients. Reviews mention friendly staff (80 reviews), fades (19), kids' cuts and barbers Tamman, Mahmood and Emiliano by name.",
+    "photos": [
+      "1585747860715-2ba37e788b70",
+      "1503951914875-452162b0f3f1",
+      "1621605815971-fbc98d665033",
+      "1517832606299-7ae9b720a186"
+    ]
+  },
+  {
+    "slug": "ancient-ember-tattoo-barbershop-north-bay",
+    "dir": "drafts",
+    "name": "Ancient Ember Tattoo & Barbershop",
+    "theme": "tattoo",
+    "layout": "bold",
+    "kicker": "Tattoo studio & barbershop · North Bay",
+    "h1": "Custom tattoos and clean cuts on Cassells St.",
+    "h1_proof": true,
+    "sub": "A clean, welcoming tattoo studio and barbershop in North Bay. Rated 4.9 on Google by 55 clients.",
+    "phone": "",
+    "tel": "",
+    "address": "1103 Cassells St, North Bay, ON P1B 4B3",
+    "rating": "4.9",
+    "reviews": 55,
+    "cta": "email",
+    "cta_label": "Email to book",
+    "hours": "Mon–Fri 9 am – 5 pm · Closed Sat–Sun",
+    "services": [
+      [
+        "Custom tattoos",
+        "Your idea, in the artist's style.",
+        "pen"
+      ],
+      [
+        "Flash tattoos",
+        "Ready-to-go designs.",
+        "sparkle"
+      ],
+      [
+        "Men's cuts",
+        "A kind barber, in the same shop.",
+        "scissors"
+      ],
+      [
+        "Clean studio",
+        "Spotless and well organized.",
+        "pen"
+      ]
+    ],
+    "about_h": "4.9 stars from 55 clients.",
+    "about": "Ancient Ember is a tattoo studio and barbershop on Cassells St in North Bay, rated 4.9 on Google by 55 clients. Reviews praise artists Eric and Derek, a very clean shop and a kind barber.",
+    "photos": [
+      "1568515045052-f9a854d70bfd",
+      "1760877611905-0f885a3ce551",
+      "1479767574301-a01c78234a0c",
+      "1597852075234-fd721ac361d3"
+    ]
+  },
+  {
+    "slug": "changes-hair-studio-sudbury",
+    "dir": "drafts",
+    "name": "Changes Hair Studio",
+    "theme": "salon",
+    "layout": "editorial",
+    "kicker": "Hair salon · Westmount Ave, Sudbury",
+    "h1": "Cuts, colour and prom styles in Sudbury since 2017.",
+    "h1_proof": true,
+    "sub": "A family-friendly Sudbury salon for cuts, colour and styling since 2017. Rated 4.6 on Google by 88 clients.",
+    "phone": "(705) 805-3335",
+    "tel": "+17058053335",
+    "address": "428 Westmount Ave Unit 3, Greater Sudbury, ON P3A 5V7",
+    "rating": "4.6",
+    "reviews": 88,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Tue 9:30 am – 6 pm · Wed–Fri 9:30 am – 7 pm · Sat 9:30 am – 4 pm · Closed Sun",
+    "services": [
+      [
+        "Cuts",
+        "For the whole family, last-minute too.",
+        "scissors"
+      ],
+      [
+        "Colour",
+        "Colour and dye work.",
+        "drop"
+      ],
+      [
+        "Prom & event styles",
+        "Styled the way you pictured it.",
+        "sparkle"
+      ],
+      [
+        "Product advice",
+        "Products picked for your hair type.",
+        "drop"
+      ]
+    ],
+    "about_h": "4.6 stars from 88 clients.",
+    "about": "Changes Hair Studio has been on Westmount Ave in Sudbury since 2017 and is rated 4.6 on Google by 88 clients. Reviews mention friendly staff (26 reviews), fair prices and last-minute cuts for kids.",
+    "photos": [
+      "1522337360788-8b13dee7a37e",
+      "1695527081848-1e46c06e6458",
+      "1785456283212-338f5bc44d50",
+      "1600948836101-f9ffda59d250"
+    ]
   }
 ]
