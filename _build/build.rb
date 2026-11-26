@@ -254,7 +254,7 @@ class Ctx
   def np; photos.size end
   def ph?(i) i < np end
   def menu; Array(s['menu']) end
-  def founding; FOUNDING > 0 && !!(s['address'].to_s =~ OTTAWA_RE) end
+  def founding; FOUNDING > 0 end  # Canada-wide since 2026-11-26 (owner: advertise the first-3 offer outright)
   def tz; TZ[s['address'].to_s[/\b(ON|QC|BC|AB|MB|SK|NS|NB|NL|PE)\b/]] || 'America/Toronto' end
   def week; @week end
   def week_json; JSON.generate(@week.map { |d| d.is_a?(Array) ? d : (d == :closed ? 0 : nil) }) end
