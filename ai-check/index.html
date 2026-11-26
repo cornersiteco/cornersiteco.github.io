@@ -351,11 +351,22 @@ a.sample:hover .go{text-decoration:underline}
 .cov li{padding-left:24px;position:relative;color:var(--ink2);font-size:16px}
 .cov li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2px solid var(--accent2);border-bottom:2px solid var(--accent2);transform:rotate(-45deg)}
 .ai-note{max-width:720px;margin:30px auto 0;color:var(--muted);font-size:14.5px;line-height:1.5;text-align:center}
+.watch{padding:40px 0 10px}
+.watch-in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:center;background:#1d1d1f;color:#f5f5f7;border-radius:32px;padding:48px}
+.watch .wtag{display:inline-block;font-size:13px;font-weight:600;color:#7fe0d2;margin-bottom:10px;letter-spacing:.02em}
+.watch h2{color:#fff;font-size:clamp(32px,4.4vw,48px);line-height:1.06}
+.watch p{color:#c7c7cc;font-size:17px;line-height:1.5;margin:16px 0 0}
+.watch .fine2{font-size:14.5px;color:#98989d}
+.watch-form{display:grid;gap:12px;background:rgba(255,255,255,.06);border-radius:22px;padding:22px}
+.watch-form label{display:grid;gap:6px;font-size:14px;color:#c7c7cc}
+.watch-form input{font:inherit;font-size:16px;color:#1d1d1f;background:#fff;border:0;border-radius:12px;min-height:46px;padding:0 14px}
+.watch-form .btn{margin-top:6px;width:100%;border:0;cursor:pointer}
 .ai-mbar{display:none}
 @media (max-width:900px){
   .ai-wrap{grid-template-columns:minmax(0,1fr)}
   .ai-card{position:static;order:2}
   .covers .grid{grid-template-columns:minmax(0,1fr)}
+  .watch-in{grid-template-columns:minmax(0,1fr);padding:30px 22px;border-radius:26px}
   .ai-mbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;align-items:center;justify-content:space-between;gap:12px;background:rgba(29,29,31,.86);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);color:#f5f5f7;border-radius:18px;padding:10px 10px 10px 18px;font-size:15px;transition:transform .35s,opacity .35s}
   .ai-mbar b{font-size:18px}
   .ai-mbar a{color:#fff;background:var(--accent);border-radius:12px;padding:9px 14px;font-weight:600;font-size:14.5px;white-space:nowrap}
@@ -425,6 +436,26 @@ a.sample:hover .go{text-decoration:underline}
   </div>
   <p class="ai-note">This is a checklist of things Google and AI assistants can read, based on Google's own guidance for <a href="https://support.google.com/business/answer/7091" rel="noopener">Business Profiles</a> and <a href="https://developers.google.com/search/docs/appearance/structured-data/local-business" rel="noopener">local business structured data</a>. It isn't a ranking test, and no one can honestly promise a spot in an AI answer. Websites: $990 one time, or $129/month with nothing upfront, plus your web address (about $20/year).</p>
 </div></section>
+<section class="watch"><div class="w"><div class="watch-in">
+  <div class="watch-copy">
+    <span class="wtag">Free · once a month</span>
+    <h2>Find out what the AI actually says.</h2>
+    <p>The check above is what you can control. This is the result. Once a month we ask Google&rsquo;s AI the question your customers ask, like &ldquo;best nail salon in Kingston&rdquo;, and email you what it said: which businesses it named, whether you were one of them, and the date we checked.</p>
+    <p class="fine2">A real person runs each search by hand and sends you the answer as a screenshot. Free, no card, no obligation. Reply &ldquo;stop&rdquo; any time.</p>
+  </div>
+  <form class="watch-form" action="https://formsubmit.co/cornersiteco@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New AI visibility report signup — Corner Site Co.">
+    <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://cornersiteco.ca/thanks.html">
+    <input type="hidden" name="_autoresponse" value="Thanks for signing up for the free monthly AI visibility report. Within 2 business days we will ask Google's AI the question your customers ask and email you what it said, with the date we checked. Once a month after that. Reply stop any time and we will stop. - Michael, Corner Site Co., Ottawa">
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+    <input type="hidden" name="source" value="ai-check monthly report">
+    <label>Business name<input name="business" required autocomplete="organization"></label>
+    <label>What you do and where<input name="search" required placeholder="e.g. nail salon, Orléans"></label>
+    <label>Your email<input type="email" name="email" required autocomplete="email"></label>
+    <button class="btn primary" type="submit">Send me my first report</button>
+  </form>
+</div></div></section>
 <div class="cta-band" style="max-width:900px;margin:40px auto 60px"><h2 style="font-size:30px;margin:0">See a free first draft of your homepage.</h2><p>Within 1 business day, with placeholder photos until we have yours. $990 one time, or $129/month with nothing upfront, plus your web address (about $20/year).</p><a class="btn primary" href="/#contact">Get my free draft</a> <a class="btn" style="margin-left:6px" href="tel:+16139002378">Call (613) 900-2378</a></div>
 <div class="ai-mbar off" id="aimbar"><span>Score <b id="aimscore">0/8</b></span><a href="#aicard">See result</a></div>
 </main>
