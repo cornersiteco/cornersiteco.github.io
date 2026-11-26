@@ -1,5 +1,5 @@
 <header class="sbar"><div class="w">
-  <span class="id"><%= e name %></span>
+  <span class="id"><%= tx name %></span>
   <nav aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
   <span class="r"><%= now %></span>
 </div></header>
@@ -7,9 +7,9 @@
 <section class="sheet"><div class="w">
   <div class="s-grid<%= ph?(0) ? '' : ' solo' %>">
     <div class="s-main">
-      <p class="lab"><%= area_line.map { |x| e x }.join(' / ') %></p>
+      <p class="lab"><%= area_html(' <i aria-hidden="true">/</i> ', 40) %></p>
       <h1 class="name"><%= name_h %></h1>
-      <p class="lede"><%= e lede %></p>
+      <p class="lede"><%= tx lede %></p>
       <div class="acts"><%= action_btns(icons: true) %></div>
     </div>
 <% if ph?(0) -%>
@@ -21,9 +21,9 @@
     <div><dt>Location</dt><dd><%= addr_html %><span class="sub"><a class="tl" href="<%= dir %>" target="_blank" rel="noopener">Directions</a><%= copy_addr %></span></dd></div>
 <% end -%>
 <% if tel? -%>
-    <div><dt>Phone</dt><dd><a class="v" href="tel:<%= e s['tel'] %>"><%= e s['phone'] %></a></dd></div>
+    <div><dt>Phone</dt><dd><a class="v" href="tel:<%= e s['tel'] %>"><%= tx s['phone'] %></a></dd></div>
 <% elsif email? -%>
-    <div><dt>Email</dt><dd><a class="v em" href="mailto:<%= e s['email'] %>"><%= e s['email'].to_s.downcase %></a></dd></div>
+    <div><dt>Email</dt><dd><a class="v em" href="mailto:<%= e s['email'] %>"><%= tx s['email'].to_s.downcase %></a></dd></div>
 <% end -%>
 <% unless blank?(s['hours']) -%>
     <div><dt>Hours</dt><dd><%= week ? now + %(<span class="sub"><a class="tl" href="#visit">All hours</a></span>) : %(<span class="v sm">#{hours_note? ? hours_note_html : e(s['hours'])}</span>) %></dd></div>
@@ -31,16 +31,16 @@
 <% if rating? -%>
     <div><dt>Google rating</dt><dd><a class="v num" href="<%= maps %>" target="_blank" rel="noopener"><%= e s['rating'] %><small>/ 5</small></a><span class="sub"><span class="stars" aria-hidden="true"><%= stars(s['rating']) %></span> <%= e s['reviews'] %> reviews</span></dd></div>
 <% elsif proof -%>
-    <div><dt>Note</dt><dd><span class="v sm"><%= e proof %></span></dd></div>
+    <div><dt>Note</dt><dd><span class="v sm"><%= tx proof %></span></dd></div>
 <% end -%>
   </dl>
 </div></section>
 
 <section id="services" class="sec"><div class="w">
-  <div class="sh"><h2><%= svc_title %></h2><p class="shp"><%= e sub_line %></p></div>
+  <div class="sh"><h2><%= svc_title %></h2><p class="shp"><%= tx sub_line %></p></div>
   <ul class="tbl">
 <% services.each do |title, desc, _| -%>
-    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
+    <li><h3><%= tx title %></h3><p><%= tx desc %></p></li>
 <% end -%>
   </ul>
   <%= menu.empty? ? svc_note : '' %>
@@ -53,7 +53,7 @@
 </div></section>
 
 <section id="about" class="sec about"><div class="w">
-  <div class="ab-g"><h2><%= e about_h %></h2><div><p class="ab-p"><%= e s['about'] %></p><%= about_link %></div></div>
+  <div class="ab-g"><h2><%= tx about_h %></h2><div><p class="ab-p"><%= tx s['about'] %></p><%= about_link %></div></div>
 <% figs = [ph(1, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw'), ph(2, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw'), (draft? ? yours : ph(3, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw'))].reject(&:empty?) -%>
 <% unless figs.empty? -%>
   <div class="figs k<%= figs.size %>">

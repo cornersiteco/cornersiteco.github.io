@@ -5,15 +5,15 @@
 <main id="top">
 <section class="stage<%= np > 0 ? '' : ' solo' %>"><div class="w">
   <div class="board">
-    <p class="est"><%= area_line.map { |x| e x }.join(' &middot; ') %></p>
+    <p class="est"><%= area_html(' <i aria-hidden="true">&middot;</i> ', 29) %></p>
     <h1 class="name"><%= name_h %></h1>
-    <p class="lede"><%= e lede %></p>
+    <p class="lede"><%= tx lede %></p>
     <div class="orn" aria-hidden="true"></div>
     <div id="services">
       <h2 class="bh"><%= svc_title %></h2>
       <ul class="items">
 <% services.each do |title, desc, _| -%>
-        <li><h3><%= e title %></h3><p><%= e desc %></p></li>
+        <li><h3><%= tx title %></h3><p><%= tx desc %></p></li>
 <% end -%>
       </ul>
       <%= menu_html %>
@@ -35,8 +35,8 @@
 
 <section id="about" class="sec about"><div class="w">
   <div class="card">
-    <h2><%= e about_h %></h2>
-    <p><%= e s['about'] %></p>
+    <h2><%= tx about_h %></h2>
+    <p><%= tx s['about'] %></p>
     <%= about_link %>
   </div>
 </div></section>

@@ -1,5 +1,5 @@
 <header class="mast"><div class="w">
-  <p class="mast-top"><span><%= e trade %></span><i aria-hidden="true"> &middot; </i><span class="r"><%= e [area, extra].reject { |x| blank?(x) }.join(' · ') %></span></p>
+  <p class="mast-top"><span><%= tx trade %></span><i aria-hidden="true"> &middot; </i><span class="r"><%= tx [area, extra].reject { |x| blank?(x) }.join(' · ') %></span></p>
   <h1 class="plate"><%= name_h %></h1>
   <nav aria-label="Main"><a href="#services"><%= food? ? 'Menu' : 'Services' %></a><a href="#about">Story</a><a href="#visit">Visit</a><span class="nav-now"><%= now %></span></nav>
 </div></header>
@@ -9,8 +9,8 @@
 <% end -%>
 <section class="lead<%= ph?(0) ? '' : ' no-cover' %>"><div class="w">
   <div class="lead-h">
-    <p class="hl"><%= e lede %></p>
-    <p class="deck"><%= e sub_line %></p>
+    <p class="hl"><%= tx lede %></p>
+    <p class="deck"><%= tx sub_line %></p>
     <div class="acts"><%= action_btns %></div>
   </div>
   <aside class="glance" aria-label="At a glance">
@@ -26,7 +26,7 @@
       <div><dt>Hours</dt><dd><%= week ? now + %( <a class="tl sm" href="#visit">All hours</a>) : (hours_note? ? hours_note_html : e(s['hours'])) %></dd></div>
 <% end -%>
 <% if tel? -%>
-      <div><dt>Phone</dt><dd><a class="plain" href="tel:<%= e s['tel'] %>"><%= e s['phone'] %></a></dd></div>
+      <div><dt>Phone</dt><dd><a class="plain" href="tel:<%= e s['tel'] %>"><%= tx s['phone'] %></a></dd></div>
 <% end -%>
     </dl>
   </aside>
@@ -36,7 +36,7 @@
   <h2 class="rule-h"><span><%= svc_title %></span></h2>
   <ul class="cols">
 <% services.each do |title, desc, _| -%>
-    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
+    <li><h3><%= tx title %></h3><p><%= tx desc %></p></li>
 <% end -%>
   </ul>
   <%= menu.empty? ? svc_note : '' %>
@@ -49,8 +49,8 @@
 <section id="about" class="story<%= ph?(1) ? '' : ' solo' %>"><div class="w">
   <div class="story-g">
     <div class="story-t">
-      <h2><%= e about_h %></h2>
-      <p class="drop"><%= e s['about'] %></p>
+      <h2><%= tx about_h %></h2>
+      <p class="drop"><%= tx s['about'] %></p>
       <%= about_link %>
     </div>
     <%= ph(1, 1200, cls: 'story-img', sizes: '(min-width:860px) 42vw, 100vw') %>
@@ -67,7 +67,7 @@
 <% end -%>
 
 <section id="visit" class="sec visit"><div class="w">
-  <h2 class="visit-h">Visit<% if addr? && street =~ /\d/ %> <span><%= e street %></span><% end %></h2>
+  <h2 class="visit-h">Visit<% if addr? && street =~ /\d/ %> <span><%= tx street %></span><% end %></h2>
   <div class="v-g">
     <div class="v-a"><%= contact_dl %><div class="acts"><%= action_btns(max: 2) %></div></div>
 <% if hours_table? -%>

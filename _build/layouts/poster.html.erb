@@ -1,12 +1,12 @@
 <header class="bar"><div class="w">
-  <span class="bar-l"><span><%= e trade %></span><% unless blank?(area) %><i aria-hidden="true"> &middot; </i><span><%= e area %></span><% end %></span>
+  <span class="bar-l"><span><%= tx trade %></span><% unless blank?(area) %><i aria-hidden="true"> &middot; </i><span><%= tx area %></span><% end %></span>
   <nav aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
 </div></header>
 <main id="top">
 <section class="poster"><div class="w">
-  <h1 aria-label="<%= e name %>"><span class="narrow" aria-hidden="true"><%= poster_html(name, 6.8, '') %></span><span class="wide" aria-hidden="true"><%= poster_html(name, 8.6, '') %></span></h1>
+  <h1 aria-label="<%= e name %>"><span class="narrow" aria-hidden="true"><%= poster_name(6.8) %></span><span class="wide" aria-hidden="true"><%= poster_name(8.6) %></span></h1>
   <div class="pfoot">
-    <p class="lede"><%= e lede %></p>
+    <p class="lede"><%= tx lede %></p>
     <div class="pmeta">
       <%= rating_line %>
       <%= today_line %>
@@ -28,7 +28,7 @@
   <h2><%= svc_title %></h2>
   <ul class="rows">
 <% services.each do |title, desc, _| -%>
-    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
+    <li><h3><%= tx title %></h3><p><%= tx desc %></p></li>
 <% end -%>
   </ul>
   <%= menu.empty? ? svc_note : '' %>
@@ -39,9 +39,9 @@
 </div></section>
 
 <section id="about" class="sec about"><div class="w">
-  <h2><%= e about_h %></h2>
+  <h2><%= tx about_h %></h2>
   <div class="ab">
-    <p><%= e s['about'] %></p>
+    <p><%= tx s['about'] %></p>
     <%= about_link %>
   </div>
 <% abp = [ph(3, 1000, sizes: '(min-width:860px) 40vw, 100vw'), yours].reject(&:empty?) -%>
@@ -53,7 +53,7 @@
 <section id="visit" class="visit"><div class="w">
   <h2>Visit</h2>
 <% if addr? && street =~ /\d/ -%>
-  <a class="where" href="<%= maps %>" target="_blank" rel="noopener"><%= e street %><% unless blank?(city) %><span><%= e city %></span><% end %></a>
+  <a class="where" href="<%= maps %>" target="_blank" rel="noopener"><%= tx street %><% unless blank?(city) %><span><%= tx city %></span><% end %></a>
 <% end -%>
   <div class="v-g">
     <div><%= contact_dl %><div class="acts"><%= action_btns(max: 2) %></div></div>

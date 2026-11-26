@@ -4,11 +4,11 @@
 </div></header>
 <main id="top">
 <section class="hero"><div class="w">
-  <p class="trade"><%= area_line.map { |x| e x }.join(' <i aria-hidden="true">&middot;</i> ') %></p>
+  <p class="trade"><%= area_html(' <i aria-hidden="true">&middot;</i> ', 32) %></p>
   <h1 class="name"><%= name_h %></h1>
   <div class="trio<%= ph?(0) ? '' : ' no-arch' %>">
     <div class="say">
-      <p class="lede"><%= e lede %></p>
+      <p class="lede"><%= tx lede %></p>
       <%= rating_line %>
     </div>
     <%= ph(0, 900, cls: 'arch', sizes: '(min-width:860px) 34vw, 78vw', lazy: false) %>
@@ -25,10 +25,10 @@
 </div></section>
 
 <section id="services" class="sec"><div class="w">
-  <div class="sh"><h2><%= svc_title %></h2><p><%= e sub_line %></p></div>
+  <div class="sh"><h2><%= svc_title %></h2><p><%= tx sub_line %></p></div>
   <ul class="list">
 <% services.each do |title, desc, _| -%>
-    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
+    <li><h3><%= tx title %></h3><p><%= tx desc %></p></li>
 <% end -%>
   </ul>
   <%= menu.empty? ? svc_note : '' %>
@@ -41,8 +41,8 @@
 <section id="about" class="sec about<%= ph?(1) ? '' : ' solo' %>"><div class="w">
   <%= ph(1, 1200, cls: 'ab-img', sizes: '(min-width:860px) 52vw, 100vw') %>
   <div class="ab-txt">
-    <h2><%= e about_h %></h2>
-    <p><%= e s['about'] %></p>
+    <h2><%= tx about_h %></h2>
+    <p><%= tx s['about'] %></p>
     <%= about_link %>
   </div>
 </div></section>
@@ -68,7 +68,7 @@
 </div></section>
 <% if contact? -%>
 <section class="close"><div class="w">
-  <p><%= e s['cta_label'] %></p>
+  <p><%= tx s['cta_label'] %></p>
   <a class="<%= email_mode? ? 'em' : '' %>" href="<%= e primary_href %>"><%= e(email_mode? ? s['email'].to_s.downcase : s['phone']) %></a>
 </div></section>
 <% end -%>

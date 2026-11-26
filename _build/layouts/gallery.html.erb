@@ -1,5 +1,5 @@
 <header class="gtop"><div class="w">
-  <a class="brand" href="#top"><%= e name %></a>
+  <a class="brand" href="#top"><%= tx name %></a>
   <nav aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
   <span class="r"><%= now %></span>
 </div></header>
@@ -9,11 +9,11 @@
 <%= draft? ? '' : wall %>
 <section class="intro"><div class="w">
   <div class="in-a">
-    <p class="trade"><%= area_line.map { |x| e x }.join(' · ') %></p>
+    <p class="trade"><%= area_html(' <i aria-hidden="true">·</i> ', 46) %></p>
     <h1 class="name"><%= name_h %></h1>
   </div>
   <div class="in-b">
-    <p class="lede"><%= e lede %></p>
+    <p class="lede"><%= tx lede %></p>
     <div class="in-m"><%= rating_line %><%= week ? now('in-now') : (hours_note? ? hours_note_html : '') %></div>
     <div class="acts"><%= action_btns %></div>
   </div>
@@ -24,7 +24,7 @@
   <h2><%= svc_title %></h2>
   <ul class="grid g<%= services.size %>">
 <% services.each do |title, desc, _| -%>
-    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
+    <li><h3><%= tx title %></h3><p><%= tx desc %></p></li>
 <% end -%>
   </ul>
   <%= menu.empty? ? svc_note : '' %>
@@ -39,8 +39,8 @@
   <a class="score" href="<%= maps %>" target="_blank" rel="noopener"><span class="big"><%= e s['rating'] %></span><span><span class="stars" aria-hidden="true"><%= stars(s['rating']) %></span><br><%= e s['reviews'] %> Google reviews</span></a>
 <% end -%>
   <div class="ab">
-    <h2><%= e about_h %></h2>
-    <p><%= e s['about'] %></p>
+    <h2><%= tx about_h %></h2>
+    <p><%= tx s['about'] %></p>
     <%= about_link %>
   </div>
 </div></section>
