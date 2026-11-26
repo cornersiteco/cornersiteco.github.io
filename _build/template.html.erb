@@ -26,14 +26,17 @@
 <script type="application/ld+json"><%= local_business_ld(s) %></script>
 <% end -%>
 </head>
-<body class="A-<%= c.art %> P-<%= c.pal_name %> V<%= c.v %><%= t['dark'] ? ' is-dark' : '' %>"<% if c.week %> data-week="<%= e c.week_json %>" data-tz="<%= c.tz %>"<% end %>>
+<body class="A-<%= c.art %> P-<%= c.pal_name %> V<%= c.v %> <%= c.flags %><%= t['dark'] ? ' is-dark' : '' %>"<% if c.week %> data-week="<%= e c.week_json %>" data-tz="<%= c.tz %>"<% end %>>
 <% if s['final'] || s['no_banner'] -%>
 <% elsif s['sample'] -%>
-<div class="ban"><p><span class="tag">Sample</span> A <b>sample site</b> for a fictional business, made by <a href="<%= HOME %>">Corner Site Co.</a> to show the kind of site we build. Photos via Unsplash.</p></div>
+<div class="ban"><p><span class="tag">Sample</span> A <b>sample site</b> for a fictional business, made by <a href="<%= HOME %>">Corner Site Co.</a> to show the kind of site we build.<%= c.np > 0 ? ' Photos via Unsplash.' : '' %></p></div>
 <% else -%>
-<div class="ban"><p><span class="tag">Draft</span> Made for <%= e s['name'] %> by <a href="<%= HOME %>">Corner Site Co.</a> · Not their official site · Stock photos <a class="dl" href="#make-it-yours">Make it yours &darr;</a></p></div>
+<div class="ban"><p><span class="b1"><span class="tag">Draft</span> Made for <%= e s['name'] %> by <a href="<%= HOME %>">Corner Site Co.</a></span><span class="bs"> · </span><span class="b2">Not their official site<%= c.np > 0 ? ' · Stock photos' : '' %> <a class="dl" href="#make-it-yours">Make it yours &darr;</a></span></p></div>
 <% end -%>
 <%= body_html %>
+<% unless c.colophon.empty? -%>
+<p class="colo"><span><%= e c.colophon %></span></p>
+<% end -%>
 <% if c.draft? -%>
 <section class="offer" id="make-it-yours" aria-label="From Corner Site Co.">
   <div class="ow">
@@ -89,7 +92,7 @@
 
 <% acts = c.actions.first(2) -%>
 <% unless acts.empty? -%>
-<div class="mbar"><% acts.each_with_index do |x, i| -%><a class="<%= i == 0 ? 'mp' : 'mq' %>" href="<%= e x[:href] %>"<%= x[:ext] ? ' target="_blank" rel="noopener"' : '' %>><%= icon(x[:k], 18) %><%= e(x[:k] == 'book' ? (s['book_label'] ? s['book_label'].split.first : 'Book') : (x[:k] == 'phone' ? 'Call' : (x[:k] == 'mail' ? 'Email' : 'Directions'))) %></a><% end -%></div>
+<div class="mbar"><% acts.each_with_index do |x, i| -%><a class="<%= i == 0 ? 'mp' : 'mq' %>" href="<%= e x[:href] %>"<%= x[:ext] ? ' target="_blank" rel="noopener"' : '' %>><%= icon((x[:k] == 'book' && s['book_label'].to_s =~ /order/i) ? 'bag' : x[:k], 18) %><%= e(x[:k] == 'book' ? (s['book_label'] ? s['book_label'].split.first : 'Book') : (x[:k] == 'phone' ? 'Call' : (x[:k] == 'mail' ? 'Email' : 'Directions'))) %></a><% end -%></div>
 <% end -%>
 
 <script>
@@ -104,7 +107,10 @@ else if(t!==null){s='Closed now';for(i=1;i<8;i++){n=w[(d+i)%7];if(n===null)break
 if(s)document.querySelectorAll('[data-now]').forEach(function(el){el.textContent=s;el.classList.add(o?'is-open':'is-shut');el.hidden=false});
 document.querySelectorAll('tr[data-d="'+d+'"]').forEach(function(r){r.classList.add('today')})}}catch(e){}
 document.querySelectorAll('.copy').forEach(function(c){c.addEventListener('click',function(){var v=c.dataset.copy,l=c.textContent;function ok(){c.textContent='Copied';setTimeout(function(){c.textContent=l},1800)}
-if(navigator.clipboard)navigator.clipboard.writeText(v).then(ok,function(){});})});})();
+if(navigator.clipboard)navigator.clipboard.writeText(v).then(ok,function(){});})});
+/* the phone bar steps aside while the page's own buttons are on screen, so the same action is never shown twice */
+var mb=document.querySelector('.mbar'),ha=document.querySelector('main .acts');
+if(mb&&ha&&'IntersectionObserver' in window){new IntersectionObserver(function(en){mb.classList.toggle('is-away',en[0].isIntersecting)},{threshold:.6}).observe(ha)}})();
 </script>
 <% unless s['final'] -%>
 <script data-goatcounter="https://cornersiteco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>

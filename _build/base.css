@@ -19,6 +19,8 @@ button{font:inherit;color:inherit}
 .ban a{color:inherit;text-underline-offset:3px}
 .ban b{font-weight:600}
 .ban .dl{margin-left:8px;font-weight:600;white-space:nowrap}
+.ban .b1,.ban .b2{text-wrap:balance}
+@media (max-width:699px){.ban p{padding:8px 20px 9px;text-align:left}.ban .b1,.ban .b2{display:block}.ban .bs{display:none}.ban .b2{opacity:.82}.ban .dl{opacity:1;margin-left:6px}}
 
 /* actions: one solid, the rest quiet. Shape comes from --r per art direction */
 .acts{display:flex;flex-wrap:wrap;gap:10px}
@@ -26,6 +28,9 @@ button{font:inherit;color:inherit}
 .act-p{background:var(--ink);color:var(--bg)}
 .act-p:hover{background:var(--accent);border-color:var(--accent);color:var(--on)}
 .act-q:hover{background:var(--ink);color:var(--bg)}
+/* phones: one full-width main button, the quiet ones share a row under it */
+@media (max-width:859px){main .acts{flex-direction:row!important;flex-wrap:wrap}main .acts .act-p{flex:1 1 100%}main .acts .act-q{flex:1 1 0;min-width:0;padding:0 10px;font-size:15px;white-space:nowrap}}
+@media (max-width:420px){main .acts .act-q~.act-q .num,main .acts .act-q:has(~.act-q) .num{display:none}}
 .tl{color:inherit;font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-color:var(--accent)}
 .tl:hover{color:var(--accent)}
 
@@ -62,6 +67,8 @@ a.rate:hover span:last-child{text-decoration:underline;text-underline-offset:4px
 .cdl .sub{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;font-size:14.5px}
 .copy{appearance:none;background:none;border:0;padding:0;cursor:pointer;font-size:14.5px;font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-color:var(--line)}
 .copy:hover{color:var(--accent)}
+.cdl .hn{display:block;font-size:19px;line-height:1.35}
+a.hn{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--line)}a.hn:hover{color:var(--accent)}
 
 /* photos: every placeholder is labelled */
 .ph{position:relative;overflow:hidden;background:var(--line)}
@@ -71,6 +78,15 @@ a.rate:hover span:last-child{text-decoration:underline;text-underline-offset:4px
 .yours b{display:block;font-size:17px;color:var(--ink);margin-bottom:4px}
 .yours span{font-size:14px}
 .note{margin-top:16px;font-size:13px;color:var(--muted)}
+/* "Good to know": true details that are not services (walk-ins, cash only, the music) */
+.gtk{margin-top:28px;max-width:60ch}
+.gtk h3{font-family:var(--fb);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.gtk li{padding:5px 0;color:var(--muted);font-size:16px;line-height:1.5}
+.gtk li b{color:var(--ink);font-weight:600}
+/* colophon: the draft notes, said once, at the end */
+.colo{max-width:1240px;margin:0 auto;padding:18px 20px 22px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+.colo span{display:block;padding-top:14px;border-top:1px solid var(--line);max-width:none}
+@media (min-width:860px){.colo{padding:20px 40px 26px}}
 
 /* price list with leaders */
 .menu{display:grid;gap:40px}
@@ -102,6 +118,8 @@ a.rate:hover span:last-child{text-decoration:underline;text-underline-offset:4px
 .mbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 86%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-top:1px solid var(--line)}
 .mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:var(--r,4px);font-family:var(--fb);font-weight:600;font-size:15.5px;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink)}
 .mbar .mp{background:var(--ink);color:var(--bg)}
+.mbar{transition:transform .28s ease}.mbar.is-away{transform:translateY(110%)}
+@media (prefers-reduced-motion:reduce){.mbar{transition:none}}
 @media (min-width:860px){.mbar{display:none}}
 
 /* Corner Site Co. offer (not part of the draft): identical on every draft */
@@ -121,13 +139,16 @@ a.rate:hover span:last-child{text-decoration:underline;text-underline-offset:4px
 .offer .who img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none}
 .offer .who a{color:#1d1d1f}
 .offer .f3 p,.offer .adds p{color:inherit}
-@media (max-width:560px){.offer .ob{flex:1 1 100%}}
+@media (max-width:560px){.offer .ob{flex:1 1 100%}.offer .oe{letter-spacing:.1em}.offer .ol{font-size:17px}.offer li{grid-template-columns:28px 1fr;gap:8px}.offer .f3>p:first-child{letter-spacing:.06em!important}.offer .adds .ah{letter-spacing:.1em}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 /* grid children may shrink (long emails, long names) */
 .v-g>*,.v3>*,.cdl>*,.cdl dd{min-width:0}
 h1,h2,h3{overflow-wrap:break-word}
 @media (max-width:360px){.hrs td{white-space:normal}.hrs th{padding-right:6px}}
-/* menu/services CTA: opens the business's own ordering or booking page (menu and prices live there) */
+/* menu/services CTA: opens the business's own ordering or booking page. Drawn by each art direction. */
 .menu-cta{margin:28px 0 0}
-.menu-cta a{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border:1.5px solid currentColor;border-radius:4px;font-weight:600;font-size:16px;text-decoration:none;color:inherit}
-.menu-cta a:hover{opacity:.75}
+.menu-cta a{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.menu-cta i{display:inline-flex;font-style:normal;transition:transform .18s}
+.menu-cta a:hover i{transform:translateX(5px)}
+/* visit grid without a timetable */
+@media (min-width:860px){.no-hrs .v-g,.no-hrs .v3{grid-template-columns:1fr 1.5fr!important}}

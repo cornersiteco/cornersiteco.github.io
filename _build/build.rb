@@ -33,7 +33,8 @@ ICONS = {
   'clock'=>'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
   'mail'=>'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
   'arrow'=>'<path d="M5 12h14M13 6l6 6-6 6"/>',
-  'book'=>'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>'
+  'book'=>'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/>',
+  'bag'=>'<path d="M6 8h12l1 12H5L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'
 }
 def icon(n, s = 18)
   %(<svg width="#{s}" height="#{s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">#{ICONS[n] || ICONS['arrow']}</svg>)
@@ -72,7 +73,7 @@ NICHE_ART = [
   [/nail|lash|brow|tattoo|piercing|detailing|makeup|jewell/i, 'gallery'],
   [/barber/i, 'poster'],
   [/caf[eé]|coffee|bakery|bake|patisserie|grocery|butcher|deli|ice cream|donut|tea\b/i, 'menu'],
-  [/restaurant|kitchen|pub\b|bar\b|grill|pizza|taco|cuisine|diner|bistro|eatery|sushi|shawarma|food/i, 'gazette'],
+  [/restaurant|kitchen|pub\b|(?<!beauty )(?<!brow )(?<!lash )(?<!nail )(?<!blow-dry )bar\b|grill|pizza|taco|cuisine|diner|bistro|eatery|sushi|shawarma|food/i, 'gazette'],
   [/auto|mechanic|tire|electric|plumb|hvac|roof|contract|garage|repair|landscap|pawn|gold buying/i, 'spec'],
   [/hair|salon|spa|beauty|wax|esthet|skin|groom|clinic|law|tailor|veterin|wellness|thrift/i, 'atelier']
 ]
@@ -81,10 +82,29 @@ def art_for(s)
   return s['art'] if ARTS.key?(s['art'])
   return s['layout'] if ARTS.key?(s['layout'])
   k = s['kicker'].to_s.split(' · ').first.to_s
+  return 'atelier' if k =~ /beauty (bar|lounge)/i
   NICHE_ART.each { |re, a| return a if k =~ re }
   THEME_ART[s['theme']] || 'atelier'
 end
 def seed(s, salt = '') Zlib.crc32(s['slug'].to_s + salt) end
+
+# ---------- QA10: honest placeholders ----------
+# A placeholder photo may show the craft or the product in close-up. It may never show another business:
+# no storefronts, signs, readable branding or staff faces (PHOTO_NEVER), and on real drafts no other shop's
+# interior either (PHOTO_INTERIOR; fine on fictional samples). A page with fewer photos is better than a page
+# with a wrong one: every layout works with 0 to 4 photos and never repeats one.
+PHOTO_NEVER = %w[1631720040176-0d789a643a78 1759662232622-6c0754a379f4 1517701986616-711a9d625afe 1777904257871-13b96905467e 1761839256791-6a93f89fb8b0 1770836037793-95bdbf190f71 1621905251189-08b45d6a269e 1621905251918-48416bd8575a 1758225490983-0fae7961e425 1584873069262-427e437b8eb4 1767491654834-13bf58ed9522 1784807739590-ddb4704d30dc 1758518731462-d091b0b4ed0d 1774072411106-81c586a56e9b 1777714219991-36d4ff2fe541 1583665354191-634609954d54 1771308354374-3d9ad8970483 1760877611905-0f885a3ce551]
+PHOTO_INTERIOR = %w[1585747860715-2ba37e788b70 1560066984-138dadb4c035 1600948836101-f9ffda59d250 1695527081848-1e46c06e6458 1764448726322-2abd2bdd6c68 1469631423273-6995642a6a40 1542181961-9590d0c79dab 1521590832167-7bcbfaa6381f 1552960226-639240203497 1497366754035-f200968a6e72 1505664063603-28e48ca204eb 1771154767182-d91ed5106636]
+# hair-wash basins and salon chairs only belong on hair pages (they were showing up on nail and lash pages)
+PHOTO_HAIR_ONLY = %w[1787651344170-c2f81514934d 1634449571010-02389ed0f9b0]
+HAIR_TRADE = ->(t) { t =~ /hair|barber/i || (t =~ /salon|beauty/i && t !~ /nail|lash|brow|wax/i) }
+
+# "Services" that are not services. ACTION ones repeat a button that is already on the page and are dropped;
+# ASIDE ones are true, useful details ("Walk-ins welcome", "Cash only") and go in a short "Good to know" list.
+SVC_ACTION = /\A(order online|book online|book ahead|online booking|easy booking|call to book|follow along|order|book)( now)?\z/i
+SVC_ASIDE = /\A(a (calm|clean|cozy|cute|friendly|warm|welcoming) .+|ask about anything else|call ahead|order ahead|walk in or call ahead|out of town\?|caring stylists|cash only|chill vibes|clean (& cozy|studio)|clean, careful work|cozy home studio|easy visit|family atmosphere|flexible times|for the whole family|friendly team|good company|good value|hijab-friendly|kids welcome|kind, talented staff|last-minute.*|local|long-lasting (nails|results)|lashes that last|nail experts|natural products|open (7 days|late)|patient care|quiet & clean|relaxing atmosphere|right on .+|same-day appointments|something for everyone|steelton local|walk-ins( welcome| & bookings)?|your music)\z/i
+RATING_H = /\A(\d[\d,]* (google )?reviews\b.*|\d\.\d stars from .+|rated \d\.\d .+|a perfect 5\.0.*)\z/i
+FOOD_RE = /restaurant|kitchen|pub\b|(?<!beauty )(?<!brow )(?<!lash )(?<!nail )bar\b|grill|pizza|taco|cuisine|diner|bistro|caf|coffee|bakery|food|grocery|butcher|shawarma/i
 
 # ---------- hours: parse "Mon–Fri 9 am – 6 pm · Sat 9–2 · Closed Sun" into a week, or nil ----------
 DAYS = %w[Mon Tue Wed Thu Fri Sat Sun]
@@ -197,7 +217,9 @@ class Ctx
   def sample?; !!s['sample'] end
   def draft?; !final? && !sample? end
   def name; s['name'] end
+  def name_h; e(name).gsub('-', '&#8209;') end   # "Sari-Sari" never breaks at its hyphen
   def kparts; s['kicker'].to_s.split(' · ').map(&:strip).reject { |x| x =~ /\Asample site\z/i } end
+  def extra; kparts[2] end
   def trade; kparts.first.to_s end
   def area; kparts[1] || city end
   def aparts; s['address'].to_s.split(',').map(&:strip).reject(&:empty?) end
@@ -218,7 +240,19 @@ class Ctx
   def contact?; tel? || email? end
   def alt; final? ? s['name'] : (sample? ? 'Sample photo' : "Placeholder photo for #{s['name']}") end
   def photo_label; final? ? nil : (sample? ? 'Sample photo' : 'Placeholder photo') end
-  def photos; Array(s['photos']) end
+  def photos
+    @photos ||= begin
+      ids = Array(s['photos']).map(&:to_s).uniq
+      unless final?
+        ids -= PHOTO_NEVER
+        ids -= PHOTO_INTERIOR unless sample?
+        ids -= PHOTO_HAIR_ONLY unless HAIR_TRADE.(trade)
+      end
+      ids
+    end
+  end
+  def np; photos.size end
+  def ph?(i) i < np end
   def menu; Array(s['menu']) end
   def founding; FOUNDING > 0 && !!(s['address'].to_s =~ OTTAWA_RE) end
   def tz; TZ[s['address'].to_s[/\b(ON|QC|BC|AB|MB|SK|NS|NB|NL|PE)\b/]] || 'America/Toronto' end
@@ -241,7 +275,7 @@ class Ctx
   end
   def action_btns(icons: false, max: 3)
     actions.first(max).each_with_index.map { |x, i|
-      %(<a class="act #{i == 0 ? 'act-p' : 'act-q'}" href="#{e x[:href]}"#{x[:ext] ? ' target="_blank" rel="noopener"' : ''}>#{icons ? icon(x[:k]) : ''}<span>#{e x[:label]}</span></a>)
+      %(<a class="act #{i == 0 ? 'act-p' : 'act-q'}" href="#{e x[:href]}"#{x[:ext] ? ' target="_blank" rel="noopener"' : ''}>#{icons ? icon(x[:k] == 'book' && x[:label] =~ /order/i ? 'bag' : x[:k]) : ''}<span>#{x[:k] == 'phone' && x[:label].to_s.start_with?('Call ') && tel? && x[:label].to_s.end_with?(s['phone'].to_s) ? %(Call <span class="num">#{e s['phone']}</span>) : e(x[:label])}</span></a>)
     }.join
   end
   def primary_link(cls = 'tl')
@@ -250,10 +284,23 @@ class Ctx
   end
   # live "Open now · closes 7 pm" (filled by the small script; nothing when hours are not machine-readable)
   def now(cls = '') week ? %(<span class="now #{cls}" data-now hidden></span>) : '' end
+  # hours that are a sentence ("Call for today's hours", "By appointment"), not a timetable: shown as one line, never as a table
+  def hours_note?
+    return false if week || blank?(s['hours'])
+    segs = s['hours'].split(/\s*·\s*/)
+    !(segs.all? { |x| x =~ /\A(mon|tue|wed|thu|fri|sat|sun|closed|emergenc|weekday|weekend|daily)/i } && segs.any? { |x| x =~ /\d/ })
+  end
+  def hours_table?; !blank?(s['hours']) && !hours_note? end
+  def hours_note_html
+    t = e(s['hours'])
+    t =~ /google/i && addr? ? %(<a class="hn" href="#{maps}" target="_blank" rel="noopener">#{t}</a>) : %(<span class="hn">#{t}</span>)
+  end
   def hours_html
+    return '' if hours_note?
     if week
       rows = week.each_with_index.map { |d, i|
-        v = d.is_a?(Array) ? "#{fmt_t(d[0])} – #{fmt_t(d[1])}" : (d == :closed ? 'Closed' : '—')
+        next '' if d.nil?   # a day the listing does not mention is left out, not guessed
+        v = d.is_a?(Array) ? "#{fmt_t(d[0])} – #{fmt_t(d[1])}" : 'Closed'
         %(<tr data-d="#{i}"><th scope="row">#{DAY_FULL[i]}</th><td>#{v}</td></tr>)
       }.join
       %(<table class="hrs"><caption class="vh">Opening hours</caption>#{rows}</table>)
@@ -278,11 +325,13 @@ class Ctx
   def addr_html
     return '' unless addr?
     rest = aparts[1..-1].join(', ')
+    return %(<a class="addr" href="#{maps}" target="_blank" rel="noopener"><span>#{e s['address']}</span></a>) unless street =~ /\d/   # no street number: keep it on one line
     %(<a class="addr" href="#{maps}" target="_blank" rel="noopener"><span>#{e street}</span>#{rest.empty? ? '' : " <span>#{e rest}</span>"}</a>)
   end
   # photo figure with the honest label
   def ph(i, w, cls: '', sizes: '100vw', lazy: true, label: true, n: nil)
-    id = photos[i % [photos.size, 1].max].to_s
+    return '' unless ph?(i)
+    id = photos[i].to_s
     ss = srcset(id, [480, 800, 1200, 1800].select { |x| x <= [w * 1.5, 1800].min })
     cap = [n, (label ? photo_label : nil)].compact.join(' · ')
     %(<figure class="ph #{cls}"><img src="#{img(id, w)}"#{ss ? %( srcset="#{ss}" sizes="#{sizes}") : ''} alt="#{e alt}"#{lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async">#{cap.empty? ? '' : "<figcaption>#{e cap}</figcaption>"}</figure>)
@@ -293,13 +342,48 @@ class Ctx
   def photo_note
     final? ? s['photo_credit'].to_s : (sample? ? 'Photos via Unsplash.' : 'Placeholder photos via Unsplash. Your own photos go here.')
   end
+  # one quiet colophon line at the end of the page instead of notes scattered under every section
+  def colophon
+    if final? then s['photo_credit'].to_s
+    elsif sample? then np > 0 ? 'Photos via Unsplash.' : ''
+    else "Draft notes: service list to confirm with the owner. " + (np > 0 ? 'Placeholder photos via Unsplash; your own photos go here.' : 'No photos yet; your own photos go here.')
+    end
+  end
   def menu_cta
     return %q() unless book
     lbl = food? ? %q(See the full menu & prices) : %q(See all services & prices)
-    %(<p class="menu-cta"><a href="#{e book}" target="_blank" rel="noopener">#{lbl} <span aria-hidden="true">&rarr;</span></a></p>)
+    %(<p class="menu-cta"><a href="#{e book}"#{book.start_with?('#') ? '' : ' target="_blank" rel="noopener"'}><span>#{lbl}</span><i aria-hidden="true">#{icon('arrow', 20)}</i></a></p>)
   end
-  def svc_note; menu_cta + (draft? ? %q(<p class="note">Service list to confirm with the owner.</p>) : %q()) end
-  def services; Array(s['services']).reject { |t, *_| t.to_s.strip =~ /\A(order|book)( online| now)?\z/i } end
+  def svc_note; asides_html + menu_cta end
+  def all_services; Array(s['services']).reject { |t, *_| t.to_s.strip =~ SVC_ACTION } end
+  def services; all_services.reject { |t, *_| t.to_s.strip =~ SVC_ASIDE } end
+  def asides; all_services.select { |t, *_| t.to_s.strip =~ SVC_ASIDE } end
+  def asides_html
+    return '' if asides.empty?
+    items = asides.map { |t, d, _| tt = t.to_s.strip; %(<li><b>#{e tt}#{tt =~ /[.?!]\z/ ? '' : '.'}</b> #{e d}</li>) }.join
+    %(<div class="gtk"><h3>Good to know</h3><ul>#{items}</ul></div>)
+  end
+  # the About heading: 130 of 149 drafts had a rating formula here ("4.8 stars from 120 customers."), on top of the
+  # rating in the hero and again in the paragraph. Say the number once; give the section a plain human heading.
+  def about_h
+    h = s['about_h'].to_s
+    return h unless h =~ RATING_H
+    if s['about'].to_s =~ /review|mention|describe|customers say|clients say/i
+      ['Word gets around.', 'What the reviews say.'][seed(s, 'ah') % 2]
+    else
+      "About #{name}"
+    end
+  end
+  # the sub line without a second copy of the rating (the hero already shows it once, with the stars)
+  def sub_line
+    t = s['sub'].to_s
+    return t unless rating?
+    t = t.gsub(/,?\s+rated (a perfect )?\d\.\d on Google( by [\d,]+ \w+)?(,(?= and ))?(?=[.,]| and )/, '')
+    t = t.gsub(/(?<=[.!?])\s+Rated (a perfect )?\d\.\d on Google( by [\d,]+ \w+)?\.(?=\s|\z)/, '')
+    t = t.sub(/\ARated (a perfect )?\d\.\d on Google( by [\d,]+ \w+)?\.\s+/, '')
+    t = t.strip
+    t.empty? ? s['sub'].to_s : t
+  end
   # optional price list: "menu": [{"title":..,"items":[[name, detail, price],..]}]
   def menu_html
     return '' if menu.empty?
@@ -322,7 +406,8 @@ class Ctx
     r = []
     r << ['Address', addr_html + %(<span class="sub"><a class="tl" href="#{dir}" target="_blank" rel="noopener">Directions</a>#{copy_addr}</span>)] if addr?
     r << ['Phone', %(<a class="big" href="tel:#{e s['tel']}">#{e s['phone']}</a>)] if tel?
-    r << ['Email', %(<a class="big em" href="mailto:#{e s['email']}">#{e s['email']}</a>)] if email?
+    r << ['Email', %(<a class="big em" href="mailto:#{e s['email']}">#{e s['email'].to_s.downcase}</a>)] if email?
+    r << ['Hours', hours_note_html] if hours_note?
     r << ['Instagram', %(<a class="big" href="https://www.instagram.com/#{e s['instagram']}/" target="_blank" rel="noopener">@#{e s['instagram']}</a>)] unless blank?(s['instagram'])
     r
   end
@@ -335,10 +420,15 @@ class Ctx
     else primary_link end
   end
   def lede; s['h1'].to_s end
-  def food?; trade =~ /restaurant|kitchen|pub|bar\b|grill|pizza|taco|cuisine|diner|bistro|caf|coffee|bakery|food|grocery|butcher/i end
-  def svc_title; menu.empty? && food? ? 'On the menu' : (food? ? 'What we serve' : 'Services') end
-  def area_line; [trade, area].reject { |x| blank?(x) } end
+  def food?; trade =~ FOOD_RE end
+  def svc_title
+    return 'In store' if trade =~ /grocery|butcher|market|variety|thrift|clothing|jewell/i
+    menu.empty? && food? ? 'On the menu' : (food? ? 'What we serve' : 'Services')
+  end
+  def area_line; [trade, area, extra].reject { |x| blank?(x) } end
   def today_line; week ? now : (blank?(s['hours']) ? '' : %(<span class="hrs-s">#{e s['hours']}</span>)) end
+  # body classes the layouts style against: how many photos, whether there is a timetable
+  def flags; "np#{np}#{hours_table? ? '' : ' no-hrs'}#{draft? ? ' is-draft' : ''}#{services.size.odd? ? ' svc-odd' : ''}" end
   def name_n; [name.split(/\s+/).map(&:size).max, (name.size / 2.0).ceil].max end
   def font_url
     "https://fonts.googleapis.com/css2?#{@a['fonts'].map { |f| 'family=' + f.gsub(' ', '+') }.join('&')}&display=swap"
