@@ -530,7 +530,7 @@
 .bc-v,.bc-v.sm{height:172px}
 .chips{gap:8px}
 .chips li{flex:none;scroll-snap-align:start}
-    table.cmp tbody{display:flex;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1 * var(--pad));padding:4px var(--pad) 22px;scroll-padding:0 var(--pad)}
+    table.cmp tbody{display:flex;align-items:flex-start;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1 * var(--pad));padding:4px var(--pad) 22px;scroll-padding:0 var(--pad)}
     table.cmp tbody::-webkit-scrollbar{display:none}
     table.cmp tbody tr,table.cmp tbody tr:first-child{flex:0 0 84%;scroll-snap-align:start;background:#fff;border:0;border-radius:20px;box-shadow:var(--sh1);padding:22px 20px 10px}
   }
@@ -857,21 +857,24 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
 </div></section>
 
 <section id="compare" class="bg-white"><div class="w sec" style="padding-top:0">
-  <div class="hd rv"><span class="kick">Compare</span><h2>Three ways to get a website. <span>Here's how they differ.</span></h2><p class="sub">How a done-for-you, see-it-first site compares with building it yourself or hiring a typical agency.</p></div>
+  <div class="hd rv"><span class="kick">Compare</span><h2>Three ways to get a website. <span>Only one does the work for you.</span></h2><p class="sub">Building it yourself looks cheap until you count the evenings and the monthly fees. An agency costs thousands before you see a thing. We build it first, and you pay only once you love it.</p></div>
   <div class="cmp-wrap rv">
     <table class="cmp">
       <colgroup><col class="c0"><col class="c1"><col><col></colgroup>
-      <thead><tr><th scope="col"><span class="hp">Feature</span></th><th scope="col" class="us">Corner Site Co.</th><th scope="col">Do-it-yourself builder</th><th scope="col">Typical agency</th></tr></thead>
+      <thead><tr><th scope="col"><span class="hp">Feature</span></th><th scope="col" class="us">Corner Site Co.</th><th scope="col">Build it yourself</th><th scope="col">Typical agency</th></tr></thead>
       <tbody>
-        <tr><th scope="row">See it before you pay</th><td class="us" data-l="Corner Site Co.">Yes, free homepage draft</td><td data-l="Do-it-yourself builder">Yes, but you built it</td><td data-l="Typical agency">Rarely: a deposit usually comes first</td></tr>
-        <tr><th scope="row">What you pay</th><td class="us" data-l="Corner Site Co.">$990 once, or $129/month with $0 upfront<small>plus your web address (about $20/year)</small></td><td data-l="Do-it-yourself builder">Low monthly subscription</td><td data-l="Typical agency">Often $3,000 to $7,000+</td></tr>
-        <tr><th scope="row">Time to go live</th><td class="us" data-l="Corner Site Co.">Usually 3 business days after you approve</td><td data-l="Do-it-yourself builder">Depends on your evenings</td><td data-l="Typical agency">Often several weeks</td></tr>
-        <tr><th scope="row">Changes later</th><td class="us" data-l="Corner Site Co.">Monthly: unlimited. One-time: $49 each</td><td data-l="Do-it-yourself builder">You make them</td><td data-l="Typical agency">Usually billed by the hour</td></tr>
-        <tr><th scope="row">Who owns it</th><td class="us" data-l="Corner Site Co.">You: domain always; site once paid</td><td data-l="Do-it-yourself builder">Tied to the platform</td><td data-l="Typical agency">Varies by contract</td></tr>
+        <tr><th scope="row">Who does the work</th><td class="us" data-l="Corner Site Co.">We do. We write it, design it and set it up.</td><td data-l="Build it yourself">You do: the writing, photos, layout and setup.</td><td data-l="Typical agency">They do, after a deposit.</td></tr>
+        <tr><th scope="row">Your time</th><td class="us" data-l="Corner Site Co.">Under an hour, mostly replying to our emails.</td><td data-l="Build it yourself">Evenings and weekends, until it's finished.</td><td data-l="Typical agency">Meetings, briefs and back-and-forth.</td></tr>
+        <tr><th scope="row">Cost over 3 years</th><td class="us" data-l="Corner Site Co.">$990 once. Hosting included, nothing monthly.<small>Or $129/month with $0 upfront. Plus your web address (about $20/year).</small></td><td data-l="Build it yourself">$756 to $1,152 in plan fees, and they never stop.<small>Typical builder plans: $21 to $32 a month, billed yearly.</small></td><td data-l="Typical agency">Often $3,000 to $7,000+ to build, plus a monthly care plan.</td></tr>
+        <tr><th scope="row">See it before you pay</th><td class="us" data-l="Corner Site Co.">Yes. Your homepage draft is free.</td><td data-l="Build it yourself">Only after you've built it yourself.</td><td data-l="Typical agency">Rarely: a deposit usually comes first.</td></tr>
+        <tr><th scope="row">Getting found on Google</th><td class="us" data-l="Corner Site Co.">Search Console, Bing and your Google Business Profile, set up for you.</td><td data-l="Build it yourself">The settings are there. Finding and filling them in is up to you.</td><td data-l="Typical agency">Often an add-on.</td></tr>
+        <tr><th scope="row">Live in</th><td class="us" data-l="Corner Site Co.">Usually 3 business days after you approve.</td><td data-l="Build it yourself">Whenever you finish.</td><td data-l="Typical agency">Often several weeks.</td></tr>
+        <tr><th scope="row">Changes later</th><td class="us" data-l="Corner Site Co.">Monthly plan: unlimited. Pay once: $49 each.</td><td data-l="Build it yourself">You make them.</td><td data-l="Typical agency">Usually billed by the hour.</td></tr>
+        <tr><th scope="row">Who owns it</th><td class="us" data-l="Corner Site Co.">You: the domain always, the site once it's paid.</td><td data-l="Build it yourself">Your site can't easily move off the builder.</td><td data-l="Typical agency">Varies by contract.</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note">General comparison based on published pricing and terms from Canadian web design providers and website builders, November 2026. Individual providers vary.</p>
+  <p class="note">Builder figures: published Canadian prices for a leading website builder's two main plans, billed yearly, checked November 26, 2026. Agency figures: typical published prices from Canadian studios, November 2026. Individual providers vary.</p>
 </div></section>
 
 <section id="pricing" class="bg-mist"><div class="w sec">
