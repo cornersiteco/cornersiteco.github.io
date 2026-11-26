@@ -7882,6 +7882,204 @@
     ]
   },
   {
+    "slug": "ground-control-parkdale",
+    "dir": "drafts",
+    "name": "Ground Control",
+    "theme": "pub",
+    "kicker": "Live music venue & dance club · Queen St W, Parkdale",
+    "h1": "Live shows and dance nights on Queen West.",
+    "h1_proof": true,
+    "sub": "A live music venue and dance club at 1279 Queen St W in Parkdale. Check what's on this week and get tickets ahead.",
+    "phone": "(416) 516-4999",
+    "tel": "+14165164999",
+    "email": "groundcontrolconnect@gmail.com",
+    "address": "1279 Queen St W, Toronto, ON M6K 1L6",
+    "rating": "4.6",
+    "reviews": 326,
+    "cta": "call",
+    "cta_label": "Call the venue",
+    "hours": "Open on event nights. Check this week's lineup before you come.",
+    "services": [
+      [
+        "Live shows",
+        "Bands and touring acts on stage.",
+        "star"
+      ],
+      [
+        "Dance nights",
+        "Reviewers mention 80s, goth and David Bowie nights.",
+        "moon"
+      ],
+      [
+        "The bar",
+        "Friendly bar staff, say the reviews.",
+        "cup"
+      ],
+      [
+        "Tickets",
+        "Buy ahead online for ticketed shows.",
+        "clock"
+      ]
+    ],
+    "about_h": "4.6 stars from 326 people who came out.",
+    "about": "Ground Control is rated 4.6 on Google by 326 people. Reviewers mention the atmosphere and theme, a spacious dance floor, friendly bar staff, 80s and goth nights and David Bowie tributes. Find it at 1279 Queen St W in Parkdale.",
+    "photos": [
+      "1561197582-95ece0848664",
+      "1571266028243-d220c6a7edbf",
+      "1774967550635-182fb37cf31f",
+      "1514359652734-6205dd477a1e"
+    ],
+    "instagram": "groundcontroltoronto"
+  },
+  {
+    "slug": "jennys-brow-bar-newmarket",
+    "dir": "drafts",
+    "name": "Jenny's Brow Bar",
+    "theme": "salon",
+    "kicker": "Permanent makeup brows · Main St S, Newmarket",
+    "h1": "Brows you wake up to, on Main Street in Newmarket.",
+    "h1_proof": true,
+    "sub": "Ombre, combo and nano brows by a certified permanent makeup artist at 86 Main St S. Book your appointment online.",
+    "phone": "(647) 500-0585",
+    "tel": "+16475000585",
+    "email": "jenny.browbar@gmail.com",
+    "address": "86 Main St S, Newmarket, ON L3Y 3Y6",
+    "rating": "5.0",
+    "reviews": 30,
+    "cta": "call",
+    "cta_label": "Call or book online",
+    "hours": "Tue–Sat 10:30 am – 5 pm · Closed Sun–Mon",
+    "services": [
+      [
+        "Ombre brows",
+        "A soft powder gradient, for all skin types.",
+        "pen"
+      ],
+      [
+        "Combo brows",
+        "Hair strokes in front, soft shading at the tail.",
+        "sparkle"
+      ],
+      [
+        "Nano brows",
+        "Ultra-fine, realistic hair strokes.",
+        "eye"
+      ],
+      [
+        "Touch-ups",
+        "Six to eight weeks after your session.",
+        "clock"
+      ]
+    ],
+    "about_h": "A perfect 5.0 from 30 clients.",
+    "about": "Jenny's Brow Bar is rated 5.0 on Google by 30 clients. Reviewers mention natural-looking brows, careful brow mapping, and how Jenny explains the whole process and puts first-timers at ease. Find it at 86 Main St S in Newmarket.",
+    "photos": [
+      "1589710751893-f9a6770ad71b",
+      "1741934023052-26baf5535088",
+      "1761718210089-ba3bb5ccb54f"
+    ],
+    "book_url": "https://jennysbrowbar.square.site/book-now"
+  },
+  {
+    "slug": "inmikeschair-studio-ottawa",
+    "dir": "drafts",
+    "name": "INMIKESCHAIR Studio",
+    "theme": "barber",
+    "kicker": "Barber studio · Metcalfe St, Centretown",
+    "h1": "A private barber studio on Metcalfe Street.",
+    "h1_proof": true,
+    "sub": "Haircuts, beards and lineups, one client at a time, at 225 Metcalfe St in Centretown. Book your chair online.",
+    "phone": "(343) 843-5383",
+    "tel": "+13438435383",
+    "email": "inmikeschair@gmail.com",
+    "address": "225 Metcalfe St, 6th floor, Suite 211, Ottawa, ON K2P 2C2",
+    "rating": "5.0",
+    "reviews": 24,
+    "cta": "call",
+    "cta_label": "Call or book online",
+    "hours": "By appointment. Book online.",
+    "services": [
+      [
+        "Haircut",
+        "A clean cut, never rushed.",
+        "scissors"
+      ],
+      [
+        "Haircut and beard",
+        "Cut and beard, done together.",
+        "razor"
+      ],
+      [
+        "Lineup and cleanup",
+        "A crisp lineup between cuts, also for braids and dreads.",
+        "comb"
+      ],
+      [
+        "Mobile service",
+        "Mike comes to you, by request.",
+        "car"
+      ]
+    ],
+    "about_h": "A perfect 5.0 from 24 clients.",
+    "about": "INMIKESCHAIR Studio is rated 5.0 on Google by 24 clients. Reviewers mention attention to detail, clean cuts, a professional but relaxed studio and a barber who takes his time. Find it inside MySalonSuite at 225 Metcalfe St in Ottawa.",
+    "photos": [
+      "1599351431202-1e0f0137899a",
+      "1621605815971-fbc98d665033",
+      "1503951914875-452162b0f3f1",
+      "1517832606299-7ae9b720a186"
+    ],
+    "book_url": "https://inmikeschair.square.site/"
+  },
+  {
+    "slug": "lexis-aesthetics-mississauga",
+    "dir": "drafts",
+    "name": "Lexi's Aesthetics",
+    "theme": "salon",
+    "kicker": "Lash & brow studio · Dundas St E, Mississauga",
+    "h1": "Lash extensions made for you, on Dundas Street East.",
+    "h1_proof": true,
+    "sub": "Natural, wispy, wet-look and volume lash extensions, lash lifts and brows at 700 Dundas St E. Book your appointment online.",
+    "phone": "(647) 928-8781",
+    "tel": "+16479288781",
+    "email": "llexisaesthetics@gmail.com",
+    "address": "700 Dundas St E, Unit 204, 2nd floor, Mississauga, ON L4Y 3Y5",
+    "rating": "5.0",
+    "reviews": 26,
+    "cta": "call",
+    "cta_label": "Call or book online",
+    "hours": "Tue 9 am – 8 pm · Fri–Sat 9 am – 8 pm · Sun 2 pm – 8 pm · Closed Mon, Wed, Thu",
+    "services": [
+      [
+        "Lash extensions",
+        "Natural, wispy, wet-look and volume sets.",
+        "eye"
+      ],
+      [
+        "Lash lifts",
+        "Your own lashes, lifted.",
+        "star"
+      ],
+      [
+        "Brow lamination",
+        "Brows set in place, fuller looking.",
+        "sparkle"
+      ],
+      [
+        "Brow tint and shaping",
+        "Colour and a clean shape.",
+        "pen"
+      ]
+    ],
+    "about_h": "A perfect 5.0 from 26 clients.",
+    "about": "Lexi's Aesthetics is rated 5.0 on Google by 26 clients. Reviewers mention customized lash extensions that last, a detail-oriented lash tech and a gentle touch. Find it on the second floor at 700 Dundas St E in Mississauga.",
+    "photos": [
+      "1589710751893-f9a6770ad71b",
+      "1761718210089-ba3bb5ccb54f",
+      "1741934023052-26baf5535088"
+    ],
+    "book_url": "https://lexis-aesthetics.square.site/"
+  },
+  {
     "slug": "halcyon-nail-and-lash",
     "dir": "samples",
     "sample": true,
