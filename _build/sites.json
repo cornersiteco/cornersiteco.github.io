@@ -358,9 +358,7 @@
     ],
     "about_h": "Made to share.",
     "about": "Habesha serves family-style Ethiopian food on Montréal Road, with meat, vegetarian, vegan and gluten-free options for everyone at the table.",
-    "photos": [
-
-    ]
+    "photos": []
   },
   {
     "slug": "cucina-da-vito",
@@ -440,9 +438,7 @@
     ],
     "about_h": "Baked in house.",
     "about": "Celina Bakery brings fresh Lebanese baking to St-Joseph Blvd in Orléans. Drop in, call ahead, or see what came out of the oven on Instagram.",
-    "photos": [
-
-    ]
+    "photos": []
   },
   {
     "slug": "baghlan-market",
@@ -1002,9 +998,7 @@
     ],
     "about_h": "536 Google reviews.",
     "about": "Hareg Cafe & Variety brings Ethiopian tastes to Bank Street, with food, coffee and a variety corner under one roof.",
-    "photos": [
-
-    ]
+    "photos": []
   },
   {
     "slug": "feenstra-collision",
@@ -1484,9 +1478,7 @@
     ],
     "about_h": "Rated 4.8 by 68 customers.",
     "about": "Banaue Sari-Sari Store is a dedicated Filipino store in Barrhaven, rated 4.8 on Google. Customers mention the friendly service, fair prices and a well-stocked shelf. Find us at 3023 Cedarview Rd.",
-    "photos": [
-
-    ]
+    "photos": []
   },
   {
     "slug": "prestige-tailor-barrhaven",
@@ -5398,7 +5390,55 @@
       "1610992015762-45dca7fa3a85",
       "1604654894610-df63bc536371"
     ],
-    "book_url": "https://ohbijou-beauty.square.site/"
+    "book_url": "https://ohbijou-beauty.square.site/",
+    "menu": [
+      {
+        "title": "Manicure and pedicure",
+        "items": [
+          [
+            "Dry manicure",
+            "Waterless",
+            "$35"
+          ],
+          [
+            "Gel manicure",
+            "50 min",
+            "$55"
+          ],
+          [
+            "Spa pedicure with gel",
+            "1 hr",
+            "$75"
+          ]
+        ]
+      },
+      {
+        "title": "Extensions and removal",
+        "items": [
+          [
+            "Gel overlay",
+            null,
+            "$70"
+          ],
+          [
+            "Gel extensions, full set",
+            "2 hr",
+            "$110"
+          ],
+          [
+            "Extension fill, 2 weeks",
+            null,
+            "$78"
+          ],
+          [
+            "Soft gel removal",
+            null,
+            "$25"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "aesthetics-by-stephanie-strathroy",
@@ -5448,7 +5488,70 @@
       "1761718210089-ba3bb5ccb54f",
       "1764448726322-2abd2bdd6c68"
     ],
-    "book_url": "https://aestheticsbystephanie.square.site/"
+    "book_url": "https://aestheticsbystephanie.square.site/",
+    "menu": [
+      {
+        "title": "Skin",
+        "items": [
+          [
+            "The Complete Skin Ritual",
+            "Customized facial · 1 hr 30 min",
+            "$125"
+          ],
+          [
+            "The Condensed Skin Ritual",
+            "Customized facial · 1 hr",
+            "$75"
+          ],
+          [
+            "Dermaplaning",
+            null,
+            "$80"
+          ],
+          [
+            "Chemical peel",
+            null,
+            "$100"
+          ],
+          [
+            "Spa pedicure",
+            null,
+            "From $75"
+          ]
+        ]
+      },
+      {
+        "title": "Brows, lashes and waxing",
+        "items": [
+          [
+            "Brow shape and tint",
+            null,
+            "$32"
+          ],
+          [
+            "Brow lamination",
+            null,
+            "$55"
+          ],
+          [
+            "Brow and lash tint",
+            null,
+            "$35"
+          ],
+          [
+            "Lash lift and tint",
+            null,
+            "$80"
+          ],
+          [
+            "Brazilian wax",
+            null,
+            "$50"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "lashes-by-muge-winnipeg",
@@ -5498,7 +5601,70 @@
       "1764448726322-2abd2bdd6c68",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://lashesbymuge.square.site/"
+    "book_url": "https://lashesbymuge.square.site/",
+    "menu": [
+      {
+        "title": "Lash extensions",
+        "items": [
+          [
+            "Classic full set",
+            null,
+            "From $120"
+          ],
+          [
+            "Hybrid full set",
+            null,
+            "From $140"
+          ],
+          [
+            "Volume full set",
+            null,
+            "From $140"
+          ],
+          [
+            "Mega volume full set",
+            null,
+            "From $150"
+          ],
+          [
+            "Classic fill, 2 weeks",
+            null,
+            "From $60"
+          ],
+          [
+            "Lash lift and tint",
+            null,
+            "From $75"
+          ]
+        ]
+      },
+      {
+        "title": "Brows, skin and nails",
+        "items": [
+          [
+            "Brow lamination and tint",
+            null,
+            "$65"
+          ],
+          [
+            "Dermaplaning",
+            null,
+            "$65"
+          ],
+          [
+            "Gel full set",
+            null,
+            "$65"
+          ],
+          [
+            "Gel polish manicure",
+            null,
+            "$25"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "east-motors-ottawa",
@@ -5821,9 +5987,9 @@
         "eye"
       ],
       [
-        "Lash lifts",
-        "Explained step by step.",
-        "sparkle"
+        "Microblading & lip blush",
+        "Ombre and nano brows, too.",
+        "pen"
       ],
       [
         "Brows & waxing",
@@ -5844,7 +6010,70 @@
       "1764448726322-2abd2bdd6c68",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://glam-lash2025.square.site/"
+    "book_url": "https://glam-lash2025.square.site/",
+    "menu": [
+      {
+        "title": "Lash extensions",
+        "items": [
+          [
+            "Classic full set",
+            null,
+            "$95"
+          ],
+          [
+            "Hybrid full set",
+            null,
+            "$105"
+          ],
+          [
+            "Volume full set",
+            null,
+            "$115"
+          ],
+          [
+            "Mega volume full set",
+            null,
+            "$125"
+          ],
+          [
+            "Classic refill",
+            null,
+            "$55"
+          ]
+        ]
+      },
+      {
+        "title": "Brows, skin and waxing",
+        "items": [
+          [
+            "Microblading",
+            "3 hr 30 min",
+            "$450"
+          ],
+          [
+            "Lip blush",
+            "3 hr 30 min",
+            "$350"
+          ],
+          [
+            "Brow lamination",
+            null,
+            "$85"
+          ],
+          [
+            "Hydrafacial",
+            "1 hr 30 min",
+            "$120"
+          ],
+          [
+            "Full face wax",
+            null,
+            "$45"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "eves-vanity-brampton",
@@ -6025,8 +6254,8 @@
         "razor"
       ],
       [
-        "Style advice",
-        "A cut that suits you.",
+        "Afro & curly hair",
+        "Cuts, line-ups and dye.",
         "comb"
       ],
       [
@@ -6043,7 +6272,60 @@
       "1621605815971-fbc98d665033",
       "1503951914875-452162b0f3f1"
     ],
-    "book_url": "https://mayorscutt.square.site/"
+    "book_url": "https://mayorscutt.square.site/",
+    "menu": [
+      {
+        "title": "Straight and scissor hair",
+        "items": [
+          [
+            "Haircut",
+            "40 min",
+            "$40"
+          ],
+          [
+            "Haircut and beard",
+            "45 min",
+            "$50"
+          ],
+          [
+            "Beard detailing",
+            null,
+            "$30"
+          ]
+        ]
+      },
+      {
+        "title": "Afro and curly hair",
+        "items": [
+          [
+            "Haircut",
+            "30 min",
+            "$40"
+          ],
+          [
+            "Haircut and beard",
+            null,
+            "$50"
+          ],
+          [
+            "Line-up, head only",
+            null,
+            "$20"
+          ],
+          [
+            "Kids' haircut",
+            "Ages 1 to 12",
+            "$30"
+          ],
+          [
+            "Haircut and dye",
+            "Black",
+            "$60"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "kingston-barbershop-scarborough",
@@ -6093,7 +6375,35 @@
       "1503951914875-452162b0f3f1",
       "1585747860715-2ba37e788b70"
     ],
-    "book_url": "https://kingstonbarbershopto.square.site/"
+    "book_url": "https://kingstonbarbershopto.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Adult cut, short hair",
+            "30 min",
+            "$36"
+          ],
+          [
+            "Adult cut, long hair",
+            "30 min",
+            "$42"
+          ],
+          [
+            "Children's cut, 12 and under",
+            null,
+            "$26"
+          ],
+          [
+            "Beard trim",
+            "15 min",
+            "$25"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "the-lash-clinic-oshawa",
@@ -6193,7 +6503,70 @@
       "1589710751893-f9a6770ad71b",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://briar-rose-beauty-inc.square.site/"
+    "book_url": "https://briar-rose-beauty-inc.square.site/",
+    "menu": [
+      {
+        "title": "Facials",
+        "items": [
+          [
+            "Custom facial",
+            "1 hr 5 min",
+            "$120"
+          ],
+          [
+            "Teen facial",
+            "50 min",
+            "$90"
+          ],
+          [
+            "Radiance peel",
+            "40 min",
+            "$95"
+          ],
+          [
+            "Microneedling, face and neck",
+            "1 hr 15 min",
+            "$350"
+          ]
+        ]
+      },
+      {
+        "title": "Lashes, brows, waxing and nails",
+        "items": [
+          [
+            "Lash lift and tint",
+            null,
+            "$95"
+          ],
+          [
+            "Brow lamination and tint",
+            null,
+            "$85"
+          ],
+          [
+            "Brow wax",
+            null,
+            "$22"
+          ],
+          [
+            "Brazilian wax",
+            null,
+            "$65"
+          ],
+          [
+            "Shellac manicure",
+            null,
+            "$55"
+          ],
+          [
+            "Signature pedicure",
+            null,
+            "$75"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "410-barbershop-brampton",
@@ -6243,7 +6616,55 @@
       "1621605815971-fbc98d665033",
       "1517832606299-7ae9b720a186"
     ],
-    "book_url": "https://410barbershop.square.site/"
+    "book_url": "https://410barbershop.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Haircut / fade",
+            "30 min",
+            "$25"
+          ],
+          [
+            "Haircut and beard",
+            "45 min",
+            "$45"
+          ],
+          [
+            "Haircut, beard and razor line-up",
+            "1 hr",
+            "$50"
+          ],
+          [
+            "Kids' (8 and under) and seniors' haircut",
+            null,
+            "$20"
+          ]
+        ]
+      },
+      {
+        "title": "Shave and extras",
+        "items": [
+          [
+            "Clean shave",
+            "Straight razor",
+            "$25"
+          ],
+          [
+            "Beard trim and line-up",
+            null,
+            "$20"
+          ],
+          [
+            "Traditional head massage",
+            "15 min",
+            "$20"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "la-lavender-toronto",
@@ -6343,7 +6764,40 @@
       "1585747860715-2ba37e788b70",
       "1503951914875-452162b0f3f1"
     ],
-    "book_url": "https://coppercoinbarbersden.square.site/"
+    "book_url": "https://coppercoinbarbersden.square.site/",
+    "menu": [
+      {
+        "title": "Cuts and line-ups",
+        "items": [
+          [
+            "Haircut",
+            "30 min",
+            "$40"
+          ],
+          [
+            "Line-up and taper",
+            "20 min",
+            "$25"
+          ],
+          [
+            "Beard trim",
+            "15 min",
+            "$17"
+          ],
+          [
+            "Line-up, hair",
+            null,
+            "$10"
+          ],
+          [
+            "Line-up, beard",
+            null,
+            "$10"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "barber-house-ll-toronto",
@@ -6493,7 +6947,65 @@
       "1785456411888-c2e842552820",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://linda-loves-hair.square.site/"
+    "book_url": "https://linda-loves-hair.square.site/",
+    "menu": [
+      {
+        "title": "Cuts and styling",
+        "items": [
+          [
+            "Women's cut and style",
+            "1 hr",
+            "$75"
+          ],
+          [
+            "Men's cut and style",
+            null,
+            "$35"
+          ],
+          [
+            "Updo, special events",
+            null,
+            "$140"
+          ],
+          [
+            "Bridal updo",
+            "1 hr 15 min",
+            "$160"
+          ]
+        ]
+      },
+      {
+        "title": "Colour, care and extensions",
+        "items": [
+          [
+            "Full colour",
+            null,
+            "$150"
+          ],
+          [
+            "Full highlights and blowout",
+            null,
+            "$325"
+          ],
+          [
+            "Balayage and blowout",
+            null,
+            "$325"
+          ],
+          [
+            "Olaplex treatment",
+            null,
+            "$40"
+          ],
+          [
+            "OSIX tape-in extensions, 18\"",
+            "Install · 3 hr",
+            "$1,000"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "the-vault-beauty-salon-sudbury",
@@ -6793,7 +7305,60 @@
       "1503951914875-452162b0f3f1",
       "1517832606299-7ae9b720a186"
     ],
-    "book_url": "https://dprattobarberstudio.square.site/s/appointments"
+    "book_url": "https://dprattobarberstudio.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Custom fade haircut",
+            "40 min",
+            "From $30"
+          ],
+          [
+            "Custom classic haircut",
+            "40 min",
+            "$30"
+          ],
+          [
+            "Haircut and beard",
+            "50 min",
+            "$45"
+          ],
+          [
+            "Kids' haircut",
+            null,
+            "$25"
+          ]
+        ]
+      },
+      {
+        "title": "Beard and care",
+        "items": [
+          [
+            "Beard trim and straight-razor line-up",
+            "25 min",
+            "$25"
+          ],
+          [
+            "Eyebrow clean-up",
+            null,
+            "$10"
+          ],
+          [
+            "Facial",
+            "40 min",
+            "$50"
+          ],
+          [
+            "D' Pratto Premium Service",
+            "The full experience · 1 hr 15 min",
+            "$75"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "kings-of-cuts-barbershop",
@@ -7188,7 +7753,60 @@
       "1522337360788-8b13dee7a37e",
       "1695527081848-1e46c06e6458"
     ],
-    "book_url": "https://hairessentialss.square.site/s/appointments"
+    "book_url": "https://hairessentialss.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts and styling",
+        "items": [
+          [
+            "Shampoo, cut and blow-dry",
+            "45 min",
+            "From $45"
+          ],
+          [
+            "Men's cut",
+            "30 min",
+            "$36.50"
+          ],
+          [
+            "Student cut, boys under 18",
+            null,
+            "$28.50"
+          ],
+          [
+            "Shampoo and blow-dry",
+            null,
+            "$61.50"
+          ],
+          [
+            "Updo",
+            "Weddings, grads, proms",
+            "$91.50"
+          ]
+        ]
+      },
+      {
+        "title": "Colour",
+        "items": [
+          [
+            "Colour",
+            null,
+            "From $30.50"
+          ],
+          [
+            "Toner",
+            null,
+            "$46.50"
+          ],
+          [
+            "Balayage",
+            "2 hr 45 min",
+            "From $211.50"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "valley-hair-artistry-pembroke",
@@ -7731,7 +8349,60 @@
       "1503951914875-452162b0f3f1",
       "1517832606299-7ae9b720a186"
     ],
-    "book_url": "https://my-site-105730-104116.square.site/s/appointments"
+    "book_url": "https://my-site-105730-104116.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Men's haircut",
+            "30 min",
+            "$30"
+          ],
+          [
+            "Men's skin or bald fade",
+            "40 min",
+            "$32"
+          ],
+          [
+            "Student haircut",
+            "12 to high school",
+            "$26"
+          ],
+          [
+            "Kids' haircut, under 12",
+            null,
+            "$24"
+          ],
+          [
+            "Women's haircut",
+            null,
+            "$32"
+          ]
+        ]
+      },
+      {
+        "title": "Beard and shaves",
+        "items": [
+          [
+            "Beard trim and straight-razor outline",
+            null,
+            "$29"
+          ],
+          [
+            "Head shave with hot towel",
+            null,
+            "$36"
+          ],
+          [
+            "Beard hot towel shave",
+            null,
+            "$36"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "young-sparrow-parlour-sarnia",
