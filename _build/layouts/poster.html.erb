@@ -1,5 +1,5 @@
 <header class="bar"><div class="w">
-  <span class="bar-l"><%= area_line.map { |x| e x }.join(' · ') %></span>
+  <span class="bar-l"><span><%= e trade %></span><% unless blank?(area) %><i aria-hidden="true"> &middot; </i><span><%= e area %></span><% end %></span>
   <nav aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
 </div></header>
 <main id="top">
@@ -14,21 +14,23 @@
     <div class="acts"><%= action_btns %></div>
   </div>
 </div></section>
+<% k = [np, 3].min -%>
+<% if k > 0 -%>
 
-<div class="strip">
+<div class="strip k<%= k %>">
   <%= ph(0, 900, sizes: '(min-width:860px) 34vw, 70vw', lazy: false) %>
   <%= ph(1, 900, sizes: '(min-width:860px) 34vw, 70vw') %>
   <%= ph(2, 900, sizes: '(min-width:860px) 34vw, 70vw') %>
 </div>
-<p class="note w"><%= e photo_note %></p>
+<% end -%>
 
 <section id="services" class="sec"><div class="w">
   <h2><%= svc_title %></h2>
-  <ol class="rows">
-<% services.each_with_index do |(title, desc, _), i| -%>
-    <li><span class="no"><%= '%02d' % (i + 1) %></span><h3><%= e title %></h3><p><%= e desc %></p></li>
+  <ul class="rows">
+<% services.each do |title, desc, _| -%>
+    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
 <% end -%>
-  </ol>
+  </ul>
   <%= menu.empty? ? svc_note : '' %>
 <% unless menu.empty? -%>
   <div class="prices" id="prices"><h2>Prices</h2><%= menu_html %></div>
@@ -37,22 +39,27 @@
 </div></section>
 
 <section id="about" class="sec about"><div class="w">
-  <h2><%= e s['about_h'] %></h2>
+  <h2><%= e about_h %></h2>
   <div class="ab">
     <p><%= e s['about'] %></p>
     <%= about_link %>
   </div>
-  <div class="ab-ph"><%= ph(3, 1000, sizes: '(min-width:860px) 40vw, 100vw') %><%= yours %></div>
+<% abp = [ph(3, 1000, sizes: '(min-width:860px) 40vw, 100vw'), yours].reject(&:empty?) -%>
+<% unless abp.empty? -%>
+  <div class="ab-ph"><%= abp.join %></div>
+<% end -%>
 </div></section>
 
 <section id="visit" class="visit"><div class="w">
   <h2>Visit</h2>
-<% if addr? -%>
+<% if addr? && street =~ /\d/ -%>
   <a class="where" href="<%= maps %>" target="_blank" rel="noopener"><%= e street %><% unless blank?(city) %><span><%= e city %></span><% end %></a>
 <% end -%>
   <div class="v-g">
     <div><%= contact_dl %><div class="acts"><%= action_btns(max: 2) %></div></div>
+<% if hours_table? -%>
     <div><%= hours_html %></div>
+<% end -%>
     <%= map_html %>
   </div>
 </div></section>

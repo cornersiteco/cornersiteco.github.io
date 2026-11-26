@@ -3,10 +3,10 @@
   <nav aria-label="Main"><a href="#about">About</a><a href="#visit">Visit</a><%= primary_link('tl') %></nav>
 </div></header>
 <main id="top">
-<section class="stage"><div class="w">
+<section class="stage<%= np > 0 ? '' : ' solo' %>"><div class="w">
   <div class="board">
     <p class="est"><%= area_line.map { |x| e x }.join(' &middot; ') %></p>
-    <h1 class="name"><%= e name %></h1>
+    <h1 class="name"><%= name_h %></h1>
     <p class="lede"><%= e lede %></p>
     <div class="orn" aria-hidden="true"></div>
     <div id="services">
@@ -21,39 +21,45 @@
     </div>
     <div class="bfoot">
       <%= rating_line %>
-      <%= week ? '' : today_line %>
+      <%= week ? '' : (hours_note? ? hours_note_html : today_line) %>
       <div class="acts"><%= action_btns %></div>
     </div>
   </div>
-  <div class="side">
+<% if np > 0 -%>
+  <div class="side k<%= [np, 2].min %>">
     <%= ph(0, 1000, cls: 's-a', sizes: '(min-width:860px) 40vw, 100vw', lazy: false) %>
     <%= ph(1, 800, cls: 's-b', sizes: '(min-width:860px) 40vw, 100vw') %>
   </div>
+<% end -%>
 </div></section>
 
 <section id="about" class="sec about"><div class="w">
   <div class="card">
-    <h2><%= e s['about_h'] %></h2>
+    <h2><%= e about_h %></h2>
     <p><%= e s['about'] %></p>
     <%= about_link %>
   </div>
 </div></section>
+<% prints = [ph(2, 800, sizes: '(min-width:860px) 30vw, 80vw'), ph(3, 800, sizes: '(min-width:860px) 30vw, 80vw'), yours].reject(&:empty?) -%>
+<% unless prints.empty? && Array(s['areas']).empty? -%>
 
 <section class="sec prints"><div class="w">
-  <div class="pr">
-    <%= ph(2, 800, sizes: '(min-width:860px) 30vw, 80vw') %>
-    <%= ph(3, 800, sizes: '(min-width:860px) 30vw, 80vw') %>
-    <%= yours %><%= draft? ? '' : ph(0, 800, sizes: '(min-width:860px) 30vw, 80vw') %>
+<% unless prints.empty? -%>
+  <div class="pr k<%= prints.size %>">
+    <%= prints.join("\n    ") %>
   </div>
-  <p class="note"><%= e photo_note %></p>
+<% end -%>
   <%= areas_html %>
 </div></section>
+<% end -%>
 
 <section id="visit" class="sec visit"><div class="w">
   <h2>Come by</h2>
   <div class="v-g">
     <div class="v-card"><%= contact_dl %></div>
+<% if hours_table? -%>
     <div class="v-card"><h3>Hours</h3><%= hours_html %></div>
+<% end -%>
     <%= map_html %>
   </div>
 </div></section>

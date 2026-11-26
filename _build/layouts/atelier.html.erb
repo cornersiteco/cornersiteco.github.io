@@ -4,9 +4,9 @@
 </div></header>
 <main id="top">
 <section class="hero"><div class="w">
-  <p class="trade"><%= area_line.map { |x| e x }.join(' <i>in</i> ') %></p>
-  <h1 class="name"><%= e name %></h1>
-  <div class="trio">
+  <p class="trade"><%= area_line.map { |x| e x }.join(' <i aria-hidden="true">&middot;</i> ') %></p>
+  <h1 class="name"><%= name_h %></h1>
+  <div class="trio<%= ph?(0) ? '' : ' no-arch' %>">
     <div class="say">
       <p class="lede"><%= e lede %></p>
       <%= rating_line %>
@@ -25,12 +25,12 @@
 </div></section>
 
 <section id="services" class="sec"><div class="w">
-  <div class="sh"><h2><%= svc_title %></h2><p><%= e s['sub'] %></p></div>
-  <ol class="list">
-<% services.each_with_index do |(title, desc, _), i| -%>
-    <li><span class="no"><%= %w[i ii iii iv v vi vii viii][i] %>.</span><h3><%= e title %></h3><p><%= e desc %></p></li>
+  <div class="sh"><h2><%= svc_title %></h2><p><%= e sub_line %></p></div>
+  <ul class="list">
+<% services.each do |title, desc, _| -%>
+    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
 <% end -%>
-  </ol>
+  </ul>
   <%= menu.empty? ? svc_note : '' %>
 <% unless menu.empty? -%>
   <div class="prices" id="prices"><h2 class="h2s">Prices</h2><%= menu_html %></div>
@@ -38,36 +38,38 @@
   <%= areas_html %>
 </div></section>
 
-<section id="about" class="sec about"><div class="w">
+<section id="about" class="sec about<%= ph?(1) ? '' : ' solo' %>"><div class="w">
   <%= ph(1, 1200, cls: 'ab-img', sizes: '(min-width:860px) 52vw, 100vw') %>
   <div class="ab-txt">
-    <h2><%= e s['about_h'] %></h2>
+    <h2><%= e about_h %></h2>
     <p><%= e s['about'] %></p>
     <%= about_link %>
   </div>
 </div></section>
+<% looks = [ph(2, 800, sizes: '(min-width:860px) 30vw, 50vw'), ph(3, 800, sizes: '(min-width:860px) 30vw, 50vw'), yours].reject(&:empty?) -%>
+<% unless looks.empty? -%>
 
 <section class="sec looks"><div class="w">
-  <div class="stag">
-    <%= ph(2, 800, sizes: '(min-width:860px) 30vw, 50vw') %>
-    <%= ph(3, 800, sizes: '(min-width:860px) 30vw, 50vw') %>
-    <%= yours %><%= draft? ? '' : ph(0, 800, sizes: '(min-width:860px) 30vw, 50vw') %>
+  <div class="stag k<%= looks.size %>">
+    <%= looks.join("\n    ") %>
   </div>
-  <p class="note"><%= e photo_note %></p>
 </div></section>
+<% end -%>
 
 <section id="visit" class="sec visit"><div class="w">
   <h2>Visit</h2>
   <div class="v3">
     <%= contact_dl %>
+<% if hours_table? -%>
     <div class="vh-col"><%= hours_html %></div>
+<% end -%>
     <%= map_html %>
   </div>
 </div></section>
 <% if contact? -%>
 <section class="close"><div class="w">
   <p><%= e s['cta_label'] %></p>
-  <a class="<%= email_mode? ? 'em' : '' %>" href="<%= e primary_href %>"><%= e(email_mode? ? s['email'] : s['phone']) %></a>
+  <a class="<%= email_mode? ? 'em' : '' %>" href="<%= e primary_href %>"><%= e(email_mode? ? s['email'].to_s.downcase : s['phone']) %></a>
 </div></section>
 <% end -%>
 </main>

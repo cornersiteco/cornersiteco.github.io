@@ -5,14 +5,16 @@
 </div></header>
 <main id="top">
 <section class="sheet"><div class="w">
-  <div class="s-grid">
+  <div class="s-grid<%= ph?(0) ? '' : ' solo' %>">
     <div class="s-main">
       <p class="lab"><%= area_line.map { |x| e x }.join(' / ') %></p>
-      <h1 class="name"><%= e name %></h1>
+      <h1 class="name"><%= name_h %></h1>
       <p class="lede"><%= e lede %></p>
       <div class="acts"><%= action_btns(icons: true) %></div>
     </div>
-    <div class="s-fig"><%= ph(0, 1200, cls: 'tick', sizes: '(min-width:860px) 44vw, 100vw', lazy: false, n: 'Fig. 1') %></div>
+<% if ph?(0) -%>
+    <div class="s-fig"><%= ph(0, 1200, cls: 'tick', sizes: '(min-width:860px) 44vw, 100vw', lazy: false) %></div>
+<% end -%>
   </div>
   <dl class="specs">
 <% if addr? -%>
@@ -21,10 +23,10 @@
 <% if tel? -%>
     <div><dt>Phone</dt><dd><a class="v" href="tel:<%= e s['tel'] %>"><%= e s['phone'] %></a></dd></div>
 <% elsif email? -%>
-    <div><dt>Email</dt><dd><a class="v em" href="mailto:<%= e s['email'] %>"><%= e s['email'] %></a></dd></div>
+    <div><dt>Email</dt><dd><a class="v em" href="mailto:<%= e s['email'] %>"><%= e s['email'].to_s.downcase %></a></dd></div>
 <% end -%>
 <% unless blank?(s['hours']) -%>
-    <div><dt>Hours</dt><dd><%= week ? now + %(<span class="sub"><a class="tl" href="#visit">All hours</a></span>) : %(<span class="v sm">#{e s['hours']}</span>) %></dd></div>
+    <div><dt>Hours</dt><dd><%= week ? now + %(<span class="sub"><a class="tl" href="#visit">All hours</a></span>) : %(<span class="v sm">#{hours_note? ? hours_note_html : e(s['hours'])}</span>) %></dd></div>
 <% end -%>
 <% if rating? -%>
     <div><dt>Google rating</dt><dd><a class="v num" href="<%= maps %>" target="_blank" rel="noopener"><%= e s['rating'] %><small>/ 5</small></a><span class="sub"><span class="stars" aria-hidden="true"><%= stars(s['rating']) %></span> <%= e s['reviews'] %> reviews</span></dd></div>
@@ -35,12 +37,12 @@
 </div></section>
 
 <section id="services" class="sec"><div class="w">
-  <div class="sh"><p class="lab">01</p><h2><%= svc_title %></h2><p class="shp"><%= e s['sub'] %></p></div>
-  <ol class="tbl">
-<% services.each_with_index do |(title, desc, _), i| -%>
-    <li><span class="no"><%= '%02d' % (i + 1) %></span><h3><%= e title %></h3><p><%= e desc %></p></li>
+  <div class="sh"><h2><%= svc_title %></h2><p class="shp"><%= e sub_line %></p></div>
+  <ul class="tbl">
+<% services.each do |title, desc, _| -%>
+    <li><h3><%= e title %></h3><p><%= e desc %></p></li>
 <% end -%>
-  </ol>
+  </ul>
   <%= menu.empty? ? svc_note : '' %>
 <% unless menu.empty? -%>
   <div class="prices" id="prices"><%= menu_html %></div>
@@ -51,21 +53,22 @@
 </div></section>
 
 <section id="about" class="sec about"><div class="w">
-  <div class="sh"><p class="lab">02</p><h2><%= e s['about_h'] %></h2></div>
-  <div class="ab-g"><p class="ab-p"><%= e s['about'] %></p><%= about_link %></div>
-  <div class="figs">
-    <%= ph(1, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw', n: 'Fig. 2') %>
-    <%= ph(2, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw', n: 'Fig. 3') %>
-    <%= yours %><%= draft? ? '' : ph(3, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw', n: 'Fig. 4') %>
+  <div class="ab-g"><h2><%= e about_h %></h2><div><p class="ab-p"><%= e s['about'] %></p><%= about_link %></div></div>
+<% figs = [ph(1, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw'), ph(2, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw'), (draft? ? yours : ph(3, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw'))].reject(&:empty?) -%>
+<% unless figs.empty? -%>
+  <div class="figs k<%= figs.size %>">
+    <%= figs.join("\n    ") %>
   </div>
-  <p class="note"><%= e photo_note %></p>
+<% end -%>
 </div></section>
 
 <section id="visit" class="sec visit"><div class="w">
-  <div class="sh"><p class="lab">03</p><h2>Visit</h2></div>
+  <div class="sh"><h2>Visit</h2></div>
   <div class="v-g">
     <div class="v-a"><%= contact_dl %><div class="acts"><%= action_btns(icons: true, max: 2) %></div></div>
+<% if hours_table? -%>
     <div class="v-b"><%= hours_html %></div>
+<% end -%>
     <%= map_html %>
   </div>
 </div></section>
