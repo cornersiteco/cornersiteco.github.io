@@ -1,0 +1,72 @@
+<header class="sbar"><div class="w">
+  <span class="id"><%= e name %></span>
+  <nav aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+  <span class="r"><%= now %></span>
+</div></header>
+<main id="top">
+<section class="sheet"><div class="w">
+  <div class="s-grid">
+    <div class="s-main">
+      <p class="lab"><%= area_line.map { |x| e x }.join(' / ') %></p>
+      <h1 class="name"><%= e name %></h1>
+      <p class="lede"><%= e lede %></p>
+      <div class="acts"><%= action_btns(icons: true) %></div>
+    </div>
+    <div class="s-fig"><%= ph(0, 1200, cls: 'tick', sizes: '(min-width:860px) 44vw, 100vw', lazy: false, n: 'Fig. 1') %></div>
+  </div>
+  <dl class="specs">
+<% if addr? -%>
+    <div><dt>Location</dt><dd><%= addr_html %><span class="sub"><a class="tl" href="<%= dir %>" target="_blank" rel="noopener">Directions</a><%= copy_addr %></span></dd></div>
+<% end -%>
+<% if tel? -%>
+    <div><dt>Phone</dt><dd><a class="v" href="tel:<%= e s['tel'] %>"><%= e s['phone'] %></a></dd></div>
+<% elsif email? -%>
+    <div><dt>Email</dt><dd><a class="v em" href="mailto:<%= e s['email'] %>"><%= e s['email'] %></a></dd></div>
+<% end -%>
+<% unless blank?(s['hours']) -%>
+    <div><dt>Hours</dt><dd><%= week ? now + %(<span class="sub"><a class="tl" href="#visit">All hours</a></span>) : %(<span class="v sm">#{e s['hours']}</span>) %></dd></div>
+<% end -%>
+<% if rating? -%>
+    <div><dt>Google rating</dt><dd><a class="v num" href="<%= maps %>" target="_blank" rel="noopener"><%= e s['rating'] %><small>/ 5</small></a><span class="sub"><span class="stars" aria-hidden="true"><%= stars(s['rating']) %></span> <%= e s['reviews'] %> reviews</span></dd></div>
+<% elsif proof -%>
+    <div><dt>Note</dt><dd><span class="v sm"><%= e proof %></span></dd></div>
+<% end -%>
+  </dl>
+</div></section>
+
+<section id="services" class="sec"><div class="w">
+  <div class="sh"><p class="lab">01</p><h2><%= svc_title %></h2><p class="shp"><%= e s['sub'] %></p></div>
+  <ol class="tbl">
+<% services.each_with_index do |(title, desc, _), i| -%>
+    <li><span class="no"><%= '%02d' % (i + 1) %></span><h3><%= e title %></h3><p><%= e desc %></p></li>
+<% end -%>
+  </ol>
+  <%= menu.empty? ? svc_note : '' %>
+<% unless menu.empty? -%>
+  <div class="prices" id="prices"><%= menu_html %></div>
+<% end -%>
+<% unless Array(s['areas']).empty? -%>
+  <div class="area"><p class="lab">Service area</p><%= areas_html %></div>
+<% end -%>
+</div></section>
+
+<section id="about" class="sec about"><div class="w">
+  <div class="sh"><p class="lab">02</p><h2><%= e s['about_h'] %></h2></div>
+  <div class="ab-g"><p class="ab-p"><%= e s['about'] %></p><%= about_link %></div>
+  <div class="figs">
+    <%= ph(1, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw', n: 'Fig. 2') %>
+    <%= ph(2, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw', n: 'Fig. 3') %>
+    <%= yours %><%= draft? ? '' : ph(3, 900, cls: 'tick', sizes: '(min-width:860px) 30vw, 50vw', n: 'Fig. 4') %>
+  </div>
+  <p class="note"><%= e photo_note %></p>
+</div></section>
+
+<section id="visit" class="sec visit"><div class="w">
+  <div class="sh"><p class="lab">03</p><h2>Visit</h2></div>
+  <div class="v-g">
+    <div class="v-a"><%= contact_dl %><div class="acts"><%= action_btns(icons: true, max: 2) %></div></div>
+    <div class="v-b"><%= hours_html %></div>
+    <%= map_html %>
+  </div>
+</div></section>
+</main>

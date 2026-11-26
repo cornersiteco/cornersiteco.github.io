@@ -1,0 +1,73 @@
+<header class="top"><div class="w">
+  <nav aria-label="Main"><a href="#services">Services</a><a href="#about">About</a><a href="#visit">Visit</a></nav>
+  <span class="top-r"><%= now %><%= primary_link('tl') %></span>
+</div></header>
+<main id="top">
+<section class="hero"><div class="w">
+  <p class="trade"><%= area_line.map { |x| e x }.join(' <i>in</i> ') %></p>
+  <h1 class="name"><%= e name %></h1>
+  <div class="trio">
+    <div class="say">
+      <p class="lede"><%= e lede %></p>
+      <%= rating_line %>
+    </div>
+    <%= ph(0, 900, cls: 'arch', sizes: '(min-width:860px) 34vw, 78vw', lazy: false) %>
+    <div class="facts">
+<% if addr? -%>
+      <div><small>Find us</small><%= addr_html %></div>
+<% end -%>
+<% unless blank?(s['hours']) -%>
+      <div><small>Hours</small><%= week ? now + %(<a class="tl sm" href="#visit">All hours</a>) : %(<span class="hrs-s">#{e s['hours']}</span>) %></div>
+<% end -%>
+      <div class="acts"><%= action_btns %></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="sec"><div class="w">
+  <div class="sh"><h2><%= svc_title %></h2><p><%= e s['sub'] %></p></div>
+  <ol class="list">
+<% services.each_with_index do |(title, desc, _), i| -%>
+    <li><span class="no"><%= %w[i ii iii iv v vi vii viii][i] %>.</span><h3><%= e title %></h3><p><%= e desc %></p></li>
+<% end -%>
+  </ol>
+  <%= menu.empty? ? svc_note : '' %>
+<% unless menu.empty? -%>
+  <div class="prices" id="prices"><h2 class="h2s">Prices</h2><%= menu_html %></div>
+<% end -%>
+  <%= areas_html %>
+</div></section>
+
+<section id="about" class="sec about"><div class="w">
+  <%= ph(1, 1200, cls: 'ab-img', sizes: '(min-width:860px) 52vw, 100vw') %>
+  <div class="ab-txt">
+    <h2><%= e s['about_h'] %></h2>
+    <p><%= e s['about'] %></p>
+    <%= about_link %>
+  </div>
+</div></section>
+
+<section class="sec looks"><div class="w">
+  <div class="stag">
+    <%= ph(2, 800, sizes: '(min-width:860px) 30vw, 50vw') %>
+    <%= ph(3, 800, sizes: '(min-width:860px) 30vw, 50vw') %>
+    <%= yours %><%= draft? ? '' : ph(0, 800, sizes: '(min-width:860px) 30vw, 50vw') %>
+  </div>
+  <p class="note"><%= e photo_note %></p>
+</div></section>
+
+<section id="visit" class="sec visit"><div class="w">
+  <h2>Visit</h2>
+  <div class="v3">
+    <%= contact_dl %>
+    <div class="vh-col"><%= hours_html %></div>
+    <%= map_html %>
+  </div>
+</div></section>
+<% if contact? -%>
+<section class="close"><div class="w">
+  <p><%= e s['cta_label'] %></p>
+  <a class="<%= email_mode? ? 'em' : '' %>" href="<%= e primary_href %>"><%= e(email_mode? ? s['email'] : s['phone']) %></a>
+</div></section>
+<% end -%>
+</main>
