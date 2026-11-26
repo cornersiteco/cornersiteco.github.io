@@ -2551,6 +2551,75 @@
       "1571290274554-6a2eaa771e5f",
       "1787651344170-c2f81514934d",
       "1604654894610-df63bc536371"
+    ],
+    "book_url": "https://moony-beauty-nails-and-spa.bookmynails.ca/",
+    "menu_note": "Prices from your online booking page, November 2026. We will confirm every one with you.",
+    "menu": [
+      {
+        "title": "Manicure and pedicure",
+        "items": [
+          [
+            "Classic manicure",
+            "30 min",
+            "$22"
+          ],
+          [
+            "Shellac manicure",
+            "45 min",
+            "$38"
+          ],
+          [
+            "Classic pedicure",
+            "45 min",
+            "$38"
+          ],
+          [
+            "Pedicure, shellac colour",
+            "45 min",
+            "$50"
+          ],
+          [
+            "Deluxe pedicure, shellac colour",
+            "60 min",
+            "$70"
+          ],
+          [
+            "Kids' manicure",
+            "10 and under · 30 min",
+            "$15"
+          ]
+        ]
+      },
+      {
+        "title": "Gel and acrylic",
+        "items": [
+          [
+            "Gel polish",
+            "45 min",
+            "$25"
+          ],
+          [
+            "Gel extensions",
+            "60 min",
+            "$80"
+          ],
+          [
+            "Acrylic full set",
+            "60 min",
+            "$62"
+          ],
+          [
+            "Acrylic fill",
+            "60 min",
+            "$50"
+          ],
+          [
+            "Ombre acrylic",
+            "90 min",
+            "$70"
+          ]
+        ]
+      }
     ]
   },
   {
@@ -2796,6 +2865,89 @@
       "1571290274554-6a2eaa771e5f",
       "1762373349045-c2decd4ec3f3",
       "1758225490983-0fae7961e425"
+    ],
+    "menu_note": "Prices from your website, November 2026. We will confirm every one with you.",
+    "menu": [
+      {
+        "title": "Nails",
+        "items": [
+          [
+            "Acrylic full set",
+            null,
+            "$60"
+          ],
+          [
+            "Acrylic refill",
+            null,
+            "$50"
+          ],
+          [
+            "Ombre full set",
+            null,
+            "$65"
+          ],
+          [
+            "Dip powder on natural nails",
+            null,
+            "$45"
+          ],
+          [
+            "Bio Gel full set",
+            null,
+            "$70"
+          ],
+          [
+            "Manicure, shellac colour",
+            null,
+            "$35"
+          ],
+          [
+            "Pedicure, regular colour",
+            null,
+            "$40"
+          ],
+          [
+            "Pedicure and manicure, shellac",
+            null,
+            "$80"
+          ],
+          [
+            "Deluxe pedicure, shellac",
+            null,
+            "$70"
+          ]
+        ]
+      },
+      {
+        "title": "Waxing and massage",
+        "items": [
+          [
+            "Eyebrows",
+            null,
+            "$15"
+          ],
+          [
+            "Eyebrow wax and tint",
+            null,
+            "$25"
+          ],
+          [
+            "Full face",
+            null,
+            "$35"
+          ],
+          [
+            "Relaxation massage, 30 min",
+            "Women only",
+            "$45"
+          ],
+          [
+            "Relaxation massage, 1 hr",
+            "Women only",
+            "$85"
+          ]
+        ]
+      }
     ]
   },
   {
@@ -3041,6 +3193,85 @@
       "1604654894610-df63bc536371",
       "1630843599725-32ead7671867",
       "1787651344170-c2f81514934d"
+    ],
+    "book_url": "https://orleans-nails-spa.square.site/",
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you.",
+    "menu": [
+      {
+        "title": "Hands and feet",
+        "items": [
+          [
+            "Manicure",
+            "30 min",
+            "$30"
+          ],
+          [
+            "Manicure, shellac",
+            "30 min",
+            "$40"
+          ],
+          [
+            "Pedicure",
+            "30 min",
+            "$40"
+          ],
+          [
+            "Pedicure, shellac colour",
+            "45 min",
+            "$50"
+          ],
+          [
+            "Deluxe pedicure",
+            "50 min",
+            "$55"
+          ],
+          [
+            "Pedicure and manicure",
+            "1 hr 30 min",
+            "$70"
+          ],
+          [
+            "Pedicure and manicure, shellac",
+            "1 hr 30 min",
+            "$90"
+          ]
+        ]
+      },
+      {
+        "title": "Nails and waxing",
+        "items": [
+          [
+            "Acrylic full set with tips",
+            null,
+            "$60"
+          ],
+          [
+            "Gel X",
+            "45 min",
+            "$60"
+          ],
+          [
+            "Ombre",
+            null,
+            "$65"
+          ],
+          [
+            "Dip powder on natural nails",
+            "45 min",
+            "$50"
+          ],
+          [
+            "Eyebrow wax",
+            "20 min",
+            "$20"
+          ],
+          [
+            "Eyebrow wax and tint",
+            "35 min",
+            "$35"
+          ]
+        ]
+      }
     ]
   },
   {
