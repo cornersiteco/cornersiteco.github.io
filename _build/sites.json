@@ -3385,7 +3385,70 @@
       "1621605815971-fbc98d665033",
       "1599351431202-1e0f0137899a"
     ],
-    "book_url": "https://eidoz.square.site/"
+    "book_url": "https://eidoz.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Men's haircut",
+            null,
+            "$30"
+          ],
+          [
+            "Men's fade",
+            null,
+            "$35"
+          ],
+          [
+            "Hair and beard",
+            null,
+            "$40"
+          ],
+          [
+            "Haircut and eyebrows",
+            null,
+            "$30"
+          ],
+          [
+            "Kid's haircut",
+            "11 and under",
+            "$20"
+          ],
+          [
+            "Senior haircut",
+            null,
+            "$20"
+          ],
+          [
+            "First responders haircut",
+            "Police, paramedics and firefighters",
+            "$20"
+          ]
+        ]
+      },
+      {
+        "title": "Extras",
+        "items": [
+          [
+            "Beard trim",
+            null,
+            "$20"
+          ],
+          [
+            "Shape-up",
+            null,
+            "$10"
+          ],
+          [
+            "Designs",
+            null,
+            "$5"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "marya-beauty-brows",
@@ -3631,7 +3694,65 @@
       "1599351431202-1e0f0137899a",
       "1585747860715-2ba37e788b70"
     ],
-    "book_url": "https://certified-studio.square.site/"
+    "book_url": "https://certified-studio.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Certified haircut",
+            "Fades, tapers, line-ups and classic cuts",
+            "From $45"
+          ],
+          [
+            "Haircut and beard",
+            "The signature combo",
+            "Varies by barber"
+          ],
+          [
+            "The Certified Experience",
+            "Consultation, cut, wash, styling, facial and hot towel",
+            "Varies by barber"
+          ]
+        ]
+      },
+      {
+        "title": "Add-ons",
+        "items": [
+          [
+            "Hair wash and scalp refresh",
+            "10 min",
+            "$10"
+          ],
+          [
+            "Facial scrub and hot towel massage",
+            "10 min",
+            "$15"
+          ],
+          [
+            "Black mask",
+            "5 min",
+            "$10"
+          ],
+          [
+            "Eyebrow shape-up",
+            "5 min",
+            "$5"
+          ],
+          [
+            "Beard dye",
+            "15 min",
+            "$25"
+          ],
+          [
+            "Scalp analysis",
+            "5 min",
+            "Free"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "glorious-studio-mississauga",
@@ -3681,7 +3802,70 @@
       "1503951914875-452162b0f3f1",
       "1621605815971-fbc98d665033"
     ],
-    "book_url": "https://glorious-studio.square.site/"
+    "book_url": "https://glorious-studio.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Haircut",
+            null,
+            "$31"
+          ],
+          [
+            "Fade",
+            "Detailed blending",
+            "$35"
+          ],
+          [
+            "Hair and beard combo",
+            "With beard line-up and hot towel",
+            "$53"
+          ],
+          [
+            "Buzz cut",
+            "With line-up",
+            "$18"
+          ],
+          [
+            "Student fade",
+            "Under 17",
+            "$27"
+          ],
+          [
+            "Senior cut",
+            null,
+            "$22"
+          ]
+        ]
+      },
+      {
+        "title": "Beard, colour and more",
+        "items": [
+          [
+            "Hot towel shave",
+            null,
+            "$37"
+          ],
+          [
+            "Beard line-up",
+            "With hot towel",
+            "$23"
+          ],
+          [
+            "Hair colour",
+            null,
+            "$37"
+          ],
+          [
+            "Threading",
+            null,
+            "$13"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "lucky-7s-barbershop-winnipeg",
@@ -3731,7 +3915,60 @@
       "1585747860715-2ba37e788b70",
       "1599351431202-1e0f0137899a"
     ],
-    "book_url": "https://lucky7sbarbershop.square.site/"
+    "book_url": "https://lucky7sbarbershop.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Regular haircut",
+            "Cut and style",
+            "$40"
+          ],
+          [
+            "Regular haircut and beard trim",
+            null,
+            "$55"
+          ],
+          [
+            "Buzz cut",
+            "One guard all round",
+            "$30"
+          ],
+          [
+            "Buzz cut and beard trim",
+            null,
+            "$50"
+          ],
+          [
+            "Kid's haircut",
+            "10 and under",
+            "$30"
+          ],
+          [
+            "Weekly clean-up",
+            "Within 7 days of your last cut",
+            "$32.50"
+          ],
+          [
+            "Perm and haircut",
+            null,
+            "$130"
+          ]
+        ]
+      },
+      {
+        "title": "Beard",
+        "items": [
+          [
+            "Beard trim",
+            "Line-up and clean-up",
+            "$25"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "nina-hair-artistry-london",
@@ -3830,7 +4067,25 @@
       "1632345031435-8727f6897d53",
       "1764448726322-2abd2bdd6c68"
     ],
-    "book_url": "https://rtbbeautylounge.square.site/"
+    "book_url": "https://rtbbeautylounge.square.site/",
+    "menu": [
+      {
+        "title": "Starting prices",
+        "items": [
+          [
+            "Nails",
+            "Manicures, gel polish and acrylic overlays",
+            "From $40"
+          ],
+          [
+            "Lash extensions",
+            "Soft and natural to bold and full",
+            "From $55"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "iconic-brows-toronto",
@@ -3880,7 +4135,60 @@
       "1764448726322-2abd2bdd6c68",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://iconicbrows.square.site/"
+    "book_url": "https://iconicbrows.square.site/",
+    "menu": [
+      {
+        "title": "Brows",
+        "items": [
+          [
+            "Brow sculpt",
+            "New clients · mapping, hard wax and tweezing",
+            "$70"
+          ],
+          [
+            "Brow sculpt",
+            "Returning clients",
+            "$60"
+          ],
+          [
+            "Brow shape and tint",
+            null,
+            "$100"
+          ],
+          [
+            "Brow lamination and shaping",
+            "Lasts up to 6–8 weeks",
+            "$140"
+          ],
+          [
+            "Lamination, shape and tint",
+            null,
+            "$160"
+          ]
+        ]
+      },
+      {
+        "title": "Permanent makeup",
+        "items": [
+          [
+            "Nano brows",
+            "Two-step treatment",
+            "$750"
+          ],
+          [
+            "Lip blush",
+            "Lasts up to 3 years",
+            "$500"
+          ],
+          [
+            "Virtual consultation",
+            "15 min · credited toward your appointment",
+            "$50"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "snts-beauty-toronto",
@@ -3980,7 +4288,40 @@
       "1621605815971-fbc98d665033",
       "1503951914875-452162b0f3f1"
     ],
-    "book_url": "https://the-refinery-barbershop-sudbury.square.site/"
+    "book_url": "https://the-refinery-barbershop-sudbury.square.site/",
+    "menu": [
+      {
+        "title": "Cuts and shaves",
+        "items": [
+          [
+            "Adult haircut",
+            "30 min",
+            "$31"
+          ],
+          [
+            "Adult haircut with beard trim",
+            "45 min",
+            "$38"
+          ],
+          [
+            "Kid or senior haircut",
+            "30 min",
+            "$29"
+          ],
+          [
+            "Beard trim or nape shave",
+            "15 min",
+            "$18"
+          ],
+          [
+            "Barber hot shave",
+            "Traditional hot towel shave · 45 min",
+            "$40"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "oshun-hair-salon-barrie",
