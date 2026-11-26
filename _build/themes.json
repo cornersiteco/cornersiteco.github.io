@@ -1,257 +1,67 @@
 {
-  "auto": {
-    "font_h": "Archivo",
-    "font_h_w": "800",
-    "font_b": "Inter",
-    "bg": "#0e1013",
-    "surface": "#171a1f",
-    "ink": "#f4f4f5",
-    "muted": "#a1a1aa",
-    "accent": "#f97316",
-    "accent_ink": "#111111",
-    "line": "rgba(255,255,255,.08)",
-    "dark": true,
-    "radius": "14px",
-    "upper": true
-  },
-  "detailing": {
-    "font_h": "Archivo",
-    "font_h_w": "800",
-    "font_b": "Inter",
-    "bg": "#07090c",
-    "surface": "#11151b",
-    "ink": "#f5f7fa",
-    "muted": "#9aa4b2",
-    "accent": "#38bdf8",
-    "accent_ink": "#04131c",
-    "line": "rgba(255,255,255,.08)",
-    "dark": true,
-    "radius": "14px",
-    "upper": true
-  },
-  "barber": {
-    "font_h": "Bebas Neue",
-    "font_h_w": "400",
-    "font_b": "Inter",
-    "bg": "#0d0d0c",
-    "surface": "#171614",
-    "ink": "#f5f1ea",
-    "muted": "#a8a29e",
-    "accent": "#c8a165",
-    "accent_ink": "#1a140b",
-    "line": "rgba(255,255,255,.09)",
-    "dark": true,
-    "radius": "6px",
-    "upper": true
-  },
-  "tattoo": {
-    "font_h": "Bebas Neue",
-    "font_h_w": "400",
-    "font_b": "Inter",
-    "bg": "#0b0b0c",
-    "surface": "#151517",
-    "ink": "#f4f4f5",
-    "muted": "#a1a1aa",
-    "accent": "#dc2626",
-    "accent_ink": "#ffffff",
-    "line": "rgba(255,255,255,.08)",
-    "dark": true,
-    "radius": "6px",
-    "upper": true
-  },
-  "salon": {
-    "font_h": "Cormorant Garamond",
-    "font_h_w": "600",
-    "font_b": "Inter",
-    "bg": "#fbf7f4",
-    "surface": "#ffffff",
-    "ink": "#2b1e22",
-    "muted": "#7b6a70",
-    "accent": "#9f4f6b",
-    "accent_ink": "#ffffff",
-    "line": "rgba(43,30,34,.10)",
-    "dark": false,
-    "radius": "20px",
-    "upper": false
-  },
-  "tacos": {
-    "font_h": "Fraunces",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#fff8f0",
-    "surface": "#ffffff",
-    "ink": "#2a1708",
-    "muted": "#7c6250",
-    "accent": "#c2410c",
-    "accent_ink": "#ffffff",
-    "line": "rgba(42,23,8,.10)",
-    "dark": false,
-    "radius": "20px",
-    "upper": false
-  },
-  "ethiopian": {
-    "font_h": "Fraunces",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#fbf5ea",
-    "surface": "#ffffff",
-    "ink": "#2a1b0e",
-    "muted": "#7a6550",
-    "accent": "#a16207",
-    "accent_ink": "#ffffff",
-    "line": "rgba(42,27,14,.10)",
-    "dark": false,
-    "radius": "20px",
-    "upper": false
-  },
-  "italian": {
-    "font_h": "Playfair Display",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#fbf8f3",
-    "surface": "#ffffff",
-    "ink": "#231a14",
-    "muted": "#776a5e",
-    "accent": "#9f1239",
-    "accent_ink": "#ffffff",
-    "line": "rgba(35,26,20,.10)",
-    "dark": false,
-    "radius": "18px",
-    "upper": false
-  },
-  "bakery": {
-    "font_h": "Fraunces",
-    "font_h_w": "600",
-    "font_b": "Inter",
-    "bg": "#fdf8f1",
-    "surface": "#ffffff",
-    "ink": "#2e2014",
-    "muted": "#7d6a58",
-    "accent": "#b45309",
-    "accent_ink": "#ffffff",
-    "line": "rgba(46,32,20,.10)",
-    "dark": false,
-    "radius": "22px",
-    "upper": false
-  },
-  "grocery": {
-    "font_h": "Fraunces",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#f7faf7",
-    "surface": "#ffffff",
-    "ink": "#11231a",
-    "muted": "#5f7166",
-    "accent": "#166534",
-    "accent_ink": "#ffffff",
-    "line": "rgba(17,35,26,.10)",
-    "dark": false,
-    "radius": "18px",
-    "upper": false
-  },
-  "electric": {
-    "font_h": "Archivo",
-    "font_h_w": "800",
-    "font_b": "Inter",
-    "bg": "#f6f7f9",
-    "surface": "#ffffff",
-    "ink": "#0b1220",
-    "muted": "#5b6472",
-    "accent": "#facc15",
-    "accent_ink": "#0b1220",
-    "line": "rgba(11,18,32,.10)",
-    "dark": false,
-    "radius": "14px",
-    "upper": true
-  },
-  "thrift": {
-    "font_h": "Fraunces",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#faf6fb",
-    "surface": "#ffffff",
-    "ink": "#23162a",
-    "muted": "#74657b",
-    "accent": "#7e22ce",
-    "accent_ink": "#ffffff",
-    "line": "rgba(35,22,42,.10)",
-    "dark": false,
-    "radius": "22px",
-    "upper": false
-  },
-  "cafe": {
-    "font_h": "Fraunces",
-    "font_h_w": "600",
-    "font_b": "Inter",
-    "bg": "#faf6f0",
-    "surface": "#ffffff",
-    "ink": "#24180f",
-    "muted": "#7a6a5c",
-    "accent": "#7c4a24",
-    "accent_ink": "#ffffff",
-    "line": "rgba(36,24,15,.10)",
-    "dark": false,
-    "radius": "22px",
-    "upper": false
-  },
-  "pub": {
-    "font_h": "Fraunces",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#0f1712",
-    "surface": "#17211b",
-    "ink": "#f3efe6",
-    "muted": "#a9b2a9",
-    "accent": "#d4a24c",
-    "accent_ink": "#1a1206",
-    "line": "rgba(255,255,255,.09)",
-    "dark": true,
-    "radius": "16px",
-    "upper": false
-  },
-  "clinic": {
-    "font_h": "Fraunces",
-    "font_h_w": "600",
-    "font_b": "Inter",
-    "bg": "#f5f9f8",
-    "surface": "#ffffff",
-    "ink": "#0f2a27",
-    "muted": "#58706c",
-    "accent": "#0f766e",
-    "accent_ink": "#ffffff",
-    "line": "rgba(15,42,39,.10)",
-    "dark": false,
-    "radius": "20px",
-    "upper": false
-  },
-  "gold": {
-    "font_h": "Playfair Display",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#0d0c0a",
-    "surface": "#181612",
-    "ink": "#f6f1e7",
-    "muted": "#b0a796",
-    "accent": "#d4af37",
-    "accent_ink": "#1a1405",
-    "line": "rgba(255,255,255,.09)",
-    "dark": true,
-    "radius": "12px",
-    "upper": false
-  },
-  "law": {
-    "font_h": "Playfair Display",
-    "font_h_w": "700",
-    "font_b": "Inter",
-    "bg": "#f7f6f2",
-    "surface": "#ffffff",
-    "ink": "#14213d",
-    "muted": "#5d6577",
-    "accent": "#1e3a5f",
-    "accent_ink": "#ffffff",
-    "line": "rgba(20,33,61,.10)",
-    "dark": false,
-    "radius": "10px",
-    "upper": false
+  "_comment": "v4. Each art direction owns its fonts and palettes. A site picks an art direction by niche (build.rb NICHE_ART) or by sites.json \"art\"; the palette comes from sites.json \"palette\" or is picked from default_palettes by a hash of the slug, so two shops in one niche differ. All palettes are light except gallery/ink (tattoo only).",
+  "arts": {
+    "atelier": {
+      "label": "Atelier: quiet-luxury salon",
+      "fonts": ["Bodoni Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400", "Figtree:wght@400;500;600"],
+      "default_palettes": ["pearl", "shell", "sage"],
+      "palettes": {
+        "pearl": {"bg": "#f5f7f9", "paper": "#ffffff", "ink": "#14202b", "muted": "#566573", "accent": "#1f66a8", "on": "#ffffff", "line": "rgba(20,32,43,.14)"},
+        "shell": {"bg": "#faf6f2", "paper": "#ffffff", "ink": "#2a1f1c", "muted": "#6f5f58", "accent": "#96533f", "on": "#ffffff", "line": "rgba(42,31,28,.14)"},
+        "sage":  {"bg": "#f3f6f1", "paper": "#ffffff", "ink": "#1c2921", "muted": "#566459", "accent": "#3f6650", "on": "#ffffff", "line": "rgba(28,41,33,.14)"}
+      }
+    },
+    "gazette": {
+      "label": "Gazette: editorial, for restaurants",
+      "fonts": ["Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500", "Inter Tight:wght@400;500;600"],
+      "default_palettes": ["paper", "olive", "ocean"],
+      "palettes": {
+        "paper": {"bg": "#fbf9f4", "paper": "#ffffff", "ink": "#1a1714", "muted": "#655d54", "accent": "#b3261e", "on": "#ffffff", "line": "rgba(26,23,20,.16)"},
+        "olive": {"bg": "#f8f8f1", "paper": "#ffffff", "ink": "#1b1d14", "muted": "#5c6050", "accent": "#55662a", "on": "#ffffff", "line": "rgba(27,29,20,.16)"},
+        "ocean": {"bg": "#f6f9fb", "paper": "#ffffff", "ink": "#101c26", "muted": "#51616e", "accent": "#0f5c8a", "on": "#ffffff", "line": "rgba(16,28,38,.16)"}
+      }
+    },
+    "poster": {
+      "label": "Poster: typographic, for barbers",
+      "fonts": ["Anton", "Archivo:wght@400;500;600;700"],
+      "default_palettes": ["bone", "navy", "forest"],
+      "palettes": {
+        "bone":   {"bg": "#f1ece2", "paper": "#fbf8f1", "ink": "#151413", "muted": "#5d574d", "accent": "#c02e1c", "on": "#ffffff", "line": "rgba(21,20,19,.2)"},
+        "navy":   {"bg": "#eef2f6", "paper": "#ffffff", "ink": "#0d1b2a", "muted": "#4d5d6d", "accent": "#1b66ad", "on": "#ffffff", "line": "rgba(13,27,42,.2)"},
+        "forest": {"bg": "#efeee6", "paper": "#f9f8f2", "ink": "#14261c", "muted": "#55604f", "accent": "#1f6a43", "on": "#ffffff", "line": "rgba(20,38,28,.2)"}
+      }
+    },
+    "menu": {
+      "label": "Menu board: cafés, bakeries, grocers",
+      "fonts": ["DM Serif Display:ital@0;1", "DM Sans:opsz,wght@9..40,400;9..40,500;9..40,600"],
+      "default_palettes": ["cream", "mint", "sky"],
+      "palettes": {
+        "cream": {"bg": "#f6ecd9", "paper": "#fffaf0", "ink": "#2b1d12", "muted": "#6b5a4a", "accent": "#a94a14", "on": "#ffffff", "line": "rgba(43,29,18,.18)"},
+        "mint":  {"bg": "#e6efe4", "paper": "#fbfdf8", "ink": "#1b2a21", "muted": "#55655a", "accent": "#2c6646", "on": "#ffffff", "line": "rgba(27,42,33,.18)"},
+        "sky":   {"bg": "#e3edf5", "paper": "#fbfdff", "ink": "#13253a", "muted": "#506273", "accent": "#b0461d", "on": "#ffffff", "line": "rgba(19,37,58,.18)"}
+      }
+    },
+    "spec": {
+      "label": "Spec sheet: auto and trades",
+      "fonts": ["IBM Plex Sans Condensed:wght@500;600", "IBM Plex Sans:wght@400;500;600", "IBM Plex Mono:wght@400;500"],
+      "default_palettes": ["silver", "signal", "teal"],
+      "palettes": {
+        "silver": {"bg": "#f3f5f8", "paper": "#ffffff", "ink": "#0c1a26", "muted": "#52616f", "accent": "#0a66b8", "on": "#ffffff", "line": "rgba(12,26,38,.16)"},
+        "signal": {"bg": "#f4f4f1", "paper": "#ffffff", "ink": "#141414", "muted": "#5c5c57", "accent": "#c2410c", "on": "#ffffff", "line": "rgba(20,20,20,.16)"},
+        "teal":   {"bg": "#f2f6f6", "paper": "#ffffff", "ink": "#0b1b1f", "muted": "#506267", "accent": "#0a7468", "on": "#ffffff", "line": "rgba(11,27,31,.16)"}
+      }
+    },
+    "gallery": {
+      "label": "Gallery: nails, lashes, tattoo, detailing",
+      "fonts": ["Bricolage Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600", "Instrument Sans:wght@400;500;600"],
+      "default_palettes": ["blush", "ice", "stone"],
+      "palette_by_theme": {"tattoo": ["ink", "stone"]},
+      "palettes": {
+        "blush": {"bg": "#fbf5f4", "paper": "#ffffff", "ink": "#2a1a1e", "muted": "#6e5a60", "accent": "#a8425f", "on": "#ffffff", "line": "rgba(42,26,30,.14)"},
+        "ice":   {"bg": "#f4f8fa", "paper": "#ffffff", "ink": "#10212c", "muted": "#526573", "accent": "#136a95", "on": "#ffffff", "line": "rgba(16,33,44,.14)"},
+        "stone": {"bg": "#f4f2ee", "paper": "#ffffff", "ink": "#1d1b18", "muted": "#625d55", "accent": "#7a5a2e", "on": "#ffffff", "line": "rgba(29,27,24,.14)"},
+        "ink":   {"bg": "#111112", "paper": "#1a1a1c", "ink": "#f3efe8", "muted": "#a9a39a", "accent": "#d9b673", "on": "#16130c", "line": "rgba(243,239,232,.18)", "dark": true}
+      }
+    }
   }
 }

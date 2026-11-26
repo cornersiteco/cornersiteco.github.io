@@ -5,8 +5,8 @@
     "name": "Rainbow Auto",
     "theme": "auto",
     "kicker": "Auto repair · Ottawa East",
-    "h1": "Auto repair Ottawa East trusts.",
-    "h1_proof": true,
+    "h1": "Auto repair in Ottawa East.",
+    "h1_proof": false,
     "sub": "Diagnostics, brakes, maintenance and seasonal tire swaps, on Rainbow St. Call to book your car in.",
     "phone": "(613) 724-6269",
     "tel": "+16137246269",
@@ -101,8 +101,8 @@
     "name": "Spartan Auto Care Detailing",
     "theme": "detailing",
     "kicker": "Auto care & detailing · Vanier",
-    "h1": "Auto detailing, right here in Vanier.",
-    "h1_proof": true,
+    "h1": "Auto care & detailing in Vanier.",
+    "h1_proof": false,
     "sub": "Interior and exterior detailing on Shakespeare St. Call to book your car in.",
     "phone": "(613) 581-9772",
     "tel": "+16135819772",
@@ -245,7 +245,7 @@
     "name": "Elie's Hair Studio",
     "theme": "salon",
     "kicker": "Hair studio · Orléans",
-    "h1": "Great hair, right here on St-Joseph.",
+    "h1": "Hair studio in Orléans.",
     "h1_proof": false,
     "sub": "Cuts, colour and styling in the heart of Orléans. Call to book your appointment.",
     "phone": "613-834-1101",
@@ -499,7 +499,7 @@
     "name": "Bedard Electric",
     "theme": "electric",
     "kicker": "Electrician · Orléans & east Ottawa",
-    "h1": "Electrical work done right, from a local team.",
+    "h1": "Electrician in Orléans & east Ottawa.",
     "h1_proof": false,
     "sub": "Homes and businesses across Orléans and east Ottawa. Call for a quote.",
     "phone": "343-630-3320",
@@ -626,7 +626,7 @@
     "name": "Northside Auto Care",
     "theme": "auto",
     "kicker": "Auto repair · Sample site",
-    "h1": "Straight answers. Solid repairs.",
+    "h1": "Brakes, diagnostics and tires on Sample St.",
     "h1_proof": false,
     "sub": "Diagnostics, brakes, maintenance and tires. Book online or call, and we'll have you back on the road.",
     "phone": "(555) 010-0199",
@@ -635,7 +635,6 @@
     "cta": "call",
     "cta_label": "Call to book",
     "hours": "Mon–Fri 8–6 · Sat 9–2",
-    "proof": "Sample site",
     "services": [
       [
         "Diagnostics",
@@ -666,7 +665,8 @@
       "1702146713922-613313be011d",
       "1631720040176-0d789a643a78"
     ],
-    "layout": "split"
+    "palette": "silver",
+    "variant": 0
   },
   {
     "slug": "sharp-and-co",
@@ -675,7 +675,7 @@
     "name": "Sharp & Co. Barbers",
     "theme": "barber",
     "kicker": "Barbershop · Sample site",
-    "h1": "Fresh cuts. No waiting around.",
+    "h1": "Haircuts, fades and beard work on Sample Ave.",
     "h1_proof": false,
     "sub": "Haircuts, fades and beard work. Book your chair online in seconds.",
     "phone": "(555) 010-0144",
@@ -684,7 +684,6 @@
     "cta": "call",
     "cta_label": "Book your cut",
     "hours": "Tue–Sat 10–7",
-    "proof": "Sample site",
     "services": [
       [
         "Haircuts",
@@ -723,7 +722,7 @@
     "name": "Maple & Main Café",
     "theme": "cafe",
     "kicker": "Café · Sample site",
-    "h1": "Good coffee, right on the corner.",
+    "h1": "Espresso and fresh baking on Sample Rd, open daily from 7.",
     "h1_proof": false,
     "sub": "Espresso, fresh baking and a seat by the window. See the menu or order ahead.",
     "phone": "(555) 010-0177",
@@ -732,7 +731,6 @@
     "cta": "call",
     "cta_label": "Order ahead",
     "hours": "Open daily 7–5",
-    "proof": "Sample site",
     "services": [
       [
         "Espresso bar",
@@ -843,7 +841,8 @@
       "1770836037183-e0b4471fe2c0",
       "1654895716780-b4664497420d",
       "1630438994394-3deff7a591bf"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "dupont-gold",
@@ -927,7 +926,8 @@
       "1450101499163-c8848c66ca85",
       "1758518731462-d091b0b4ed0d",
       "1497366754035-f200968a6e72"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "poulsen-law",
@@ -970,7 +970,8 @@
       "1450101499163-c8848c66ca85",
       "1758518731462-d091b0b4ed0d",
       "1497366754035-f200968a6e72"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "hareg-cafe",
@@ -1070,8 +1071,8 @@
     "theme": "auto",
     "layout": "editorial",
     "kicker": "Tires & auto repair · Parkdale, Toronto",
-    "h1": "Tires and repairs on Queen West, done right.",
-    "h1_proof": true,
+    "h1": "Tires & auto repair in Parkdale, Toronto.",
+    "h1_proof": false,
     "sub": "Tires, oil changes and repairs at 1586 Queen St W. Call to book your car in.",
     "phone": "(416) 531-0095",
     "tel": "+14165310095",
@@ -1408,8 +1409,8 @@
     "theme": "auto",
     "layout": "bold",
     "kicker": "Family auto repair · Caledonia",
-    "h1": "Caledonia's family garage, trusted for decades.",
-    "h1_proof": true,
+    "h1": "Family auto repair in Caledonia.",
+    "h1_proof": false,
     "sub": "Honest repairs and fair prices at 1 Sutherland St E. Call to book your car in.",
     "phone": "(905) 765-1960",
     "tel": "+19057651960",
@@ -1457,8 +1458,8 @@
     "theme": "grocery",
     "layout": "editorial",
     "kicker": "Filipino grocery & food · Barrhaven, Ottawa",
-    "h1": "Your favourite Filipino food, right here in Barrhaven.",
-    "h1_proof": true,
+    "h1": "Filipino grocery & food in Barrhaven, Ottawa.",
+    "h1_proof": false,
     "sub": "Filipino groceries, hot food and halo-halo on Cedarview Rd. Open seven days.",
     "phone": "(613) 440-0273",
     "tel": "+16134400273",
@@ -1506,8 +1507,8 @@
     "theme": "law",
     "layout": "split",
     "kicker": "Tailoring & alterations · Chapman Mills, Barrhaven",
-    "h1": "Alterations and repairs, done right and on time.",
-    "h1_proof": true,
+    "h1": "Tailoring & alterations in Chapman Mills, Barrhaven.",
+    "h1_proof": false,
     "sub": "Hems, zippers, suits and jacket repairs at Chapman Mills Marketplace. Open six days a week.",
     "phone": "(613) 823-4638",
     "tel": "+16138234638",
@@ -1546,7 +1547,8 @@
       "1520006403909-838d6b92c22e",
       "1582719188393-bb71ca45dbb9",
       "1603400521630-9f2de124b33b"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "old-town-barber-barrhaven",
@@ -1644,7 +1646,8 @@
       "1445205170230-053b83016050",
       "1603400521630-9f2de124b33b",
       "1582719188393-bb71ca45dbb9"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "royal-barber-orleans",
@@ -1702,8 +1705,8 @@
     "theme": "barber",
     "layout": "split",
     "kicker": "Barbershop · St Joseph Blvd, Orléans",
-    "h1": "Haircuts for the whole family, done right.",
-    "h1_proof": true,
+    "h1": "Barbershop on St Joseph Blvd, Orléans.",
+    "h1_proof": false,
     "sub": "Fades, clean cuts and kids' cuts at 2142 St Joseph Blvd. Open six days a week.",
     "phone": "(613) 824-0333",
     "tel": "+16138240333",
@@ -1751,8 +1754,8 @@
     "theme": "barber",
     "layout": "editorial",
     "kicker": "Barbershop · Lacasse Ave, Vanier",
-    "h1": "Every hair type. Every time, done right.",
-    "h1_proof": true,
+    "h1": "Barbershop on Lacasse Ave, Vanier.",
+    "h1_proof": false,
     "sub": "A friendly neighbourhood barbershop at 367 Lacasse Ave, open late Friday and Saturday.",
     "phone": "(613) 818-6103",
     "tel": "+16138186103",
@@ -1941,7 +1944,7 @@
     "name": "Norling",
     "theme": "italian",
     "kicker": "Tibetan & Hakka cuisine · Parkdale",
-    "h1": "Tibetan and Hakka favourites in Parkdale.",
+    "h1": "Tibetan & Hakka cuisine in Parkdale.",
     "h1_proof": false,
     "sub": "Momos, laphing, chilli chicken and Hakka noodles, at 1512 Queen St W.",
     "phone": "416-532-2877",
@@ -2127,8 +2130,8 @@
     "theme": "tacos",
     "layout": "split",
     "kicker": "Shawarma · World Exchange Plaza, downtown Ottawa",
-    "h1": "Downtown’s best-kept shawarma secret.",
-    "h1_proof": true,
+    "h1": "Shawarma in World Exchange Plaza, downtown Ottawa.",
+    "h1_proof": false,
     "sub": "Find us in the World Exchange Plaza food court at 111 Albert St. Open weekdays for lunch, with dine-in, takeout and delivery.",
     "phone": "(613) 233-4747",
     "tel": "+16132334747",
@@ -2216,7 +2219,8 @@
       "1568288796918-03e7d93306bd",
       "1578353022142-09264fd64295",
       "1457972657980-4c9fddebec8d"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "posh-puppies",
@@ -2265,7 +2269,8 @@
       "1625279138876-8910c2af9a30",
       "1534361960057-19889db9621e",
       "1776880952098-1cc6dbbda513"
-    ]
+    ],
+    "art": "spec"
   },
   {
     "slug": "bytown-shoe-repair",
@@ -2274,8 +2279,8 @@
     "theme": "cafe",
     "layout": "split",
     "kicker": "Shoe & leather repair · Dalhousie St, ByWard Market",
-    "h1": "Your favourite boots, saved.",
-    "h1_proof": true,
+    "h1": "Shoe & leather repair on Dalhousie St, ByWard Market.",
+    "h1_proof": false,
     "sub": "Resoling, heels, zippers, stretching and leather goods repair at 341 Dalhousie St. Quick turnaround and fair prices.",
     "phone": "(613) 562-2141",
     "tel": "+16135622141",
@@ -3058,8 +3063,8 @@
     "theme": "bakery",
     "layout": "editorial",
     "kicker": "Family hair salon · Orléans",
-    "h1": "The salon families trust, for years.",
-    "h1_proof": true,
+    "h1": "Family hair salon in Orléans.",
+    "h1_proof": false,
     "sub": "Cuts, colour and styling for the whole family at 375 Des Épinettes Ave, with evening hours on Wednesdays and Thursdays.",
     "phone": "(613) 841-8939",
     "tel": "+16138418939",
@@ -3598,8 +3603,8 @@
     "theme": "barber",
     "layout": "bold",
     "kicker": "Barbers, braids & lashes · Port Credit, Mississauga",
-    "h1": "603 reviews. 4.9 stars. Fades, braids and lashes done right.",
-    "h1_proof": true,
+    "h1": "Barbers, braids & lashes in Port Credit, Mississauga.",
+    "h1_proof": false,
     "sub": "A Port Credit hair studio at 1 Hurontario St: fades, beard trims, braids and lash extensions, with attention to detail customers mention again and again.",
     "phone": "(289) 203-1507",
     "tel": "+12892031507",
@@ -3648,8 +3653,8 @@
     "theme": "tattoo",
     "layout": "split",
     "kicker": "Beauty & barber shop · Rathburn Rd W, Mississauga",
-    "h1": "Custom cuts from a barber clients have trusted for years.",
-    "h1_proof": true,
+    "h1": "Beauty & barber shop on Rathburn Rd W, Mississauga.",
+    "h1_proof": false,
     "sub": "Fades, beard trims and custom cuts at 592 Rathburn Rd W, rated 4.9 on Google by 149 customers. Open six days.",
     "phone": "(905) 749-6250",
     "tel": "+19057496250",
@@ -3847,8 +3852,8 @@
     "theme": "salon",
     "layout": "bold",
     "kicker": "Brow studio · Ossington Ave, Toronto",
-    "h1": "Brows by an artist clients trust for years.",
-    "h1_proof": true,
+    "h1": "Brow studio on Ossington Ave, Toronto.",
+    "h1_proof": false,
     "sub": "Brow shaping, lamination and tint, nano brows, lip blush and lash lifts at 100A Ossington Ave. Rated 4.9 on Google by 138 clients.",
     "phone": "(647) 954-6280",
     "tel": "+16479546280",
@@ -4147,8 +4152,8 @@
     "theme": "bakery",
     "layout": "bold",
     "kicker": "Nail salon · 23 Ave NW, Edmonton",
-    "h1": "Any design you show them, done right.",
-    "h1_proof": true,
+    "h1": "Nail salon on 23 Ave NW, Edmonton.",
+    "h1_proof": false,
     "sub": "Manicures, nail designs and acrylics by a husband-and-wife team at 10950 23 Ave NW. Rated 4.9 on Google by 79 clients.",
     "phone": "(780) 233-7779",
     "tel": "+17802337779",
@@ -4446,8 +4451,8 @@
     "theme": "bakery",
     "layout": "editorial",
     "kicker": "Hair salon · Woolwich St, Guelph",
-    "h1": "The salon clients drive in for.",
-    "h1_proof": true,
+    "h1": "Hair salon on Woolwich St, Guelph.",
+    "h1_proof": false,
     "sub": "Hair, brows, lashes and facials at 531 Woolwich St. Rated 4.8 on Google by 25 clients.",
     "phone": "(519) 827-1414",
     "tel": "+15198271414",
@@ -4696,8 +4701,8 @@
     "theme": "auto",
     "layout": "editorial",
     "kicker": "European car specialists · Montréal Rd, Ottawa · since 1968",
-    "h1": "European cars, done right since 1968.",
-    "h1_proof": true,
+    "h1": "European car specialists on Montréal Rd, Ottawa.",
+    "h1_proof": false,
     "sub": "Repairs, maintenance and pre-owned European cars at 651 Montréal Rd, serving Ottawa–Gatineau. All other makes welcome. Rated 4.3 on Google by 88 customers.",
     "phone": "(613) 749-0231",
     "tel": "+16137490231",
@@ -6672,7 +6677,8 @@
       "1760877611905-0f885a3ce551",
       "1479767574301-a01c78234a0c",
       "1597852075234-fd721ac361d3"
-    ]
+    ],
+    "email": "Ancientembertattoos@gmail.com"
   },
   {
     "slug": "changes-hair-studio-sudbury",
@@ -7067,6 +7073,356 @@
       "1503951914875-452162b0f3f1",
       "1517832606299-7ae9b720a186",
       "1585747860715-2ba37e788b70"
+    ]
+  },
+  {
+    "slug": "halcyon-nail-and-lash",
+    "dir": "samples",
+    "sample": true,
+    "name": "Halcyon Nail & Lash",
+    "theme": "salon",
+    "kicker": "Nail & lash studio · Sample site",
+    "h1": "Gel, BIAB and nail art, plus classic, hybrid and volume lash sets.",
+    "h1_proof": false,
+    "sub": "Gel, BIAB and nail art, plus classic, hybrid and volume lash sets. Book online in a few taps.",
+    "phone": "(555) 010-0155",
+    "tel": "+15550100155",
+    "address": "400 Sample St, Ottawa, ON",
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Tue–Sat 10–7 · Sun 11–5",
+    "book_url": "#prices",
+    "book_label": "Book online",
+    "services": [
+      [
+        "Gel manicures",
+        "Shaped, cuticle care and long-wearing colour.",
+        "sparkle"
+      ],
+      [
+        "BIAB & extensions",
+        "Builder gel overlays and Gel-X length.",
+        "gem"
+      ],
+      [
+        "Pedicures",
+        "Classic or gel, with a proper soak and massage.",
+        "drop"
+      ],
+      [
+        "Lash extensions",
+        "Classic, hybrid and volume sets, plus fills.",
+        "eye"
+      ]
+    ],
+    "menu": [
+      {
+        "title": "Nails",
+        "items": [
+          [
+            "Gel manicure",
+            "45 min",
+            "$45"
+          ],
+          [
+            "BIAB overlay",
+            "60 min",
+            "$60"
+          ],
+          [
+            "Gel-X extensions",
+            "90 min",
+            "$75"
+          ],
+          [
+            "Gel pedicure",
+            "60 min",
+            "$65"
+          ],
+          [
+            "Nail art",
+            "per nail",
+            "from $5"
+          ],
+          [
+            "Gel removal",
+            "20 min",
+            "$15"
+          ]
+        ]
+      },
+      {
+        "title": "Lashes & brows",
+        "items": [
+          [
+            "Classic full set",
+            "2 hr",
+            "$120"
+          ],
+          [
+            "Hybrid full set",
+            "2 hr 15 min",
+            "$140"
+          ],
+          [
+            "Volume full set",
+            "2 hr 30 min",
+            "$160"
+          ],
+          [
+            "Lash fill",
+            "within 3 weeks · 60 min",
+            "$70"
+          ],
+          [
+            "Lash lift & tint",
+            "60 min",
+            "$85"
+          ],
+          [
+            "Brow lamination",
+            "45 min",
+            "$75"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Sample prices. On a real site, Book online opens your own booking page (Square, Fresha, Booksy or Vagaro), so bookings work exactly as they do now.",
+    "about_h": "Your reviews, front and centre.",
+    "about": "On a real client site, this is where your Google rating and a few of your best real reviews go.",
+    "photos": [
+      "1610992015762-45dca7fa3a85",
+      "1589710751893-f9a6770ad71b",
+      "1619607146034-5a05296c8f9a",
+      "1607779097040-26e80aa78e66"
+    ]
+  },
+  {
+    "slug": "brightwire-electric",
+    "dir": "samples",
+    "sample": true,
+    "name": "Brightwire Electric",
+    "theme": "electric",
+    "kicker": "Licensed electricians · Sample site",
+    "h1": "Panel upgrades, EV chargers and pot lights across Ottawa, with 24/7 emergency calls.",
+    "h1_proof": false,
+    "sub": "Panel upgrades, EV chargers, pot lights and 24/7 emergency calls across Ottawa. Licensed, insured, upfront prices.",
+    "phone": "(555) 010-0122",
+    "tel": "+15550100122",
+    "address": "500 Sample Ave, Ottawa, ON",
+    "cta": "call",
+    "cta_label": "Call for a quote",
+    "hours": "Mon–Fri 7–6 · Emergencies 24/7",
+    "services": [
+      [
+        "Panel upgrades",
+        "100A to 200A, breakers and safety fixes.",
+        "bolt"
+      ],
+      [
+        "EV chargers",
+        "Level 2 home chargers, permit included.",
+        "plug"
+      ],
+      [
+        "Lighting",
+        "Pot lights, fixtures and dimmers.",
+        "bulb"
+      ],
+      [
+        "Outlets & wiring",
+        "New circuits, GFCIs and rewiring.",
+        "plug"
+      ]
+    ],
+    "menu": [
+      {
+        "title": "Common jobs",
+        "items": [
+          [
+            "Service call",
+            "Includes the first 30 minutes",
+            "$129"
+          ],
+          [
+            "Hourly rate",
+            "After the first 30 minutes",
+            "$115/hr"
+          ],
+          [
+            "Emergency call-out",
+            "Evenings, weekends and holidays",
+            "$229"
+          ],
+          [
+            "Pot lights",
+            "Per light, installed",
+            "from $165"
+          ],
+          [
+            "Level 2 EV charger",
+            "Installed, ESA permit included",
+            "from $1,350"
+          ],
+          [
+            "Panel upgrade",
+            "100A to 200A, permit included",
+            "from $3,200"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Sample prices, plus HST. Bigger work gets a free written quote after a quick look.",
+    "areas": [
+      "Centretown",
+      "Glebe",
+      "Westboro",
+      "Hintonburg",
+      "Kanata",
+      "Stittsville",
+      "Barrhaven",
+      "Nepean",
+      "Orléans",
+      "Gloucester",
+      "Vanier",
+      "Manotick"
+    ],
+    "about_h": "Your reviews, front and centre.",
+    "about": "On a real client site, this is where your Google rating and a few of your best real reviews go.",
+    "photos": [
+      "1621905251189-08b45d6a269e",
+      "1758101755915-462eddc23f57",
+      "1576446470246-499c738d1c8e",
+      "1553873002-785d775854c9"
+    ],
+    "palette": "signal",
+    "variant": 2
+  },
+  {
+    "slug": "larkspur-kitchen",
+    "dir": "samples",
+    "sample": true,
+    "name": "Larkspur Kitchen",
+    "theme": "italian",
+    "kicker": "Restaurant · Sample site",
+    "h1": "Seasonal plates, a full bar and a private room for 40 on Sample Rd.",
+    "h1_proof": false,
+    "sub": "Seasonal plates, a full bar and a room for your next celebration. Order online for pickup or delivery.",
+    "phone": "(555) 010-0133",
+    "tel": "+15550100133",
+    "address": "600 Sample Rd, Ottawa, ON",
+    "cta": "call",
+    "cta_label": "Call to book a table",
+    "hours": "Tue–Thu 11:30–9 · Fri–Sat 11:30–10 · Sun 11–8",
+    "book_url": "#prices",
+    "book_label": "Order online",
+    "services": [
+      [
+        "Dine in",
+        "Lunch and dinner, with a full bar.",
+        "utensils"
+      ],
+      [
+        "Pickup & delivery",
+        "Order online, ready in about 20 minutes.",
+        "bag"
+      ],
+      [
+        "Catering",
+        "Trays for offices, parties and family events.",
+        "users"
+      ],
+      [
+        "Private events",
+        "A private room for up to 40 guests.",
+        "star"
+      ]
+    ],
+    "menu": [
+      {
+        "title": "Small plates",
+        "items": [
+          [
+            "Charred broccolini",
+            "Lemon, chili, toasted almonds · V",
+            "$14"
+          ],
+          [
+            "Crispy cauliflower",
+            "Tahini, pomegranate, herbs · V",
+            "$15"
+          ],
+          [
+            "Beef tartare",
+            "Shallot, capers, grilled sourdough",
+            "$19"
+          ],
+          [
+            "Burrata",
+            "Roasted squash, hazelnut, honey · V",
+            "$18"
+          ]
+        ]
+      },
+      {
+        "title": "Mains",
+        "items": [
+          [
+            "Half roast chicken",
+            "Salsa verde, fries",
+            "$29"
+          ],
+          [
+            "Braised short rib",
+            "Soft polenta, gremolata",
+            "$36"
+          ],
+          [
+            "Seared salmon",
+            "Lentils, brown butter, greens",
+            "$32"
+          ],
+          [
+            "Mushroom risotto",
+            "Parmesan, thyme · V",
+            "$26"
+          ]
+        ]
+      },
+      {
+        "title": "Sides & sweets",
+        "items": [
+          [
+            "Fries",
+            "Garlic aioli · V",
+            "$8"
+          ],
+          [
+            "Market greens",
+            "House vinaigrette · V",
+            "$9"
+          ],
+          [
+            "Olive oil cake",
+            "Crème fraîche, citrus · V",
+            "$11"
+          ],
+          [
+            "Chocolate pot de crème",
+            "Sea salt, whipped cream · V",
+            "$12"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Sample menu and prices. V = vegetarian. On a real site, Order online opens your Uber Eats, DoorDash or ordering app.",
+    "about_h": "Your reviews, front and centre.",
+    "about": "On a real client site, this is where your Google rating and a few of your best real reviews go.",
+    "photos": [
+      "1695390837115-408e49a2041e",
+      "1552960226-639240203497",
+      "1712746784068-703c0c915611",
+      "1576842546422-60562b9242ae"
     ]
   }
 ]
