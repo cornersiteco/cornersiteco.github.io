@@ -9099,5 +9099,247 @@
       "1712746784068-703c0c915611",
       "1576842546422-60562b9242ae"
     ]
+  },
+  {
+    "slug": "la-crystal-nail-spa-ottawa",
+    "dir": "drafts",
+    "name": "La Crystal Nail & Spa",
+    "theme": "clinic",
+    "layout": "editorial",
+    "kicker": "Nail salon · Murray St, ByWard Market",
+    "h1": "Where nails are an art form, in the ByWard Market.",
+    "h1_proof": true,
+    "sub": "Manicures, nail extensions and custom nail art at 117 Murray St, since 2015. Call to book.",
+    "phone": "(613) 860-0717",
+    "tel": "+16138600717",
+    "address": "117 Murray St, Ottawa, ON K1N 5M5",
+    "rating": "4.4",
+    "reviews": 568,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Thu 10 am – 7:30 pm · Fri 10 am – 8 pm · Sat 10 am – 6 pm · Sun 11 am – 6 pm",
+    "services": [
+      [
+        "Nail art",
+        "Custom designs. Nails as an art form.",
+        "gem"
+      ],
+      [
+        "Manicures & extensions",
+        "Manicures and nail extensions, in the heart of the Market.",
+        "sparkle"
+      ],
+      [
+        "Laser hair removal",
+        "Offered alongside your nails.",
+        "star"
+      ],
+      [
+        "Mobile nail technician",
+        "Ask about an appointment at your place.",
+        "users"
+      ]
+    ],
+    "about_h": "568 reviews. 4.4 stars.",
+    "about": "La Crystal Nail & Spa is rated 4.4 on Google by 568 clients. Reviewers mention shellac manicures (20 reviews), talented staff (13) and custom designs. Find the salon at 117 Murray St in the ByWard Market.",
+    "photos": [
+      "1632345031435-8727f6897d53",
+      "1604654894610-df63bc536371",
+      "1610992015762-45dca7fa3a85",
+      "1787651344170-c2f81514934d"
+    ]
+  },
+  {
+    "slug": "the-car-clinic-ottawa",
+    "dir": "drafts",
+    "name": "The Car Clinic",
+    "theme": "auto",
+    "kicker": "Auto repair · Holland Ave, Hintonburg",
+    "h1": "Honest auto repair on Holland Ave.",
+    "h1_proof": true,
+    "sub": "Mechanical, electrical and body work by certified technicians at 65B Holland Ave. Over 20 years in business.",
+    "phone": "(343) 988-4442",
+    "tel": "+13439884442",
+    "address": "65B Holland Ave, Ottawa, ON K1Y 0X9",
+    "rating": "4.4",
+    "reviews": 364,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Sat 9 am – 7 pm · Sun closed",
+    "services": [
+      [
+        "Mechanical repair",
+        "Full repair and maintenance, by certified technicians.",
+        "gauge"
+      ],
+      [
+        "Electrical",
+        "Diagnosis and repair, battery testing and installs.",
+        "gauge"
+      ],
+      [
+        "Body work",
+        "Body work and accessories, under the same roof.",
+        "star"
+      ],
+      [
+        "Mobile maintenance",
+        "Maintenance that can come to you.",
+        "users"
+      ]
+    ],
+    "about_h": "364 reviews. 4.4 stars.",
+    "about": "The Car Clinic is rated 4.4 on Google by 364 customers. Reviewers mention safety inspections (21 reviews), alignments (16) and an honest mechanic (13). Find the shop at 65B Holland Ave in Hintonburg.",
+    "photos": [
+      "1619642751034-765dfdf7c58e",
+      "1702146713858-8e7d1cc29fe8",
+      "1702146713922-613313be011d",
+      "1631720040176-0d789a643a78"
+    ]
+  },
+  {
+    "slug": "dk-nails-spa-baseline",
+    "dir": "drafts",
+    "name": "DK Nails Spa",
+    "theme": "bakery",
+    "layout": "split",
+    "kicker": "Nail salon · Baseline Rd",
+    "h1": "A clean, relaxing nail spa on Baseline Rd.",
+    "h1_proof": true,
+    "sub": "Manicures, pedicures, Dermalogica skin care and waxing at 780 Baseline Rd. Kids welcome, too.",
+    "phone": "(613) 224-4777",
+    "tel": "+16132244777",
+    "address": "780 Baseline Rd #4, Ottawa, ON K2C 3V8",
+    "rating": "4.2",
+    "reviews": 235,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Tue–Wed 9:30 am – 7 pm · Thu–Fri 9:30 am – 8 pm · Sat 9:30 am – 6 pm · Sun 10 am – 6 pm · Mon closed",
+    "services": [
+      [
+        "Hand care",
+        "Manicures in a clean, relaxing spa.",
+        "sparkle"
+      ],
+      [
+        "Foot care",
+        "Pedicures and foot care.",
+        "drop"
+      ],
+      [
+        "Skin care",
+        "Skin services with Dermalogica products.",
+        "leaf"
+      ],
+      [
+        "Kids' services & waxing",
+        "Services for kids 8 and under, plus waxing.",
+        "users"
+      ]
+    ],
+    "about_h": "235 reviews on Google.",
+    "about": "DK Nails Spa has 235 Google reviews. Reviewers mention shellac (11 reviews), a clean space (9) and careful cuticle work. Find the spa at 780 Baseline Rd, unit 4.",
+    "photos": [
+      "1632345031435-8727f6897d53",
+      "1604654894610-df63bc536371",
+      "1630843599725-32ead7671867",
+      "1787651344170-c2f81514934d"
+    ]
+  },
+  {
+    "slug": "metcalfe-hair-design",
+    "dir": "drafts",
+    "name": "Metcalfe Hair Design",
+    "theme": "salon",
+    "kicker": "Hair salon · Bank St, Centretown",
+    "h1": "Cuts, colour and styling in Centretown.",
+    "h1_proof": false,
+    "sub": "Precision cuts, colour, styling and hair spa treatments at 181 Bank St. Call to book.",
+    "phone": "(613) 797-9479",
+    "tel": "+16137979479",
+    "address": "181 Bank St, Ottawa, ON K2P 1W5",
+    "rating": "4.7",
+    "reviews": 118,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Mon–Fri 9:30 am – 6 pm · Sat 9:30 am – 4 pm · Sun closed",
+    "services": [
+      [
+        "Cutting",
+        "Precision cuts for your face shape and lifestyle.",
+        "scissors"
+      ],
+      [
+        "Styling",
+        "Updos, sleek blowouts, any look you have in mind.",
+        "comb"
+      ],
+      [
+        "Colouring",
+        "From subtle highlights to bold colour.",
+        "drop"
+      ],
+      [
+        "Hair spa",
+        "Nourishing hair and scalp treatments.",
+        "leaf"
+      ]
+    ],
+    "about_h": "118 reviews. 4.7 stars.",
+    "about": "Metcalfe Hair Design is rated 4.7 on Google by 118 clients. Reviewers mention fair prices (13 reviews), great hair design and a clean salon with kind staff. Find it at 181 Bank St in Centretown.",
+    "photos": [
+      "1522337360788-8b13dee7a37e",
+      "1560066984-138dadb4c035",
+      "1600948836101-f9ffda59d250",
+      "1695527081848-1e46c06e6458"
+    ]
+  },
+  {
+    "slug": "esthetics-by-gilla-nepean",
+    "dir": "drafts",
+    "name": "Esthetics By Gilla",
+    "theme": "clinic",
+    "kicker": "Esthetics & electrolysis · Nepean",
+    "h1": "Sugaring, waxing and electrolysis in Nepean.",
+    "h1_proof": false,
+    "sub": "Sugaring and waxing, electrolysis, facials and manicures, with friendly, bilingual service. Call to book.",
+    "phone": "(613) 567-6336",
+    "tel": "+16135676336",
+    "address": "Nepean, Ottawa, ON",
+    "rating": "4.8",
+    "reviews": 28,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Tue–Fri 10 am – 8 pm · Sat 9 am – 5 pm · Sun–Mon closed",
+    "services": [
+      [
+        "Sugaring & waxing",
+        "Sugaring and body waxing, brows included.",
+        "leaf"
+      ],
+      [
+        "Electrolysis",
+        "Permanent hair removal with professional equipment.",
+        "star"
+      ],
+      [
+        "Facials & skin care",
+        "Facials, galvanic facials and microdermabrasion.",
+        "drop"
+      ],
+      [
+        "Manicures & pedicures",
+        "Hands and feet, plus massage.",
+        "sparkle"
+      ]
+    ],
+    "about_h": "28 reviews. 4.8 stars.",
+    "about": "Esthetics By Gilla is rated 4.8 on Google by 28 clients. Reviewers mention body waxing (8 reviews), hygiene and comfort, and the owner replies to reviews personally. Visa, Mastercard and debit accepted.",
+    "photos": [
+      "1634449571010-02389ed0f9b0",
+      "1761839256791-6a93f89fb8b0",
+      "1521590832167-7bcbfaa6381f",
+      "1585747860715-2ba37e788b70"
+    ]
   }
 ]
