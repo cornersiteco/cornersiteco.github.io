@@ -521,6 +521,17 @@
     table.cmp td::before{content:attr(data-l);display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:2px;letter-spacing:-.004em}
     table.cmp td.us{border-radius:14px!important;padding:14px 16px!important;border-bottom:0;margin-bottom:2px;box-shadow:none}
     table.cmp td.us::before{color:var(--ocean-d)}
+/* phones: card grids become swipeable rows (Apple-style), next card peeks in */
+.bento,.chips{display:flex;flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad));padding:4px var(--pad) 22px;scroll-padding:0 var(--pad)}
+.bento::-webkit-scrollbar,.chips::-webkit-scrollbar{display:none}
+.bento{gap:12px}
+.bento>.bc{flex:0 0 84%;scroll-snap-align:start}
+.bc-v,.bc-v.sm{height:172px}
+.chips{gap:8px}
+.chips li{flex:none;scroll-snap-align:start}
+    table.cmp tbody{display:flex;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1 * var(--pad));padding:4px var(--pad) 22px;scroll-padding:0 var(--pad)}
+    table.cmp tbody::-webkit-scrollbar{display:none}
+    table.cmp tbody tr,table.cmp tbody tr:first-child{flex:0 0 84%;scroll-snap-align:start;background:#fff;border:0;border-radius:20px;box-shadow:var(--sh1);padding:22px 20px 10px}
   }
   @media (max-width:700px){
     nav a.ntel,nav a.btn{display:none}
