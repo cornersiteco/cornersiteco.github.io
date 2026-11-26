@@ -4692,7 +4692,75 @@
       "1585747860715-2ba37e788b70",
       "1599351431202-1e0f0137899a"
     ],
-    "book_url": "https://mnmhairsalon.square.site/"
+    "book_url": "https://book.squareup.com/appointments/sdforttrdy5prb/location/L2BZ8648XAQHN/services",
+    "menu": [
+      {
+        "title": "Men",
+        "items": [
+          [
+            "Men's haircut",
+            "Cut and styling",
+            "$30"
+          ],
+          [
+            "Men's haircut and beard fade",
+            "45 min",
+            "$35"
+          ],
+          [
+            "Beard fade or design",
+            "30 min",
+            "$15"
+          ],
+          [
+            "Senior men's haircut",
+            "45 min",
+            "$27"
+          ]
+        ]
+      },
+      {
+        "title": "Women and kids",
+        "items": [
+          [
+            "Women's haircut and blow-dry",
+            "1 hr",
+            "$35"
+          ],
+          [
+            "Women's shampoo, cut and style",
+            "1 hr",
+            "$40"
+          ],
+          [
+            "Senior women's haircut",
+            "1 hr",
+            "$30"
+          ],
+          [
+            "Kids' haircut",
+            "Under 10",
+            "$25"
+          ],
+          [
+            "Wash and blow-dry",
+            "1 hr",
+            "$30"
+          ],
+          [
+            "Wash and iron curls",
+            "1 hr",
+            "$35"
+          ],
+          [
+            "Women's root touch-up",
+            "2 hr",
+            "From $80"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "old-town-barbershop-surrey",
@@ -4742,7 +4810,70 @@
       "1503951914875-452162b0f3f1",
       "1599351431202-1e0f0137899a"
     ],
-    "book_url": "https://the-old-town-barbershop-108763.square.site/"
+    "book_url": "https://the-old-town-barbershop-108763.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Regular cut",
+            "Number cuts, 0.5 to 5",
+            "$20"
+          ],
+          [
+            "Skin fade",
+            "High, mid, low or taper",
+            "$25"
+          ],
+          [
+            "Scissor cut",
+            null,
+            "$25"
+          ],
+          [
+            "Pro haircut",
+            "Fade design and styling",
+            "$30"
+          ],
+          [
+            "Regular cut and beard trim",
+            null,
+            "$40"
+          ],
+          [
+            "Skin fade and beard trim",
+            null,
+            "$45"
+          ]
+        ]
+      },
+      {
+        "title": "Grooming and treatments",
+        "items": [
+          [
+            "Beard trim",
+            "Machine trim",
+            "$20"
+          ],
+          [
+            "Hair colour",
+            "Natural black or brown",
+            "$20"
+          ],
+          [
+            "Groom package",
+            "Cut, beard, facial, styling",
+            "$100"
+          ],
+          [
+            "Hair treatments",
+            "Perms, curls or keratin",
+            "$150"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "yeg-nails-salon-edmonton",
@@ -4974,7 +5105,7 @@
     "kicker": "Lash & brow studio · Seabrook Dr, Kitchener",
     "h1": "Lashes and brows, done with care.",
     "h1_proof": true,
-    "sub": "Lash extensions, lash lifts and brow lamination at 173 Seabrook Dr. Rated 4.9 on Google by 128 clients.",
+    "sub": "Lash extensions, lash lifts and ombre brows at 173 Seabrook Dr. Rated 4.9 on Google by 128 clients.",
     "phone": "(519) 760-9707",
     "tel": "+15197609707",
     "address": "173 Seabrook Dr, Kitchener, ON N2E 4E9",
@@ -4995,9 +5126,9 @@
         "sparkle"
       ],
       [
-        "Brow lamination",
-        "Shaped, set brows that last.",
-        "star"
+        "Ombre brows",
+        "Soft, powdered brows.",
+        "pen"
       ],
       [
         "Lash & brow courses",
@@ -5251,7 +5382,7 @@
     "kicker": "Hair salon · Woolwich St, Guelph",
     "h1": "Hair salon on Woolwich St, Guelph.",
     "h1_proof": false,
-    "sub": "Hair, brows, lashes and facials at 531 Woolwich St. Rated 4.8 on Google by 25 clients.",
+    "sub": "Cuts, colour and foils at 531 Woolwich St. Rated 4.8 on Google by 25 clients.",
     "phone": "(519) 827-1414",
     "tel": "+15198271414",
     "address": "531 Woolwich St, Guelph, ON N1H 3X9",
@@ -5267,14 +5398,14 @@
         "scissors"
       ],
       [
-        "Brows",
-        "Brow shaping and waxing.",
-        "eye"
+        "Colour & foils",
+        "Root refreshes, partial and full foils.",
+        "drop"
       ],
       [
-        "Facials & lashes",
-        "Facials and lashes, clients say, leave them completely relaxed.",
-        "sparkle"
+        "Clipper cuts",
+        "Quick, clean clipper cuts.",
+        "scissors"
       ],
       [
         "A cute salon",
@@ -5290,7 +5421,55 @@
       "1764448726322-2abd2bdd6c68",
       "1560066984-138dadb4c035"
     ],
-    "book_url": "https://cardinalhair.square.site/"
+    "book_url": "https://cardinalhair.square.site/",
+    "menu": [
+      {
+        "title": "Haircuts",
+        "items": [
+          [
+            "Clipper cut",
+            null,
+            "$35"
+          ],
+          [
+            "Haircut, short hair",
+            null,
+            "$50"
+          ],
+          [
+            "Haircut, long hair",
+            null,
+            "$60"
+          ]
+        ]
+      },
+      {
+        "title": "Colour and cut",
+        "items": [
+          [
+            "Root refresh and haircut",
+            "Up to 1 inch of regrowth",
+            "$121"
+          ],
+          [
+            "Partial foil and haircut",
+            "Partial blonding, toned",
+            "$215"
+          ],
+          [
+            "Full foil and haircut",
+            "Full blonding, toned",
+            "$250"
+          ],
+          [
+            "Root refresh, partial foil and haircut",
+            null,
+            "$275"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from the price list on your website, November 2026. We will confirm every one with you."
   },
   {
     "slug": "the-pink-bar-whitby",
@@ -5340,7 +5519,75 @@
       "1610992015762-45dca7fa3a85",
       "1632345031435-8727f6897d53"
     ],
-    "book_url": "https://the-pink-bar-inc.square.site/"
+    "book_url": "https://the-pink-bar-inc.square.site/",
+    "menu": [
+      {
+        "title": "Nails",
+        "items": [
+          [
+            "Polish-free manicure",
+            "Dry e-file Russian manicure",
+            "$40"
+          ],
+          [
+            "Shellac manicure",
+            "Russian manicure with gel",
+            "From $55"
+          ],
+          [
+            "Shellac polish change",
+            null,
+            "$40"
+          ],
+          [
+            "Soft gel overlay",
+            null,
+            "From $65"
+          ],
+          [
+            "Bio gel overlay",
+            null,
+            "$75"
+          ],
+          [
+            "Gel-X full set",
+            null,
+            "From $90"
+          ],
+          [
+            "Acrylic full set",
+            null,
+            "From $90"
+          ]
+        ]
+      },
+      {
+        "title": "Toes and lashes",
+        "items": [
+          [
+            "Polish-free pedicure",
+            "45 min",
+            "$65"
+          ],
+          [
+            "Basic gel pedicure",
+            "1 hr",
+            "From $70"
+          ],
+          [
+            "Classic lash full set",
+            "1 hr 30 min",
+            "$110"
+          ],
+          [
+            "Volume lash full set",
+            "2 hr",
+            "$150"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "ohbijou-nail-studio-burnaby",
@@ -5871,7 +6118,7 @@
     "kicker": "Private hair studio · Norfolk St, Guelph",
     "h1": "A private hair studio in downtown Guelph.",
     "h1_proof": true,
-    "sub": "Cuts, colour, highlights and beard trims at 115 Norfolk St. Rated a perfect 5.0 on Google by 81 clients.",
+    "sub": "Cuts, colour and beard trims at 115 Norfolk St. Rated a perfect 5.0 on Google by 81 clients.",
     "phone": "(647) 625-6254",
     "tel": "+16476256254",
     "address": "115 Norfolk St Unit 3, Guelph, ON N1H 4J7",
@@ -5887,7 +6134,7 @@
         "scissors"
       ],
       [
-        "Colour & highlights",
+        "Colour & lightening",
         "Highlights clients come back for.",
         "drop"
       ],
@@ -5910,7 +6157,70 @@
       "1634449571010-02389ed0f9b0",
       "1600948836101-f9ffda59d250"
     ],
-    "book_url": "https://thistlehairstudio.square.site/"
+    "book_url": "https://book.squareup.com/appointments/9gt1s5634asl1u/location/L9KYYEPGJ9SR4/services",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Short haircut",
+            "Clippers, cut and style",
+            "$50"
+          ],
+          [
+            "Long haircut",
+            "Scissors only",
+            "$70"
+          ],
+          [
+            "Buzz cut or sides only",
+            "30 min",
+            "$35"
+          ],
+          [
+            "Short haircut and treatment",
+            null,
+            "$55"
+          ],
+          [
+            "Child's short haircut",
+            "Under 13",
+            "$40"
+          ],
+          [
+            "Child's long haircut",
+            "Under 13",
+            "$45"
+          ]
+        ]
+      },
+      {
+        "title": "Beard",
+        "items": [
+          [
+            "Short haircut and beard",
+            "1 hr 15 min",
+            "$60"
+          ],
+          [
+            "Long haircut and beard",
+            "1 hr 30 min",
+            "$80"
+          ],
+          [
+            "Beard",
+            "30 min",
+            "$25"
+          ],
+          [
+            "Clean-up",
+            "15 min",
+            "$20"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "queena-beauty-kanata",
@@ -5960,7 +6270,70 @@
       "1761718210089-ba3bb5ccb54f",
       "1764448726322-2abd2bdd6c68"
     ],
-    "book_url": "https://queena-beauty.square.site/"
+    "book_url": "https://queena-beauty.square.site/",
+    "menu": [
+      {
+        "title": "Lash extensions",
+        "items": [
+          [
+            "Natural look full set",
+            "1 hr 15 min",
+            "$105"
+          ],
+          [
+            "Hybrid full set",
+            "1 hr 30 min",
+            "$125"
+          ],
+          [
+            "5D volume full set",
+            "2 hr",
+            "$135"
+          ],
+          [
+            "Wispy volume full set",
+            "2 hr 15 min",
+            "$140"
+          ],
+          [
+            "Natural look refill",
+            "Within 3 weeks",
+            "$65"
+          ]
+        ]
+      },
+      {
+        "title": "Lifts, brows and PMU",
+        "items": [
+          [
+            "Lash lift and tint",
+            "1 hr",
+            "$95"
+          ],
+          [
+            "Brow lamination",
+            "45 min",
+            "$80"
+          ],
+          [
+            "Brow lamination and tint",
+            "1 hr",
+            "$95"
+          ],
+          [
+            "Brow wax and tint",
+            "30 min",
+            "$45"
+          ],
+          [
+            "Nano, powder or combo brows",
+            "Semi-permanent",
+            "$400"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "glam-and-lash-oakville",
@@ -6122,7 +6495,75 @@
       "1741934023052-26baf5535088",
       "1589710751893-f9a6770ad71b"
     ],
-    "book_url": "https://eves-vanity-ltd.square.site/"
+    "book_url": "https://eves-vanity-ltd.square.site/",
+    "menu": [
+      {
+        "title": "Brows and lashes",
+        "items": [
+          [
+            "Brow map and wax",
+            "20 min",
+            "$25"
+          ],
+          [
+            "Brow map, wax and tint",
+            "25 min",
+            "$35"
+          ],
+          [
+            "Brow lamination",
+            "Wax and shape included",
+            "$75"
+          ],
+          [
+            "Brow lamination, wax and hybrid tint",
+            "1 hr",
+            "$85"
+          ],
+          [
+            "Lash lift and tint",
+            "1 hr",
+            "$85"
+          ]
+        ]
+      },
+      {
+        "title": "Waxing",
+        "items": [
+          [
+            "Lip",
+            null,
+            "$8"
+          ],
+          [
+            "Underarm",
+            null,
+            "$20"
+          ],
+          [
+            "Bikini line",
+            null,
+            "$25"
+          ],
+          [
+            "Brazilian",
+            "First visit",
+            "$60"
+          ],
+          [
+            "Brazilian maintenance",
+            "Every 4-6 weeks",
+            "$50"
+          ],
+          [
+            "Full legs",
+            null,
+            "$50"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "sams-fades-brantford",
@@ -6172,7 +6613,70 @@
       "1503951914875-452162b0f3f1",
       "1599351431202-1e0f0137899a"
     ],
-    "book_url": "https://sams-fades.square.site/"
+    "book_url": "https://sams-fades.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Fade",
+            "40 min",
+            "$39.99"
+          ],
+          [
+            "Regular haircut",
+            "40 min",
+            "$34.99"
+          ],
+          [
+            "Scissor cut",
+            "35 min",
+            "$32.99"
+          ],
+          [
+            "Buzz cut",
+            "25 min",
+            "$24.99"
+          ],
+          [
+            "Kids' cut",
+            "12 and under",
+            "$27.99"
+          ],
+          [
+            "Senior cut",
+            "30 min",
+            "$32.99"
+          ]
+        ]
+      },
+      {
+        "title": "Beard and packages",
+        "items": [
+          [
+            "Fade and beard line-up",
+            "50 min",
+            "$49.99"
+          ],
+          [
+            "Fade and beard, premium",
+            "1 hr",
+            "$59.99"
+          ],
+          [
+            "Beard trim and clean-up",
+            "Straight razor",
+            "$24.99"
+          ],
+          [
+            "Platinum service",
+            "1 hr 30 min",
+            "$84.99"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "btown-barbershop-hamilton",
@@ -6209,8 +6713,8 @@
         "scissors"
       ],
       [
-        "Book online",
-        "Pick a time in a minute.",
+        "Call ahead",
+        "Call to check today's wait.",
         "clock"
       ]
     ],
@@ -6221,8 +6725,7 @@
       "1585747860715-2ba37e788b70",
       "1599351431202-1e0f0137899a",
       "1621605815971-fbc98d665033"
-    ],
-    "book_url": "http://btownbarbershop10.booksy.com/"
+    ]
   },
   {
     "slug": "mayorscutt-waterloo",
@@ -6453,7 +6956,70 @@
       "1764448726322-2abd2bdd6c68",
       "1741934023052-26baf5535088"
     ],
-    "book_url": "https://thelashclinicoshawa.square.site/"
+    "book_url": "https://thelashclinicoshawa.square.site/",
+    "menu": [
+      {
+        "title": "Lashes",
+        "items": [
+          [
+            "Signature full set",
+            "2 hr 30 min",
+            "$175"
+          ],
+          [
+            "Signature fill",
+            "Within 21 days",
+            "$90"
+          ],
+          [
+            "TLC touch",
+            "Light refill",
+            "$55"
+          ],
+          [
+            "Foreign fill",
+            "Another artist's set",
+            "$110"
+          ],
+          [
+            "Lash lift and tint",
+            "50 min",
+            "$90"
+          ],
+          [
+            "Korean signature lash lift and tint",
+            "1 hr 30 min",
+            "$135"
+          ]
+        ]
+      },
+      {
+        "title": "Brows",
+        "items": [
+          [
+            "Signature brow sculpt",
+            "Lamination, tint and wax",
+            "$120"
+          ],
+          [
+            "Sleek brow",
+            "Lamination",
+            "$90"
+          ],
+          [
+            "Define brow",
+            "Tint and wax",
+            "$45"
+          ],
+          [
+            "Sculpted brow",
+            "Wax and shape",
+            "$25"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "briar-rose-beauty-stittsville",
@@ -6714,7 +7280,75 @@
       "1610992015762-45dca7fa3a85",
       "1607779097040-26e80aa78e66"
     ],
-    "book_url": "https://la-lavender.square.site/"
+    "book_url": "https://la-lavender.square.site/",
+    "menu": [
+      {
+        "title": "Nails",
+        "items": [
+          [
+            "Manicure",
+            "25 min",
+            "$20"
+          ],
+          [
+            "Shellac manicure",
+            "35 min",
+            "$35"
+          ],
+          [
+            "Pedicure",
+            "35 min",
+            "$30"
+          ],
+          [
+            "Shellac pedicure",
+            "45 min",
+            "$40"
+          ],
+          [
+            "Deluxe pedicure",
+            "Shellac polish",
+            "$55"
+          ],
+          [
+            "Acrylic full set",
+            null,
+            "From $35"
+          ],
+          [
+            "Bio-gel",
+            null,
+            "From $45"
+          ]
+        ]
+      },
+      {
+        "title": "Waxing and threading",
+        "items": [
+          [
+            "Eyebrow wax",
+            null,
+            "$10"
+          ],
+          [
+            "Threading",
+            null,
+            "From $12"
+          ],
+          [
+            "Brazilian",
+            null,
+            "From $40"
+          ],
+          [
+            "Full leg",
+            null,
+            "$40"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "copper-coin-barbers-den",
@@ -6847,7 +7481,40 @@
       "1621605815971-fbc98d665033",
       "1599351431202-1e0f0137899a"
     ],
-    "book_url": "https://barber-house-ll.square.site/"
+    "book_url": "https://barber-house-ll.square.site/",
+    "menu": [
+      {
+        "title": "Cuts and beard",
+        "items": [
+          [
+            "Haircut and wash",
+            "40 min",
+            "$45"
+          ],
+          [
+            "Haircut, beard trim and hot towel",
+            "55 min",
+            "$55"
+          ],
+          [
+            "Beard trim and hot towel",
+            "30 min",
+            "$30"
+          ],
+          [
+            "Kids' haircut",
+            "35 min",
+            "$30"
+          ],
+          [
+            "Line-up",
+            "30 min",
+            "$30"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "gabys-hair-salon-barbershop",
@@ -6858,7 +7525,7 @@
     "kicker": "Salon & barbershop · Lawrence Ave W, North York",
     "h1": "Hair for every texture, in English and Español.",
     "h1_proof": true,
-    "sub": "Hair, barbering and tattoos at 1575 Lawrence Ave W. Rated 4.8 on Google by 125 clients.",
+    "sub": "Hair, barbering and braids at 1575 Lawrence Ave W. Rated 4.8 on Google by 125 clients.",
     "phone": "(416) 245-2825",
     "tel": "+14162452825",
     "address": "1575 Lawrence Ave W Unit 1, North York, ON M6L 1C3",
@@ -6879,9 +7546,9 @@
         "razor"
       ],
       [
-        "Tattoos",
-        "In the same shop.",
-        "pen"
+        "Braids & silk press",
+        "Knotless braids, silk press and Dominican blow-dry.",
+        "sparkle"
       ],
       [
         "Book online",
@@ -6897,7 +7564,75 @@
       "1785456283212-338f5bc44d50",
       "1600948836101-f9ffda59d250"
     ],
-    "book_url": "http://gabyshairsalonbarbershop.booksy.com/a/"
+    "book_url": "http://gabyshairsalonbarbershop.booksy.com/a/",
+    "menu": [
+      {
+        "title": "Hair salon",
+        "items": [
+          [
+            "Women's haircut",
+            "30 min",
+            "$50"
+          ],
+          [
+            "Wash and silk press",
+            null,
+            "From $85"
+          ],
+          [
+            "Dominican blow-dry",
+            "No flat iron",
+            "From $70"
+          ],
+          [
+            "Knotless braids, medium",
+            null,
+            "From $160"
+          ],
+          [
+            "Bohemian knotless, medium",
+            null,
+            "From $250"
+          ],
+          [
+            "Keratin treatment",
+            "4 hr",
+            "$250"
+          ]
+        ]
+      },
+      {
+        "title": "Barbershop",
+        "items": [
+          [
+            "Haircut and fade",
+            "50 min",
+            "$40"
+          ],
+          [
+            "Haircut and beard",
+            "55 min",
+            "$50"
+          ],
+          [
+            "Line-up",
+            "20 min",
+            "$25"
+          ],
+          [
+            "Beard line-up",
+            "20 min",
+            "$25"
+          ],
+          [
+            "Kids' haircut",
+            "40 min",
+            "$30"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Booksy page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "linda-loves-hair-london",
@@ -7155,7 +7890,45 @@
       "1503951914875-452162b0f3f1",
       "1517832606299-7ae9b720a186"
     ],
-    "book_url": "https://book.squareup.com/appointments/07xui6olb82i3h/location/LGVFFZJRMXMYJ/services"
+    "book_url": "https://book.squareup.com/appointments/07xui6olb82i3h/location/LGVFFZJRMXMYJ/services",
+    "menu": [
+      {
+        "title": "Men",
+        "items": [
+          [
+            "Men's haircut",
+            "With Rouzbeh",
+            "$45"
+          ],
+          [
+            "Men's haircut",
+            "With Farzad",
+            "$40"
+          ],
+          [
+            "Men's hair and beard",
+            "With Farzad",
+            "$50"
+          ]
+        ]
+      },
+      {
+        "title": "Women",
+        "items": [
+          [
+            "Women's cut, shampoo and dry",
+            "45 min",
+            "$60"
+          ],
+          [
+            "Women's root colour",
+            "Short hair",
+            "$60"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "canvas-barbershop-bowmanville",
@@ -7205,7 +7978,40 @@
       "1503951914875-452162b0f3f1",
       "1585747860715-2ba37e788b70"
     ],
-    "book_url": "https://canvas-barbershop.square.site/s/appointments"
+    "book_url": "https://canvas-barbershop.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts and services",
+        "items": [
+          [
+            "Men's regular haircut",
+            "Wash and style",
+            "$25"
+          ],
+          [
+            "Men's fade haircut",
+            "Wash and style",
+            "$30"
+          ],
+          [
+            "Women's haircut",
+            "Wash and blowout",
+            "$40–$60"
+          ],
+          [
+            "King's service",
+            "Cut, steam, hot towel, mask",
+            "$70"
+          ],
+          [
+            "Keratin treatment",
+            "2 hr 30 min",
+            "$150–$200"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "simmies-beauty-lounge-lasalle",
@@ -7255,7 +8061,75 @@
       "1761718210089-ba3bb5ccb54f",
       "1764448726322-2abd2bdd6c68"
     ],
-    "book_url": "https://simmies-beauty-lounge.square.site/s/appointments"
+    "book_url": "https://simmies-beauty-lounge.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Brows, lips and laser",
+        "items": [
+          [
+            "Eyebrow threading",
+            "10 min",
+            "$12"
+          ],
+          [
+            "Eyebrow threading and tint",
+            "20 min",
+            "$30"
+          ],
+          [
+            "Brow lamination",
+            "30 min",
+            "$75"
+          ],
+          [
+            "Microblading",
+            "2 hr 30 min",
+            "$350"
+          ],
+          [
+            "Lip blush tattoo",
+            "2 hr 30 min",
+            "$350"
+          ],
+          [
+            "Laser hair removal, underarms",
+            null,
+            "$50"
+          ]
+        ]
+      },
+      {
+        "title": "Nails",
+        "items": [
+          [
+            "Classic manicure",
+            "Gel paint",
+            "$35"
+          ],
+          [
+            "Russian manicure",
+            "Gel paint",
+            "$65"
+          ],
+          [
+            "Classic pedicure",
+            "Gel paint",
+            "$45"
+          ],
+          [
+            "Advanced luxury pedicure",
+            "Gel paint",
+            "$65"
+          ],
+          [
+            "Gel short set",
+            null,
+            "$40"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "dpratto-barber-studio-cornwall",
@@ -7408,7 +8282,70 @@
       "1621605815971-fbc98d665033",
       "1585747860715-2ba37e788b70"
     ],
-    "book_url": "https://book.squareup.com/appointments/2dsn191cpstsaz/location/LC81VPWM8BFHC/services"
+    "book_url": "https://book.squareup.com/appointments/2dsn191cpstsaz/location/LC81VPWM8BFHC/services",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Haircut",
+            "30 min",
+            "$40"
+          ],
+          [
+            "Haircut and beard",
+            "40 min",
+            "$45"
+          ],
+          [
+            "Total package",
+            "Cut, beard, hot towel",
+            "$50"
+          ],
+          [
+            "Kids' haircut",
+            "Under 11",
+            "$30"
+          ],
+          [
+            "Senior haircut",
+            "25 min",
+            "$30"
+          ]
+        ]
+      },
+      {
+        "title": "Braids, twists and locs",
+        "items": [
+          [
+            "Knotless braids, medium",
+            "3 hr",
+            "$200"
+          ],
+          [
+            "Two-strand twists",
+            "1 hr 30 min",
+            "$100"
+          ],
+          [
+            "Cornrows, straight back",
+            "1 hr 30 min",
+            "$70"
+          ],
+          [
+            "Loc retwist",
+            "1 hr 30 min",
+            "$90"
+          ],
+          [
+            "Interlocking retwist",
+            "1 hr 30 min",
+            "$130"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "wellington-barbershop-ottawa",
@@ -7608,7 +8545,75 @@
       "1764448726322-2abd2bdd6c68",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://www.dashbooking.com/salon/zoey-nails-and-spa"
+    "book_url": "https://www.dashbooking.com/salon/zoey-nails-and-spa",
+    "menu": [
+      {
+        "title": "Manicures and pedicures",
+        "items": [
+          [
+            "Shellac manicure",
+            "30 min",
+            "$35"
+          ],
+          [
+            "Shellac pedicure",
+            "45 min",
+            "$50"
+          ],
+          [
+            "Manicure and pedicure",
+            "Regular polish",
+            "$55"
+          ],
+          [
+            "Manicure and pedicure",
+            "Both with shellac",
+            "$85"
+          ],
+          [
+            "Deluxe pedicure with shellac",
+            "Deep clean",
+            "$65"
+          ]
+        ]
+      },
+      {
+        "title": "Extensions, lashes and waxing",
+        "items": [
+          [
+            "Acrylic full set",
+            "With gel polish",
+            "$55"
+          ],
+          [
+            "Bio gel full set",
+            "1 hr",
+            "$65"
+          ],
+          [
+            "Dipping powder full set",
+            "1 hr",
+            "$55"
+          ],
+          [
+            "Classic lash full set",
+            "1 hr",
+            "$90"
+          ],
+          [
+            "Hybrid lash full set",
+            "1 hr",
+            "$110"
+          ],
+          [
+            "Brazilian wax",
+            "30 min",
+            "$50"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your online booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "ankas-hair-esthetics-ottawa",
@@ -7703,7 +8708,70 @@
       "1517832606299-7ae9b720a186",
       "1585747860715-2ba37e788b70"
     ],
-    "book_url": "https://the-grubby-barber-shop.square.site/s/appointments"
+    "book_url": "https://the-grubby-barber-shop.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Men's cut",
+            null,
+            "$25"
+          ],
+          [
+            "Men's cut and wash",
+            null,
+            "$30"
+          ],
+          [
+            "Women's cut",
+            null,
+            "$25"
+          ],
+          [
+            "Wash, cut and style",
+            null,
+            "$30"
+          ],
+          [
+            "Kids' cut",
+            null,
+            "$25"
+          ],
+          [
+            "Beard trim",
+            null,
+            "$7.50"
+          ],
+          [
+            "Bang trim",
+            null,
+            "$6"
+          ]
+        ]
+      },
+      {
+        "title": "Colour",
+        "items": [
+          [
+            "All-over colour",
+            "With wash, cut and style",
+            "From $100"
+          ],
+          [
+            "Highlights",
+            "With wash, cut and style",
+            "From $150"
+          ],
+          [
+            "Balayage or creative colour",
+            null,
+            "From $200"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "hair-essentials-carleton-place",
@@ -7856,7 +8924,75 @@
       "1589710751893-f9a6770ad71b",
       "1761718210089-ba3bb5ccb54f"
     ],
-    "book_url": "https://valleyhairartistry.square.site/s/appointments"
+    "book_url": "https://valleyhairartistry.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts and styling",
+        "items": [
+          [
+            "Shampoo, cut and style",
+            "1 hr",
+            "$69"
+          ],
+          [
+            "Men's haircut",
+            "40 min",
+            "$35"
+          ],
+          [
+            "Child's haircut",
+            "Under 10",
+            "$26"
+          ],
+          [
+            "Women's blowout",
+            "45 min",
+            "$46"
+          ],
+          [
+            "Upstyle",
+            "1 hr",
+            "$91"
+          ],
+          [
+            "Bridal upstyle",
+            "1 hr 30 min",
+            "$163"
+          ]
+        ]
+      },
+      {
+        "title": "Colour and treatments",
+        "items": [
+          [
+            "Full colour",
+            null,
+            "From $144"
+          ],
+          [
+            "Foils (highlight)",
+            null,
+            "From $166"
+          ],
+          [
+            "Balayage",
+            null,
+            "From $189"
+          ],
+          [
+            "Signature blonding",
+            "4 hr",
+            "$295"
+          ],
+          [
+            "Hair Botox",
+            "3 hr 30 min",
+            "From $254"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "quattro-hair-studio-belleville",
@@ -8452,7 +9588,75 @@
       "1785456411888-c2e842552820",
       "1764448726322-2abd2bdd6c68"
     ],
-    "book_url": "https://theyoungsparrowparlour.square.site/s/appointments"
+    "book_url": "https://theyoungsparrowparlour.square.site/s/appointments",
+    "menu": [
+      {
+        "title": "Cuts and barbering",
+        "items": [
+          [
+            "Short cut",
+            "45 min",
+            "$26"
+          ],
+          [
+            "Medium cut",
+            "45 min",
+            "$40"
+          ],
+          [
+            "Long cut",
+            "45 min",
+            "$60"
+          ],
+          [
+            "Fade",
+            "45 min",
+            "$26"
+          ],
+          [
+            "Beard trim",
+            "30 min",
+            "$15"
+          ],
+          [
+            "Hot shave",
+            "45 min",
+            "$35"
+          ],
+          [
+            "Kids' short cut",
+            "30 min",
+            "$22"
+          ]
+        ]
+      },
+      {
+        "title": "Colour",
+        "items": [
+          [
+            "All-over colour",
+            "2 hr 30 min",
+            "$120"
+          ],
+          [
+            "Root touch-up",
+            "2 hr",
+            "$90"
+          ],
+          [
+            "Partial highlight",
+            "3 hr",
+            "$120"
+          ],
+          [
+            "Balayage",
+            "3 hr",
+            "$180"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "elegance-nail-spa-windsor",
@@ -8699,7 +9903,50 @@
       "1503951914875-452162b0f3f1",
       "1517832606299-7ae9b720a186"
     ],
-    "book_url": "https://inmikeschair.square.site/"
+    "book_url": "https://inmikeschair.square.site/",
+    "menu": [
+      {
+        "title": "Cuts and services",
+        "items": [
+          [
+            "Haircut",
+            "50 min",
+            "$50"
+          ],
+          [
+            "Haircut and beard",
+            "1 hr",
+            "$60"
+          ],
+          [
+            "Scissor cut",
+            "Long hair",
+            "$60"
+          ],
+          [
+            "Lineup",
+            "25 min",
+            "$20"
+          ],
+          [
+            "Cleanup",
+            "For braids or locs",
+            "$35"
+          ],
+          [
+            "INMIKESCHAIR VIP",
+            "All the works",
+            "$90"
+          ],
+          [
+            "Mobile service",
+            "Outside the shop",
+            "$100"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "lexis-aesthetics-mississauga",
@@ -8748,7 +9995,75 @@
       "1761718210089-ba3bb5ccb54f",
       "1741934023052-26baf5535088"
     ],
-    "book_url": "https://lexis-aesthetics.square.site/"
+    "book_url": "https://lexis-aesthetics.square.site/",
+    "menu": [
+      {
+        "title": "Lash extensions",
+        "items": [
+          [
+            "Natural full set",
+            "3 hr",
+            "$125"
+          ],
+          [
+            "Hybrid or soft volume full set",
+            "3 hr",
+            "$135"
+          ],
+          [
+            "Volume full set",
+            "3 hr",
+            "$150"
+          ],
+          [
+            "Mega volume full set",
+            "3 hr",
+            "$160"
+          ],
+          [
+            "Natural set refill",
+            "Within 2 weeks",
+            "$75"
+          ]
+        ]
+      },
+      {
+        "title": "Lifts and brows",
+        "items": [
+          [
+            "Lash lift",
+            null,
+            "$85"
+          ],
+          [
+            "Lash lift and tint",
+            null,
+            "$95"
+          ],
+          [
+            "Brow lamination and shape",
+            null,
+            "$65"
+          ],
+          [
+            "Brow lamination, shape and tint",
+            null,
+            "$75"
+          ],
+          [
+            "Brow tint",
+            "10 min",
+            "$10"
+          ],
+          [
+            "Brow shaping",
+            "10 min",
+            "$10"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "halcyon-nail-and-lash",
