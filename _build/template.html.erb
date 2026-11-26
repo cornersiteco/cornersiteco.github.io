@@ -17,11 +17,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
-<link rel="stylesheet" href="<%= c.font_url %>">
+<% c.font_urls.each do |u| -%>
+<link rel="stylesheet" href="<%= u %>">
+<% end -%>
 <style>
 :root{<%= c.css_vars %>}
 <%= page_css %>
-</style>
+<%= c.brand_css %></style>
 <% if s['final'] -%>
 <script type="application/ld+json"><%= local_business_ld(s) %></script>
 <% end -%>
@@ -31,7 +33,7 @@
 <% elsif s['sample'] -%>
 <div class="ban"><p><span class="tag">Sample</span> A <b>sample site</b> for a fictional business, made by <a href="<%= HOME %>">Corner Site Co.</a> to show the kind of site we build.<%= c.np > 0 ? ' Photos via Unsplash.' : '' %></p></div>
 <% else -%>
-<div class="ban"><p><span class="b1"><span class="tag">Draft</span> Made for <%= e s['name'] %> by <a href="<%= HOME %>">Corner Site Co.</a></span><span class="bs"> · </span><span class="b2">Not their official site<%= c.np > 0 ? ' · Stock photos' : '' %> <a class="dl" href="#make-it-yours">Make it yours &darr;</a></span></p></div>
+<div class="ban"><p class="bd"><span class="b1"><span class="tag">Draft</span> Made for <%= e s['name'] %> by <a href="<%= HOME %>">Corner Site Co.</a></span><span class="bs"> · </span><span class="b2"><span>Not their official site<%= c.np > 0 ? ' · Stock photos' : '' %></span> <a class="dl" href="#make-it-yours">Make it yours &darr;</a></span></p></div>
 <% end -%>
 <%= body_html %>
 <% unless c.colophon.empty? -%>
@@ -41,11 +43,10 @@
 <section class="offer" id="make-it-yours" aria-label="From Corner Site Co.">
   <div class="ow">
     <p class="oe">From Corner Site Co. · not part of the draft</p>
-    <h2>Like it? This can be <%= e poss(s['name']) %> real website.</h2>
-    <p class="ol">Want your own <%= book ? 'photos, prices and booking link' : 'photos and prices' %> in it first? Text or email me and I'll put them in, free, before you decide anything.</p>
+    <h2>Like it? This can be <%= tx poss(s['name']) %> real website.</h2>
+    <p class="ol">Want your own <%= book ? 'photos, prices and booking link' : 'photos and prices' %> in it first? Text or email me and I&rsquo;ll put them in, free, before you decide anything.</p>
 <% if book -%>
-    <style>.offer .adds{margin:0 0 28px;padding:18px 20px;border:1px solid rgba(0,0,0,.1);border-radius:14px;background:#fff}.offer .ah{margin:0 0 10px;font:500 11px/1.4 ui-monospace,'SF Mono',Menlo,Consolas,monospace;letter-spacing:.18em;text-transform:uppercase;color:#6e6e73}.offer .adds ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}.offer .adds li{display:block;padding:0 0 0 22px;border:0;position:relative;font-size:15px;line-height:1.45;counter-increment:none}.offer .adds li::before{content:'✓';position:absolute;left:0;top:0;font:600 14px/1.45 Inter,sans-serif;letter-spacing:0;color:#2f7d4f}@media (max-width:600px){.offer .adds ul{grid-template-columns:1fr}}</style>
-    <div class="adds"><p class="ah">What this adds to your booking page</p><ul>
+    <div class="ocard adds"><p class="ah">What this adds to your booking page</p><ul>
       <li><b>Your own web address</b>, registered in your name.</li>
       <li><b>Your services, hours and story</b> on one page Google can read.</li>
       <li><b>Your work, shown off</b> in a photo gallery.</li>
@@ -53,13 +54,13 @@
     </ul></div>
 <% end -%>
 <% if founding -%>
-    <div class="f3" style="margin:0 0 24px;padding:18px 20px;border:1px solid rgba(0,0,0,.12);border-radius:14px;background:#fff;font-size:15px;line-height:1.5"><p style="margin:0 0 6px;font:600 12px/1.4 ui-monospace,'SF Mono',Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:#2f7d4f">Free website for our first 3 clients · <%= FOUNDING %> of 3 spots left</p><p style="margin:0">We're a new business, and we want our first clients to become our best examples. So the first three businesses that say yes get their website finished and put online <b>free of charge</b>. You'd only pay for your web address (about $20 a year, in your name). Normally $990, or $129/month. All we ask is that we can show your business on our site as an example of our work.</p></div>
+    <div class="ocard f3"><p class="ah">Free website for our first 3 clients <b><%= FOUNDING %> of 3 spots left</b></p><p>We&rsquo;re a new business, and we want our first clients to become our best examples. So the first three businesses that say yes get their website finished and put online <b>free of charge</b>. You&rsquo;d only pay for your web address (about $20 a year, in your name). Normally $990, or $129/month. All we ask is that we can show your business on our site as an example of our work.</p></div>
 <% end -%>
     <ol>
       <li><span><b>Tell us what to change.</b> Your own photos, prices and wording. Two rounds of changes are included.</span></li>
-      <li><span><b>Approve the finished site</b> on your phone. It's usually live 3 business days after you approve it.</span></li>
+      <li><span><b>Approve the finished site</b> on your phone. It&rsquo;s usually live 3 business days after you approve it.</span></li>
 <% if founding -%>
-      <li><span><b>Only then, pay:</b> nothing if you're one of our first 3 clients (just your web address, about $20/year, in your name). After that it's $990 one time, or $129/month with nothing upfront (cancel any time), plus your web address.</span></li>
+      <li><span><b>Only then, pay:</b> nothing if you&rsquo;re one of our first 3 clients (just your web address, about $20/year, in your name). After that it&rsquo;s $990 one time, or $129/month with nothing upfront (cancel any time), plus your web address.</span></li>
 <% else -%>
       <li><span><b>Only then, pay:</b> $990 one time, or $129/month with nothing upfront (cancel any time). Plus your web address (about $20/year), registered in your name.</span></li>
 <% end -%>
@@ -110,7 +111,17 @@ document.querySelectorAll('.copy').forEach(function(c){c.addEventListener('click
 if(navigator.clipboard)navigator.clipboard.writeText(v).then(ok,function(){});})});
 /* the phone bar steps aside while the page's own buttons are on screen, so the same action is never shown twice */
 var mb=document.querySelector('.mbar'),ha=document.querySelector('main .acts');
-if(mb&&ha&&'IntersectionObserver' in window){new IntersectionObserver(function(en){mb.classList.toggle('is-away',en[0].isIntersecting)},{threshold:.6}).observe(ha)}})();
+if(mb&&ha&&'IntersectionObserver' in window){new IntersectionObserver(function(en){mb.classList.toggle('is-away',en[0].isIntersecting)},{threshold:.6}).observe(ha)}
+/* brand fonts: measure the name in the real font and make it fit (poster lines fill the width; other names only ever shrink) */
+if(b.classList.contains('bfit')&&document.fonts){var cv=document.createElement('canvas').getContext('2d');
+function em(el,x){var cs=getComputedStyle(el),tt=cs.textTransform,fs=parseFloat(cs.fontSize)||1;x=tt=='uppercase'?x.toUpperCase():tt=='lowercase'?x.toLowerCase():x;cv.font=cs.fontStyle+' '+cs.fontWeight+' 100px '+cs.fontFamily;return cv.measureText(x).width/100+(parseFloat(cs.letterSpacing)||0)/fs*x.length}
+function fit(){document.querySelectorAll('.pl').forEach(function(el){var v=em(el,el.textContent);if(v>0)el.style.setProperty('--w',v.toFixed(3))});
+document.querySelectorAll('.name,.plate').forEach(function(el){el.style.fontSize='';var cs=getComputedStyle(el),fs=parseFloat(cs.fontSize),W=el.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),m=0;if(!W)return;
+el.textContent.trim().split(/\s+/).forEach(function(x){m=Math.max(m,em(el,x))});if(m*fs>W)el.style.fontSize=Math.floor(W/m*.985)+'px'})}
+document.fonts.ready.then(fit);var ft;addEventListener('resize',function(){clearTimeout(ft);ft=setTimeout(fit,120)})}
+/* quiet arrival: what is below the first screen eases in as it arrives. Nothing is ever hidden waiting for this script. */
+if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var vh=innerHeight,io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px 6% 0px'});
+document.querySelectorAll('main section>.w>*,main>.wall,main>.strip,main>.cover,.offer .ow').forEach(function(el){if(el.getBoundingClientRect().top>vh*1.1)io.observe(el)})}})();
 </script>
 <% unless s['final'] -%>
 <script data-goatcounter="https://cornersiteco.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>

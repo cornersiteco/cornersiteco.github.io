@@ -5,6 +5,37 @@
 # Rules (unchanged): only verified facts for real businesses; photos are Unsplash (free licence)
 # placeholders, labelled; real drafts carry the draft banner + noindex.
 # Files: template.html.erb (shell), base.css, layouts/<art>.html.erb + layouts/<art>.css, themes.json (arts + palettes).
+#
+# ---------- BRAND MATCHING (optional, per site) ----------
+# A draft should look like the client's own brand, not like one of our palettes. Add to a sites.json entry:
+#
+#   "brand": {
+#     "accent": "#c8102e",              the brand colour (buttons, links, highlights)
+#     "ink": "#1a1a1a",                 main text colour
+#     "bg": "#fffaf3",                  page background (a dark value gives a dark page)
+#     "display_font": "Playfair Display",   Google Font for the name and headings
+#     "body_font": "Inter",                 Google Font for everything else
+#     "logo_case": "upper"              how the name is set: upper | title | lower   (title = exactly as written in "name")
+#   }
+#
+# Every key is optional; anything left out keeps the art direction's own value. Every layout honours all six.
+#   Colours   #rgb or #rrggbb. paper / muted / line / button-text colours are derived from the three you give.
+#             WCAG AA (4.5:1) is enforced at build time, and each fix is logged as "WARN brand <slug>: ...":
+#               - ink on bg below 4.5:1      -> ink falls back to near-black or white, whichever reads better
+#               - accent as TEXT on bg/paper -> the fill keeps the true brand colour; text uses a shade of it nudged
+#                                               toward ink until it passes (CSS var --at). Example: gold links on cream.
+#               - text on accent (buttons)   -> white if it passes, otherwise near-black
+#               - an unreadable value ("red", "#12") is ignored with a warning
+#             A supplied accent also becomes the colour of the main button in every layout.
+#   Fonts     loaded from Google Fonts only when set (the layout font they replace is no longer requested).
+#             Families in BRAND_FONTS get their proper weights/italics; any other family is requested as plain
+#             "family=Name" (regular only) with a warning. To ask for exact axes write it the themes.json way:
+#             "display_font": "Rozha One"  or  "display_font": "Bitter:ital,wght@0,400..700;1,400".
+#             Each brand font gets its own <link>, so a mistyped family can only lose itself, never the page's other fonts.
+#             Fake bold/italic is switched off for brand fonts: a missing style falls back to the real upright cut.
+#             Optional extra: "display_weight": 700 forces the weight of the name and section headings.
+#             A wide brand font never overflows: a few lines of inline JS shrink the name to fit (poster: re-fit exactly).
+#   Preview   NOBRAND=1 ruby build.rb builds everything with the brand blocks ignored (for before/after checks).
 require 'uri'; require 'json'; require 'cgi'; require 'erb'; require 'fileutils'; require 'zlib'
 ROOT = __dir__
 THEMES = JSON.parse(File.read(File.join(ROOT, 'themes.json'), encoding: 'UTF-8'))
@@ -66,6 +97,109 @@ def stars(r)
   v = r.to_f
   (1..5).map { |i| f = [[v - (i - 1), 0].max, 1].min; %(<span class="st" style="--f:#{(f * 100).round}%">★</span>) }.join
 end
+
+# ---------- colour maths (WCAG 2.x) ----------
+def hex_rgb(h)
+  m = h.to_s.strip.match(/\A#?(\h{3}|\h{6})\z/) or return nil
+  x = m[1]; x = x.chars.map { |c| c * 2 }.join if x.size == 3
+  x.scan(/../).map { |c| c.to_i(16) }
+end
+def rgb_hex(c) '#' + c.map { |v| '%02x' % [[v.round, 0].max, 255].min }.join end
+def lum(c) r, g, b = c.map { |v| v /= 255.0; v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055)**2.4 }; 0.2126 * r + 0.7152 * g + 0.0722 * b end
+def contrast(a, b) x, y = [lum(a), lum(b)].sort; (y + 0.05) / (x + 0.05) end
+def mix(a, b, t) a.zip(b).map { |x, y| x + (y - x) * t } end   # t = 0 -> a, t = 1 -> b
+AA = 4.5
+NEAR_BLACK = [17, 17, 17]; WHITE = [255, 255, 255]
+def best_text_on(bg) contrast(WHITE, bg) >= contrast(NEAR_BLACK, bg) ? WHITE : NEAR_BLACK end
+# move colour c toward `to` in small steps until it reads at AA on every background given
+def until_aa(c, to, bgs)
+  0.step(1, 0.04) { |t| x = mix(c, to, t); return x if bgs.all? { |b| contrast(x, b) >= AA } }
+  to
+end
+
+# ---------- brand: sites.json "brand" -> palette + fonts (see the header of this file) ----------
+BRAND_FONTS = {   # Google Fonts axes that exist for each family (all checked against the css2 API)
+  'Abril Fatface'=>'', 'Alfa Slab One'=>'', 'Anton'=>'', 'Archivo'=>'wght@400;500;600;700;800', 'Archivo Black'=>'', 'Barlow'=>'wght@400;500;600;700',
+  'Barlow Condensed'=>'wght@500;600;700', 'Bebas Neue'=>'', 'Big Shoulders Display'=>'wght@500;600;700;800', 'Bodoni Moda'=>'ital,opsz,wght@0,6..96,400..700;1,6..96,400..600',
+  'Bricolage Grotesque'=>'opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700', 'Cinzel'=>'wght@400;500;600;700', 'Cormorant'=>'ital,wght@0,400..700;1,400..700',
+  'Cormorant Garamond'=>'ital,wght@0,400;0,500;0,600;1,400;1,500', 'DM Sans'=>'opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700', 'DM Serif Display'=>'ital@0;1',
+  'Dancing Script'=>'wght@400;500;600;700', 'Epilogue'=>'wght@400;500;600;700', 'Familjen Grotesk'=>'wght@400;500;600;700', 'Figtree'=>'wght@400;500;600;700',
+  'Fraunces'=>'ital,opsz,wght@0,9..144,400..800;1,9..144,400..600', 'Gloock'=>'', 'Great Vibes'=>'', 'Instrument Sans'=>'wght@400;500;600;700', 'Instrument Serif'=>'ital@0;1',
+  'Inter'=>'wght@400;500;600;700', 'Italiana'=>'', 'Josefin Sans'=>'wght@400;500;600;700', 'Jost'=>'wght@400;500;600;700', 'Kanit'=>'wght@400;500;600;700', 'Karla'=>'wght@400;500;600;700',
+  'Lato'=>'wght@400;700', 'League Spartan'=>'wght@400;500;600;700', 'Lexend'=>'wght@400;500;600;700', 'Libre Baskerville'=>'ital,wght@0,400;0,700;1,400',
+  'Libre Franklin'=>'wght@400;500;600;700', 'Lora'=>'ital,wght@0,400..700;1,400..700', 'Manrope'=>'wght@400;500;600;700;800', 'Marcellus'=>'', 'Montserrat'=>'wght@400;500;600;700;800',
+  'Mulish'=>'wght@400;500;600;700', 'Newsreader'=>'ital,opsz,wght@0,6..72,400..700;1,6..72,400..600', 'Nunito'=>'wght@400;500;600;700;800', 'Nunito Sans'=>'wght@400;600;700',
+  'Open Sans'=>'wght@400;500;600;700', 'Oswald'=>'wght@400;500;600;700', 'Outfit'=>'wght@400;500;600;700', 'Pacifico'=>'', 'Permanent Marker'=>'',
+  'Playfair Display'=>'ital,wght@0,400..800;1,400..600', 'Plus Jakarta Sans'=>'wght@400;500;600;700', 'Poppins'=>'wght@400;500;600;700', 'Prata'=>'', 'Quicksand'=>'wght@400;500;600;700',
+  'Raleway'=>'wght@400;500;600;700', 'Red Hat Display'=>'wght@400;500;600;700;800', 'Righteous'=>'', 'Roboto'=>'wght@400;500;700', 'Rubik'=>'wght@400;500;600;700', 'Sora'=>'wght@400;500;600;700',
+  'Source Serif 4'=>'ital,opsz,wght@0,8..60,400..700;1,8..60,400', 'Space Grotesk'=>'wght@400;500;600;700', 'Syne'=>'wght@400;500;600;700;800', 'Teko'=>'wght@400;500;600;700',
+  'Tenor Sans'=>'', 'Unbounded'=>'wght@400;500;600;700', 'Urbanist'=>'wght@400;500;600;700', 'Work Sans'=>'wght@400;500;600;700', 'Yeseva One'=>'', 'Zilla Slab'=>'wght@400;500;600;700'
+}
+ART_FALLBACK = {'atelier'=>'"Didot","Bodoni 72",Georgia,serif', 'gazette'=>'"Iowan Old Style",Georgia,serif', 'poster'=>'"Haettenschweiler","Arial Narrow",Impact,sans-serif', 'menu'=>'"Iowan Old Style",Georgia,serif', 'spec'=>'"Arial Narrow",system-ui,sans-serif', 'gallery'=>'system-ui,-apple-system,"Segoe UI",sans-serif'}
+BRAND_WARN = []
+def brand_warn(slug, msg) BRAND_WARN << "WARN brand #{slug}: #{msg}"; warn BRAND_WARN.last end
+# "Playfair Display" or "Bitter:wght@400;700" -> [css family name, Google Fonts css2 family spec] (nil when not usable)
+def brand_font(slug, v, key)
+  return nil if blank?(v)
+  name, axes = v.to_s.strip.split(':', 2)
+  name = name.strip.gsub(/\s+/, ' ')
+  unless name =~ /\A[A-Za-z0-9 ]+\z/
+    brand_warn(slug, %(#{key} "#{v}" is not a Google Font family name; keeping the layout font)); return nil
+  end
+  if axes.nil?
+    known = BRAND_FONTS.find { |k, _| k.casecmp?(name) }
+    if known then name, axes = known
+    else brand_warn(slug, %(#{key} "#{name}" is not in BRAND_FONTS; loading the regular cut only (write "#{name}:wght@400;600" to ask for more)))
+    end
+  end
+  [name, blank?(axes) ? name : "#{name}:#{axes}"]
+end
+# base = the art direction's palette (hash of CSS colours). Returns [palette, text-accent hex].
+def brand_palette(slug, base, b)
+  col = lambda { |k|
+    next nil if blank?(b[k])
+    hex_rgb(b[k]) || (brand_warn(slug, %(#{k} "#{b[k]}" is not a #rgb / #rrggbb colour; keeping the layout colour)); nil)
+  }
+  bg = col.('bg'); ink = col.('ink'); accent = col.('accent')
+  p = base.dup
+  own_bg = bg || hex_rgb(base['bg']); own_ink = ink || hex_rgb(base['ink'])
+  if contrast(own_ink, own_bg) < AA
+    safe = best_text_on(own_bg)
+    brand_warn(slug, "ink #{rgb_hex(own_ink)} on bg #{rgb_hex(own_bg)} is #{'%.2f' % contrast(own_ink, own_bg)}:1 (needs 4.5); text falls back to #{rgb_hex(safe)}")
+    own_ink = safe
+  end
+  if bg || ink
+    dark = lum(own_bg) < 0.18
+    paper = dark ? mix(own_bg, WHITE, 0.07) : mix(own_bg, WHITE, 0.62)
+    p['bg'] = rgb_hex(own_bg); p['ink'] = rgb_hex(own_ink); p['paper'] = rgb_hex(paper)
+    p['muted'] = rgb_hex(until_aa(mix(own_ink, own_bg, 0.36), own_ink, [own_bg, paper]))
+    p['line'] = "rgba(#{own_ink.map(&:round).join(',')},#{dark ? '.2' : '.15'})"
+    dark ? p['dark'] = true : p.delete('dark')
+  end
+  paper = hex_rgb(p['paper']) || own_bg
+  acc = accent || hex_rgb(base['accent'])
+  if accent
+    p['accent'] = rgb_hex(acc)
+    on = contrast(WHITE, acc) >= AA ? WHITE : best_text_on(acc)
+    brand_warn(slug, "white on accent #{rgb_hex(acc)} is #{'%.2f' % contrast(WHITE, acc)}:1; button text uses #{rgb_hex(on)}") unless on == WHITE
+    p['on'] = rgb_hex(on)
+  end
+  at = acc
+  unless [own_bg, paper].all? { |x| contrast(acc, x) >= AA }
+    at = until_aa(acc, own_ink, [own_bg, paper])
+    worst = [own_bg, paper].min_by { |x| contrast(acc, x) }
+    brand_warn(slug, "accent #{rgb_hex(acc)} as text on #{worst == own_bg ? 'bg' : 'card background'} #{rgb_hex(worst)} is #{'%.2f' % contrast(acc, worst)}:1 (needs 4.5); accent-coloured text uses #{rgb_hex(at)}, fills keep the brand colour") if accent || bg
+  end
+  p['at'] = rgb_hex(at)
+  p
+end
+
+# typographic apostrophes and quotes for visible text (never for attributes, URLs or the copy button)
+def smart(s)
+  s.to_s.gsub(/(?<=[[:alpha:].,!?])'/, "\u2019").gsub(/(?<=\d)'(?=[[:alpha:]])/, "\u2019").gsub(/'(?=\d0s\b)/, "\u2019")   # it's, Kids', 2023's, '90s
+   .gsub(/(?<![[:alnum:]])"(?=\S)/, "\u201C").gsub(/(?<=[^\s\d])"/, "\u201D").gsub(/(?<![[:alnum:]])'(?=\S)/, "\u2018")   # 18" and 5' stay straight (inches, feet)
+end
+def tx(s) CGI.escapeHTML(smart(s)) end
 
 # ---------- art direction choice ----------
 # 1) sites.json "art" (or "layout" if it already holds a v4 name); 2) niche words in the kicker; 3) the old theme.
@@ -196,8 +330,8 @@ def poster_lines(name, maxw)
   end
   best[1]
 end
-def poster_html(name, maxw, cls)
-  poster_lines(name, maxw).map { |l| %(<span class="pl #{cls}" style="--w:#{anton_w(l).round(3)}">#{e l.upcase}</span>) }.join
+def poster_html(name, maxw, cls, kase = 'upper')
+  poster_lines(name, maxw).map { |l| %(<span class="pl #{cls}" style="--w:#{anton_w(l).round(3)}">#{tx(kase == 'lower' ? l.downcase : (kase == 'title' ? l : l.upcase))}</span>) }.join
 end
 
 # ---------- per-site context ----------
@@ -209,7 +343,14 @@ class Ctx
     names = @a['palettes'].keys
     allowed = (@a['palette_by_theme'] || {})[s['theme']] || @a['default_palettes'] || names
     @pal_name = names.include?(s['palette']) ? s['palette'] : allowed[seed(s, 'pal') % allowed.size]
-    @pal = @a['palettes'].fetch(@pal_name)
+    @brand = (ENV['NOBRAND'] || !s['brand'].is_a?(Hash)) ? {} : s['brand']
+    base = @a['palettes'].fetch(@pal_name)
+    @pal = brand_palette(s['slug'], base, @brand)
+    @bfonts = [brand_font(s['slug'], @brand['display_font'], 'display_font'), brand_font(s['slug'], @brand['body_font'], 'body_font')]
+    @kase = @brand['logo_case'].to_s.downcase
+    unless @kase.empty? || %w[upper title lower].include?(@kase)
+      brand_warn(s['slug'], %(logo_case "#{@brand['logo_case']}" is not upper, title or lower; ignored)); @kase = ''
+    end
     @v = (s['variant'] || seed(s, 'v')).to_i % 3
     @week = hours_parse(s['hours'])
   end
@@ -217,7 +358,37 @@ class Ctx
   def sample?; !!s['sample'] end
   def draft?; !final? && !sample? end
   def name; s['name'] end
-  def name_h; e(name).gsub('-', '&#8209;') end   # "Sari-Sari" never breaks at its hyphen
+  def name_h; tx(name).gsub('-', '&#8209;').gsub(' &amp; ', '&nbsp;&amp; ') end   # ...and an ampersand never starts a line   # "Sari-Sari" never breaks at its hyphen
+  # --- brand ---
+  def brand?; !@brand.empty? end
+  def brand_fonts?; @bfonts.any? end
+  def logo_case; @kase end
+  def poster_name(maxw) poster_html(name, maxw, '', @kase.empty? ? 'upper' : @kase) end
+  # kicker parts that stay on one line each, so a line never breaks inside "Preston St"
+  # When the whole kicker is longer than `max` characters it cannot fit one phone line: the parts then stack, one per line,
+  # and the separators step aside (classes kb / ks, phones only), instead of leaving a dot dangling at a line end.
+  def area_html(sep, max = 99)
+    long = area_line.join('   ').size > max
+    area_line.map { |x| %(<span class="nb#{long ? ' kb' : ''}">#{tx x}</span>) }.join(long ? sep.sub('<i ', '<i class="ks" ') : sep)
+  end
+  # CSS that must come after the layout's own :root (fonts, case, weight)
+  def brand_css
+    return '' unless brand?
+    out = []
+    v = []
+    v << %(--fh:"#{@bfonts[0][0]}",#{ART_FALLBACK[@art]}) if @bfonts[0]
+    v << %(--fb:"#{@bfonts[1][0]}",system-ui,-apple-system,"Segoe UI",sans-serif) if @bfonts[1]
+    out << ":root{#{v.join(';')}}" unless v.empty?
+    # a supplied brand colour is the colour of the main button, in every layout
+    out << 'body.bf .act-p,body.bf .mbar .mp{background:var(--accent);border-color:var(--accent);color:var(--on)}body.bf .act-p:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}' unless blank?(@brand['accent'])
+    out << 'h1,h2,h3,.lede,.hl,.deck,.drop,.where,.close a,.menu-cta a,.score .big{font-synthesis:none}' if @bfonts[0]
+    out << 'body{font-synthesis:none}' if @bfonts[1] && @bfonts[1][1] !~ /wght/
+    tt = { 'upper' => 'uppercase', 'lower' => 'lowercase', 'title' => 'none' }[@kase]
+    out << "body.bf .name,body.bf .plate,body.bf .brand,body.bf .sbar .id{text-transform:#{tt}#{tt == 'uppercase' ? ';letter-spacing:.01em' : ''}}" if tt
+    w = @brand['display_weight'].to_i
+    out << "body.bf .name,body.bf .plate,body.bf .pl,body.bf .brand,body.bf main h2:not(.rule-h):not(.bh),body.bf .hl,body.bf .where{font-weight:#{w}}" if w.between?(100, 900)
+    out.join
+  end
   def kparts; s['kicker'].to_s.split(' · ').map(&:strip).reject { |x| x =~ /\Asample site\z/i } end
   def extra; kparts[2] end
   def trade; kparts.first.to_s end
@@ -275,12 +446,12 @@ class Ctx
   end
   def action_btns(icons: false, max: 3)
     actions.first(max).each_with_index.map { |x, i|
-      %(<a class="act #{i == 0 ? 'act-p' : 'act-q'}" href="#{e x[:href]}"#{x[:ext] ? ' target="_blank" rel="noopener"' : ''}>#{icons ? icon(x[:k] == 'book' && x[:label] =~ /order/i ? 'bag' : x[:k]) : ''}<span>#{x[:k] == 'phone' && x[:label].to_s.start_with?('Call ') && tel? && x[:label].to_s.end_with?(s['phone'].to_s) ? %(Call <span class="num">#{e s['phone']}</span>) : e(x[:label])}</span></a>)
+      %(<a class="act #{i == 0 ? 'act-p' : 'act-q'}" href="#{e x[:href]}"#{x[:ext] ? ' target="_blank" rel="noopener"' : ''}>#{icons || i > 0 ? icon(x[:k] == 'book' && x[:label] =~ /order/i ? 'bag' : x[:k], 17) : ''}<span>#{x[:k] == 'phone' && x[:label].to_s.start_with?('Call ') && tel? && x[:label].to_s.end_with?(s['phone'].to_s) ? %(Call <span class="num">#{e s['phone']}</span>) : tx(x[:label])}</span></a>)
     }.join
   end
   def primary_link(cls = 'tl')
     x = actions.first or return ''
-    %(<a class="#{cls}" href="#{e x[:href]}"#{x[:ext] ? ' target="_blank" rel="noopener"' : ''}>#{e x[:label]}</a>)
+    %(<a class="#{cls}" href="#{e x[:href]}"#{x[:ext] ? ' target="_blank" rel="noopener"' : ''}>#{tx x[:label]}</a>)
   end
   # live "Open now · closes 7 pm" (filled by the small script; nothing when hours are not machine-readable)
   def now(cls = '') week ? %(<span class="now #{cls}" data-now hidden></span>) : '' end
@@ -292,8 +463,8 @@ class Ctx
   end
   def hours_table?; !blank?(s['hours']) && !hours_note? end
   def hours_note_html
-    t = e(s['hours'])
-    t =~ /google/i && addr? ? %(<a class="hn" href="#{maps}" target="_blank" rel="noopener">#{t}</a>) : %(<span class="hn">#{t}</span>)
+    hx = tx(s['hours'])
+    hx =~ /google/i && addr? ? %(<a class="hn" href="#{maps}" target="_blank" rel="noopener">#{hx}</a>) : %(<span class="hn">#{hx}</span>)
   end
   def hours_html
     return '' if hours_note?
@@ -305,7 +476,7 @@ class Ctx
       }.join
       %(<table class="hrs"><caption class="vh">Opening hours</caption>#{rows}</table>)
     elsif !blank?(s['hours'])
-      %(<ul class="hrs-l">#{s['hours'].split(/\s*·\s*/).map { |x| "<li>#{e x}</li>" }.join}</ul>)
+      %(<ul class="hrs-l">#{s['hours'].split(/\s*·\s*/).map { |x| "<li>#{tx x}</li>" }.join}</ul>)
     else
       ''
     end
@@ -314,7 +485,7 @@ class Ctx
     if rating?
       %(<a class="rate #{cls}" href="#{maps}" target="_blank" rel="noopener"><span class="stars" aria-hidden="true">#{stars(s['rating'])}</span><span><b>#{e s['rating']}</b> from #{e s['reviews']} Google reviews</span></a>)
     elsif proof
-      %(<span class="rate rate-t #{cls}">#{e proof}</span>)
+      %(<span class="rate rate-t #{cls}">#{tx proof}</span>)
     else
       ''
     end
@@ -325,8 +496,8 @@ class Ctx
   def addr_html
     return '' unless addr?
     rest = aparts[1..-1].join(', ')
-    return %(<a class="addr" href="#{maps}" target="_blank" rel="noopener"><span>#{e s['address']}</span></a>) unless street =~ /\d/   # no street number: keep it on one line
-    %(<a class="addr" href="#{maps}" target="_blank" rel="noopener"><span>#{e street}</span>#{rest.empty? ? '' : " <span>#{e rest}</span>"}</a>)
+    return %(<a class="addr" href="#{maps}" target="_blank" rel="noopener"><span>#{tx s['address']}</span></a>) unless street =~ /\d/   # no street number: keep it on one line
+    %(<a class="addr" href="#{maps}" target="_blank" rel="noopener"><span>#{tx street}</span>#{rest.empty? ? '' : " <span>#{tx rest}</span>"}</a>)
   end
   # photo figure with the honest label
   def ph(i, w, cls: '', sizes: '100vw', lazy: true, label: true, n: nil)
@@ -337,7 +508,7 @@ class Ctx
     %(<figure class="ph #{cls}"><img src="#{img(id, w)}"#{ss ? %( srcset="#{ss}" sizes="#{sizes}") : ''} alt="#{e alt}"#{lazy ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async">#{cap.empty? ? '' : "<figcaption>#{e cap}</figcaption>"}</figure>)
   end
   def yours(cls = '')
-    draft? ? %(<figure class="ph yours #{cls}"><div><b>Your photos here</b><span>Text them to us. Free.</span></div></figure>) : ''
+    draft? ? %(<figure class="ph yours #{cls}"><div><i aria-hidden="true"></i><b>Your photos here</b><span>Text them to us. Free.</span></div></figure>) : ''
   end
   def photo_note
     final? ? s['photo_credit'].to_s : (sample? ? 'Photos via Unsplash.' : 'Placeholder photos via Unsplash. Your own photos go here.')
@@ -360,7 +531,7 @@ class Ctx
   def asides; all_services.select { |t, *_| t.to_s.strip =~ SVC_ASIDE } end
   def asides_html
     return '' if asides.empty?
-    items = asides.map { |t, d, _| tt = t.to_s.strip; %(<li><b>#{e tt}#{tt =~ /[.?!]\z/ ? '' : '.'}</b> #{e d}</li>) }.join
+    items = asides.map { |t, d, _| tt = t.to_s.strip; %(<li><b>#{tx tt}#{tt =~ /[.?!]\z/ ? '' : '.'}</b> #{tx d}</li>) }.join
     %(<div class="gtk"><h3>Good to know</h3><ul>#{items}</ul></div>)
   end
   # the About heading: 130 of 149 drafts had a rating formula here ("4.8 stars from 120 customers."), on top of the
@@ -388,18 +559,18 @@ class Ctx
   def menu_html
     return '' if menu.empty?
     groups = menu.map { |g|
-      rows = Array(g['items']).map { |n, d, p| %(<li><span class="mn">#{e n}#{blank?(d) ? '' : "<small>#{e d}</small>"}</span><span class="ml" aria-hidden="true"></span><span class="mp">#{e p}</span></li>) }.join
-      %(<div class="mg"><h3>#{e g['title']}</h3><ul>#{rows}</ul></div>)
+      rows = Array(g['items']).map { |n, d, p| %(<li><span class="mn">#{tx n}#{blank?(d) ? '' : "<small>#{tx d}</small>"}</span><span class="ml" aria-hidden="true"></span><span class="mp">#{tx p}</span></li>) }.join
+      %(<div class="mg"><h3>#{tx g['title']}</h3><ul>#{rows}</ul></div>)
     }.join
     note = blank?(s['menu_note']) ? (sample? ? 'Sample prices.' : (draft? ? 'Prices to confirm with the owner.' : '')) : s['menu_note']
-    %(<div class="menu">#{groups}</div>#{note.empty? ? '' : %(<p class="note">#{e note}</p>)})
+    %(<div class="menu">#{groups}</div>#{note.empty? ? '' : %(<p class="note">#{tx note}</p>)})
   end
   def areas_html
     a = Array(s['areas']); return '' if a.empty?
-    %(<ul class="areas">#{a.map { |x| "<li>#{e x}</li>" }.join}</ul>)
+    %(<ul class="areas">#{a.map { |x| "<li>#{tx x}</li>" }.join}</ul>)
   end
   def map_html
-    addr? ? %(<div class="map"><iframe src="#{embed}" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>) : ''
+    addr? ? %(<div class="map"><a class="map-ph" href="#{maps}" target="_blank" rel="noopener">#{icon('pin', 22)}<b>#{tx(street =~ /\d/ ? street : s['address'])}</b><span>Open in Google Maps</span></a><iframe src="#{embed}" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>) : ''
   end
   # contact rows used in every "visit" block: [label, html]
   def contact_rows
@@ -428,14 +599,20 @@ class Ctx
   def area_line; [trade, area, extra].reject { |x| blank?(x) } end
   def today_line; week ? now : (blank?(s['hours']) ? '' : %(<span class="hrs-s">#{e s['hours']}</span>)) end
   # body classes the layouts style against: how many photos, whether there is a timetable
-  def flags; "np#{np}#{hours_table? ? '' : ' no-hrs'}#{draft? ? ' is-draft' : ''}#{services.size.odd? ? ' svc-odd' : ''}" end
+  def flags; "np#{np}#{hours_table? ? '' : ' no-hrs'}#{draft? ? ' is-draft' : ''}#{services.size.odd? ? ' svc-odd' : ''}#{brand? ? ' bf' : ''}#{brand_fonts? || !@kase.empty? ? ' bfit' : ''}" end
   def name_n; [name.split(/\s+/).map(&:size).max, (name.size / 2.0).ceil].max end
   def font_url
-    "https://fonts.googleapis.com/css2?#{@a['fonts'].map { |f| 'family=' + f.gsub(' ', '+') }.join('&')}&display=swap"
+    font_urls.first
+  end
+  # The layout's own fonts in one request; each brand font in its own, so a mistyped brand font can only lose itself.
+  def font_urls
+    g = ->(fams) { "https://fonts.googleapis.com/css2?#{fams.map { |f| 'family=' + f.gsub(' ', '+') }.join('&')}&display=swap" }
+    keep = @a['fonts'].each_with_index.reject { |_, i| i < 2 && @bfonts[i] }.map(&:first)
+    (keep.empty? ? [] : [g.(keep)]) + @bfonts.compact.map { |_, spec| spec }.uniq.map { |spec| g.([spec]) }
   end
   def css_vars
     p = pal
-    "--bg:#{p['bg']};--paper:#{p['paper']};--ink:#{p['ink']};--muted:#{p['muted']};--accent:#{p['accent']};--on:#{p['on']};--line:#{p['line']};--n:#{name_n}"
+    "--bg:#{p['bg']};--paper:#{p['paper']};--ink:#{p['ink']};--muted:#{p['muted']};--accent:#{p['accent']};--at:#{p['at']};--on:#{p['on']};--line:#{p['line']};--n:#{name_n}"
   end
   def get_binding; binding end
 end
@@ -459,6 +636,9 @@ SITES.each do |s|
   File.write(File.join(out, 'index.html'), SHELL.result(binding))
   index << [s['dir'], s['slug'], s['name'], c.art, c.pal_name, c.v]
   puts "built #{s['dir']}/#{s['slug']}  [#{c.art}/#{c.pal_name}/v#{c.v}]"
+end
+unless BRAND_WARN.empty?
+  warn "#{BRAND_WARN.size} brand warning(s): the pages above were built with the safe fallbacks."
 end
 # local review index (never published)
 if only.empty?
