@@ -3176,11 +3176,6 @@
         "pen"
       ],
       [
-        "Repairs",
-        "Nail repairs, quickly sorted.",
-        "clock"
-      ],
-      [
         "Pedicures",
         "Shellac and regular pedicures.",
         "drop"
@@ -3883,10 +3878,10 @@
     "name": "Certified Studio",
     "theme": "barber",
     "layout": "bold",
-    "kicker": "Barbers, braids & lashes · Port Credit, Mississauga",
-    "h1": "Barbers, braids & lashes in Port Credit, Mississauga.",
+    "kicker": "Barbers & braids · Port Credit, Mississauga",
+    "h1": "Barbers & braids in Port Credit, Mississauga.",
     "h1_proof": false,
-    "sub": "A Port Credit hair studio at 1 Hurontario St: fades, beard trims, braids and lash extensions, with attention to detail customers mention again and again.",
+    "sub": "A Port Credit barber studio at 1 Hurontario St: fades, beard trims and braids, with attention to detail customers mention again and again.",
     "phone": "(289) 203-1507",
     "tel": "+12892031507",
     "address": "1 Hurontario St, Mississauga, ON L5G 0A3",
@@ -3905,11 +3900,6 @@
         "Braids",
         "A client favourite.",
         "comb"
-      ],
-      [
-        "Lash extensions",
-        "Lashes too, mentioned in more than 25 reviews.",
-        "eye"
       ],
       [
         "Beard trims",
@@ -4283,11 +4273,6 @@
         "Pedicures",
         "Relaxing pedicures, clients say.",
         "leaf"
-      ],
-      [
-        "Brows",
-        "Brow waxing to finish the look.",
-        "star"
       ]
     ],
     "about_h": "78 reviews. 4.9 stars.",
@@ -4351,11 +4336,6 @@
         "Nano brows & lip blush",
         "Permanent makeup with a soft, natural finish.",
         "pen"
-      ],
-      [
-        "Lash lifts",
-        "A lift for lashes, too.",
-        "star"
       ]
     ],
     "about_h": "138 reviews. 4.9 stars.",
@@ -4582,11 +4562,6 @@
         "Wash & blow-dry",
         "A luxurious wash and blow-dry.",
         "drop"
-      ],
-      [
-        "Brows",
-        "Brow tint and lamination too.",
-        "eye"
       ],
       [
         "Caring stylists",
@@ -5078,8 +5053,8 @@
         "eye"
       ],
       [
-        "Hand & foot massage",
-        "Part of every visit.",
+        "Pedicures",
+        "Foot soak, exfoliation, nail care, massage and polish.",
         "sparkle"
       ],
       [
