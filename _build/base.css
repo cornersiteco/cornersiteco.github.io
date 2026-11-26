@@ -127,3 +127,7 @@ a.rate:hover span:last-child{text-decoration:underline;text-underline-offset:4px
 .v-g>*,.v3>*,.cdl>*,.cdl dd{min-width:0}
 h1,h2,h3{overflow-wrap:break-word}
 @media (max-width:360px){.hrs td{white-space:normal}.hrs th{padding-right:6px}}
+/* menu/services CTA: opens the business's own ordering or booking page (menu and prices live there) */
+.menu-cta{margin:28px 0 0}
+.menu-cta a{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border:1.5px solid currentColor;border-radius:4px;font-weight:600;font-size:16px;text-decoration:none;color:inherit}
+.menu-cta a:hover{opacity:.75}

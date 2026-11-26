@@ -293,8 +293,13 @@ class Ctx
   def photo_note
     final? ? s['photo_credit'].to_s : (sample? ? 'Photos via Unsplash.' : 'Placeholder photos via Unsplash. Your own photos go here.')
   end
-  def svc_note; draft? ? '<p class="note">Service list to confirm with the owner.</p>' : '' end
-  def services; Array(s['services']) end
+  def menu_cta
+    return %q() unless book
+    lbl = food? ? %q(See the full menu & prices) : %q(See all services & prices)
+    %(<p class="menu-cta"><a href="#{e book}" target="_blank" rel="noopener">#{lbl} <span aria-hidden="true">&rarr;</span></a></p>)
+  end
+  def svc_note; menu_cta + (draft? ? %q(<p class="note">Service list to confirm with the owner.</p>) : %q()) end
+  def services; Array(s['services']).reject { |t, *_| t.to_s.strip =~ /\A(order|book)( online| now)?\z/i } end
   # optional price list: "menu": [{"title":..,"items":[[name, detail, price],..]}]
   def menu_html
     return '' if menu.empty?
