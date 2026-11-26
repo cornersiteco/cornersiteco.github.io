@@ -459,7 +459,11 @@
   .contact .copy p{margin-top:20px;font-size:clamp(18px,1.7vw,20px);line-height:1.45;color:var(--muted);letter-spacing:-.014em;text-wrap:pretty}
   .contact .copy p.em{font-size:17px;color:var(--ink)}
   .contact .copy p.areas{font-size:14px}
-  .contact-bg{position:relative;overflow:hidden;overflow:clip;background:radial-gradient(60% 80% at 100% 100%,#cfe4ff 0%,rgba(207,228,255,0) 70%),radial-gradient(40% 60% at 0% 0%,#dff5fb 0%,rgba(223,245,251,0) 70%),#fbfcfe}
+  .contact-bg{position:relative;overflow:hidden;overflow:clip;background:#fbfcfe}
+.contact-bg::before{content:"";position:absolute;inset:-6%;background:url(/assets/art/clouds.jpg) center/cover no-repeat;filter:saturate(1.6) contrast(1.06);animation:drift 40s ease-in-out infinite alternate;pointer-events:none}
+.contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fbfcfe 0%,rgba(251,252,254,0) 16%,rgba(251,252,254,0) 84%,#fbfcfe 100%);pointer-events:none}
+.contact-bg>.w{position:relative;z-index:1}
+@keyframes drift{from{transform:scale(1.02) translate3d(-1.5%,0,0)}to{transform:scale(1.09) translate3d(1.5%,-1.2%,0)}}
 
   /* footer */
   footer{background:var(--mist);font-size:12.5px;line-height:1.5;color:var(--muted);padding:24px 0 28px;border-top:1px solid var(--hair)}
