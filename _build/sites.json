@@ -4602,7 +4602,80 @@
       "1600948836101-f9ffda59d250",
       "1695527081848-1e46c06e6458"
     ],
-    "book_url": "https://oshun-hair-salon-inc.square.site/"
+    "book_url": "https://oshun-hair-salon-inc.square.site/",
+    "menu": [
+      {
+        "title": "Cuts and styling",
+        "items": [
+          [
+            "Women's haircut",
+            null,
+            "$90"
+          ],
+          [
+            "Short hair scissor cut",
+            null,
+            "$55"
+          ],
+          [
+            "Curly hair cut",
+            null,
+            "$100"
+          ],
+          [
+            "Girls under 10",
+            null,
+            "$50"
+          ],
+          [
+            "Blow-dry style",
+            null,
+            "$60"
+          ],
+          [
+            "Silk press",
+            null,
+            "$85"
+          ]
+        ]
+      },
+      {
+        "title": "Colour and extensions",
+        "items": [
+          [
+            "Full colour with cut",
+            null,
+            "$195"
+          ],
+          [
+            "Root retouch with cut",
+            null,
+            "$170"
+          ],
+          [
+            "Half-head foils with toner and cut",
+            null,
+            "$250"
+          ],
+          [
+            "Balayage with toner and cut",
+            null,
+            "$300"
+          ],
+          [
+            "K-tip extensions install",
+            "3 hr 30 min",
+            "$375"
+          ],
+          [
+            "Consultation",
+            null,
+            "Free"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "mnm-hair-salon-moncton",
@@ -4752,7 +4825,70 @@
       "1610992015762-45dca7fa3a85",
       "1787651344170-c2f81514934d"
     ],
-    "book_url": "https://yeg-nails-salon.square.site/"
+    "book_url": "https://yeg-nails-salon.square.site/",
+    "menu": [
+      {
+        "title": "Manicure and pedicure",
+        "items": [
+          [
+            "Manicure",
+            null,
+            "$30"
+          ],
+          [
+            "Manicure, gel polish",
+            null,
+            "$50"
+          ],
+          [
+            "Pedicure",
+            null,
+            "$45"
+          ],
+          [
+            "Pedicure, gel polish",
+            null,
+            "$65"
+          ],
+          [
+            "Pedicure and manicure",
+            null,
+            "$65"
+          ],
+          [
+            "Pedicure and manicure, gel polish",
+            null,
+            "$105"
+          ]
+        ]
+      },
+      {
+        "title": "Spa and enhancements",
+        "items": [
+          [
+            "Spa manicure",
+            null,
+            "$60"
+          ],
+          [
+            "Spa pedicure",
+            null,
+            "$80"
+          ],
+          [
+            "Spa pedicure and manicure, gel polish",
+            "1 hr 45 min",
+            "$125"
+          ],
+          [
+            "Acrylic fill",
+            null,
+            "$55"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "always-fresh-barbershop-saskatoon",
@@ -4802,7 +4938,65 @@
       "1585747860715-2ba37e788b70",
       "1621605815971-fbc98d665033"
     ],
-    "book_url": "https://always-fresh-barbershop.square.site/"
+    "book_url": "https://always-fresh-barbershop.square.site/",
+    "menu": [
+      {
+        "title": "Cuts",
+        "items": [
+          [
+            "Men's haircut and style",
+            "Cut and blow-dry",
+            "$40"
+          ],
+          [
+            "Men's haircut and beard trim",
+            "Fade or blended cut",
+            "$65"
+          ],
+          [
+            "Buzz cut",
+            null,
+            "$27"
+          ],
+          [
+            "Kids' haircut",
+            "Ages 1 to 5",
+            "$30"
+          ]
+        ]
+      },
+      {
+        "title": "Shave, beard and care",
+        "items": [
+          [
+            "Hot shave",
+            "Straight razor · 45 min",
+            "$45"
+          ],
+          [
+            "Beard trim",
+            null,
+            "$27"
+          ],
+          [
+            "Hair colour",
+            "Base colour",
+            "$20"
+          ],
+          [
+            "Facial cleansing",
+            "Hot steam towels",
+            "$45"
+          ],
+          [
+            "Head and neck massage",
+            null,
+            "$25"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "allure-beauty-cove-kitchener",
@@ -4902,7 +5096,85 @@
       "1610992015762-45dca7fa3a85",
       "1604654894610-df63bc536371"
     ],
-    "book_url": "https://coco-beauty-109772.square.site/"
+    "book_url": "https://coco-beauty-109772.square.site/",
+    "menu": [
+      {
+        "title": "Nails",
+        "items": [
+          [
+            "Shellac manicure",
+            "45 min",
+            "$35"
+          ],
+          [
+            "Acrylic overlay, full set",
+            "No added length",
+            "$45"
+          ],
+          [
+            "Acrylic full set with tips",
+            "Varies with length and design",
+            "From $55"
+          ],
+          [
+            "Bio gel overlay",
+            null,
+            "$55"
+          ],
+          [
+            "Bio gel full set with extensions",
+            null,
+            "From $60"
+          ],
+          [
+            "Gel-X full set",
+            null,
+            "$65"
+          ],
+          [
+            "Acrylic refill",
+            null,
+            "From $45"
+          ],
+          [
+            "Spa deluxe pedicure",
+            null,
+            "$45"
+          ]
+        ]
+      },
+      {
+        "title": "Lashes",
+        "items": [
+          [
+            "Classic full set",
+            null,
+            "$110"
+          ],
+          [
+            "Hybrid full set",
+            null,
+            "$130"
+          ],
+          [
+            "Volume full set",
+            null,
+            "$160"
+          ],
+          [
+            "Mega volume full set",
+            null,
+            "$180"
+          ],
+          [
+            "Classic refill",
+            "Within 2 weeks",
+            "$60"
+          ]
+        ]
+      }
+    ],
+    "menu_note": "Prices from your Square booking page, November 2026. We will confirm every one with you."
   },
   {
     "slug": "omni-nails-brampton",
