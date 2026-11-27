@@ -1962,55 +1962,6 @@
     ]
   },
   {
-    "slug": "afrobeat-kitchen",
-    "dir": "drafts",
-    "name": "Afrobeat Kitchen / Bar",
-    "theme": "tacos",
-    "kicker": "Nigerian kitchen & bar · Queen St W, Parkdale",
-    "h1": "Nigerian cooking, cocktails and good music on Queen West.",
-    "h1_proof": false,
-    "sub": "Party jollof, egusi, suya wings and plantains at 1510 Queen St W. Named one of Toronto's best new restaurants of 2023 by Toronto Life.",
-    "phone": "416-672-0651",
-    "tel": "+14166720651",
-    "email": "contactafrobeatkitchen@gmail.com",
-    "address": "1510 Queen St W, Toronto, ON",
-    "cta": "call",
-    "cta_label": "Call the kitchen",
-    "hours": "Wed–Thu 4–10 pm · Fri 4–11 pm · Sat 2–11 pm · Sun 2–9 pm · Closed Mon–Tue",
-    "proof": "4.7★ from 481 Google reviews",
-    "services": [
-      [
-        "Jollof & stews",
-        "Smoky party jollof, chicken jollof rice and egusi with greens.",
-        "bowl"
-      ],
-      [
-        "Suya wings & small plates",
-        "Sticky suya wings, fried plantains and more to share.",
-        "flame"
-      ],
-      [
-        "Cocktails & music",
-        "A full bar, Afrobeats on the speakers and a back patio in summer.",
-        "cup"
-      ],
-      [
-        "Order online",
-        "Pickup or delivery through the ordering app you already use.",
-        "clock"
-      ]
-    ],
-    "about_h": "From a Bloordale pop-up to Queen West.",
-    "about": "Afrobeat Kitchen started as a Nigerian food pop-up in Bloordale that sold out most nights, then moved into 1510 Queen St W. Chef Victor Ugwueke grew up in Lagos and cooks the dishes he learned from his mother. Toronto Life named it one of the city's best new restaurants of 2023, and 481 Google reviews give it 4.7 stars.",
-    "photos": [
-      "1665332195309-9d75071138f0",
-      "1766589221324-656419e4c844",
-      "1539755530862-00f623c00f52"
-    ],
-    "book_url": "https://ritual.co/order/afrobeat-kitchen-queen-macdonell-toronto/c529",
-    "book_label": "Order online"
-  },
-  {
     "slug": "so-jeats-house",
     "dir": "drafts",
     "name": "So Jeat's House",
