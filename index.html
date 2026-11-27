@@ -264,7 +264,8 @@
   .play-note{font-size:14px;color:var(--muted);text-wrap:pretty}
   .play-v{position:relative;display:grid;place-items:center;padding:clamp(20px,4vw,48px) 0}
   .play-v::before{content:"";position:absolute;inset:6% 4%;border-radius:36px;background:radial-gradient(60% 60% at 70% 20%,#cfe4ff,rgba(207,228,255,0) 70%),radial-gradient(50% 50% at 20% 90%,#d5f3fb,rgba(213,243,251,0) 70%)}
-  .play-v .ph{position:relative;right:auto;top:auto;width:min(300px,78%)}
+  .play-v .sk-dev{width:min(290px,72vw)}
+  .sk-scr{position:relative;aspect-ratio:390/844;border-radius:13.2cqw;overflow:hidden;background:#fff;isolation:isolate}
   .sk{position:absolute;inset:0;display:flex;flex-direction:column;font-family:Inter,var(--sans);overflow:hidden;animation:skIn .5s var(--ease)}
   @keyframes skIn{from{opacity:0;transform:scale(1.03)}}
   .sk-nm{overflow-wrap:anywhere;hyphens:auto}
@@ -707,7 +708,7 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
     </div>
   </div>
   <div class="play-v rv d1" aria-hidden="true">
-    <div class="ph"><div class="ph-b"><div class="ph-s" id="sk-screen"></div></div></div>
+    <div class="dev sk-dev"><div class="dev-b"><div class="dev-z"><div class="sk-scr" id="sk-screen"></div></div></div></div>
   </div>
 </div></section>
 
