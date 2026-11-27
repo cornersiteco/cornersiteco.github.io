@@ -687,8 +687,11 @@
 
   /* Canada, live */
   .cn{position:relative;overflow:hidden;overflow:clip;background:linear-gradient(180deg,#fff 0%,#f4f8fd 26%,#edf4fc 100%)}
-  .cn .sec{padding-bottom:0}
-  .cn-map{position:relative;height:clamp(420px,50vw,720px);margin-top:clamp(-28px,-2vw,-8px);touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none}
+  .cn .sec{padding-bottom:0;position:relative;z-index:1}
+  .cn-sky{position:absolute;left:0;right:0;top:0;height:clamp(520px,50vw,740px);background:url(/assets/sky/dawn-over-canada-1376.jpg) center 30%/cover no-repeat;-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 34%,rgba(0,0,0,.5) 52%,transparent 74%);mask-image:linear-gradient(180deg,#000 0%,#000 34%,rgba(0,0,0,.5) 52%,transparent 74%);pointer-events:none}
+  @media (max-width:700px){.cn-sky{background-image:url(/assets/sky/dawn-over-canada-800.jpg);background-position:center 0%;height:clamp(460px,125vw,580px)}}
+  .cn .hd .sub{color:#3a4859;text-shadow:0 1px 14px rgba(255,255,255,.7)}
+  .cn-map{position:relative;z-index:1;height:clamp(420px,50vw,720px);margin-top:clamp(-28px,-2vw,-8px);touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none}
   .cn-map.drag{cursor:grabbing}
   #cn-c{position:absolute;inset:0;width:100%;height:100%;display:block}
   .cn-map::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,rgba(242,246,251,0),var(--mist));pointer-events:none}
@@ -975,7 +978,7 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
   </div>
 </div></section>
 
-<section id="canada" class="cn" aria-labelledby="cn-h"><div class="w sec">
+<section id="canada" class="cn" aria-labelledby="cn-h"><div class="cn-sky" aria-hidden="true"></div><div class="w sec">
   <div class="hd c rv"><span class="kick">Across Canada</span><h2 id="cn-h">From Ottawa to every corner of Canada. <span>One homepage draft at a time.</span></h2><p class="sub">Each line lands in a city where we&rsquo;ve already built a homepage draft for a local business. Wherever your shop is, yours starts the same way: free, and on your phone within 1 business day.</p></div>
 </div>
 <div class="cn-map" id="cn-map">
