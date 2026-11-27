@@ -10656,5 +10656,137 @@
       "1521590832167-7bcbfaa6381f",
       "1585747860715-2ba37e788b70"
     ]
+  },
+  {
+    "slug": "zeigelhaus-london",
+    "dir": "drafts",
+    "name": "ZeigelHaus",
+    "theme": "pub",
+    "kicker": "Event space · Dundas St, downtown London",
+    "h1": "An intimate event space on Dundas Street.",
+    "h1_proof": false,
+    "sub": "A downtown London venue for watch parties, gatherings and private events. Email to ask about a date.",
+    "phone": "(519) 614-2838",
+    "tel": "+15196142838",
+    "email": "zeigelhaus@gmail.com",
+    "address": "246 Dundas St, London, ON N6A 1H3",
+    "rating": "4.8",
+    "reviews": 5,
+    "cta": "email",
+    "cta_label": "Ask about a date",
+    "hours": "By booking (hours to confirm)",
+    "services": [
+      [
+        "Private events",
+        "Book the space for your own gathering.",
+        "users"
+      ],
+      [
+        "Watch parties",
+        "A reviewer came for a UFC watch party.",
+        "star"
+      ],
+      [
+        "Downtown location",
+        "246 Dundas St, in the core.",
+        "pin"
+      ]
+    ],
+    "about_h": "A cool little event space, say the reviews.",
+    "about": "ZeigelHaus is an event venue at 246 Dundas St in downtown London, rated 4.8 on Google. Reviewers mention the downtown location, the furniture and vibe, and an intimate setting. Details and pricing to confirm with the owner.",
+    "photos": [
+      "1786325492140-7353058296ae",
+      "1779300007516-eebee9151c19",
+      "1770816307762-09a7fd6d7aef",
+      "1761085590866-e94c99818636"
+    ]
+  },
+  {
+    "slug": "mcgill-law-firm-london",
+    "dir": "drafts",
+    "name": "McGill Law Firm",
+    "theme": "law",
+    "kicker": "Law firm · Fullarton St, downtown London",
+    "h1": "A downtown London law firm.",
+    "h1_proof": false,
+    "sub": "McGill Law Firm on Fullarton Street. Call the office to discuss your matter.",
+    "phone": "(519) 433-9800",
+    "tel": "+15194339800",
+    "email": "rob@ramlaw.ca",
+    "address": "140 Fullarton St #100, London, ON N6A 1H8 (suite to confirm)",
+    "cta": "call",
+    "cta_label": "Call the office",
+    "hours": "Weekdays until 5 pm (to confirm)",
+    "proof": "Law firm · Downtown London",
+    "services": [
+      [
+        "Consultations",
+        "Call to ask whether your matter is a fit.",
+        "pen"
+      ],
+      [
+        "Practice areas",
+        "To confirm with the firm before anything goes live.",
+        "star"
+      ],
+      [
+        "Downtown office",
+        "On Fullarton Street in the core.",
+        "pin"
+      ]
+    ],
+    "about_h": "A downtown practice.",
+    "about": "McGill Law Firm practises from Fullarton Street in downtown London. Call the office to discuss your matter. Practice areas and lawyer details to confirm with the firm.",
+    "photos": [
+      "1505664063603-28e48ca204eb",
+      "1450101499163-c8848c66ca85",
+      "1758518731462-d091b0b4ed0d",
+      "1497366754035-f200968a6e72"
+    ],
+    "art": "spec"
+  },
+  {
+    "slug": "london-pilates-richmond",
+    "dir": "drafts",
+    "name": "London Pilates",
+    "theme": "clinic",
+    "kicker": "Pilates studio · Richmond St, London",
+    "h1": "Pilates on Richmond Street.",
+    "h1_proof": true,
+    "sub": "A pilates studio at 750 Richmond St in downtown London, rated 5.0 on Google. Call or email to book a class.",
+    "phone": "(519) 615-1334",
+    "tel": "+15196151334",
+    "email": "lndpilates@icloud.com",
+    "address": "750 Richmond St, London, ON N6A 3H3",
+    "rating": "5.0",
+    "reviews": 42,
+    "cta": "call",
+    "cta_label": "Call to book",
+    "hours": "Class times to confirm",
+    "services": [
+      [
+        "Pilates classes",
+        "Class types and schedule to confirm with the studio.",
+        "users"
+      ],
+      [
+        "Booking",
+        "Call or email to reserve a spot.",
+        "phone"
+      ],
+      [
+        "Location",
+        "750 Richmond St, downtown London.",
+        "pin"
+      ]
+    ],
+    "about_h": "42 reviews. 5.0 stars.",
+    "about": "London Pilates is a studio at 750 Richmond St, rated 5.0 on Google by 42 people. Class types, prices and schedule to confirm with the studio.",
+    "photos": [
+      "1788463127138-d17920230de9",
+      "1783841193384-4269c68aa050",
+      "1754258167836-6878c54e316c",
+      "1717500252297-b09508db7ceb"
+    ]
   }
 ]
