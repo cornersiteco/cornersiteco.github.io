@@ -18,7 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
 <% c.font_urls.each do |u| -%>
-<link rel="stylesheet" href="<%= u %>">
+<link rel="stylesheet" href="<%= u %>" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="<%= u %>"></noscript>
 <% end -%>
 <style>
 :root{<%= c.css_vars %>}
