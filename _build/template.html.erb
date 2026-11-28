@@ -45,7 +45,7 @@
   <div class="ow">
     <p class="oe">From Corner Site Co. · not part of the draft</p>
     <h2>Like it? This can be <%= tx poss(s['name']) %> real website.</h2>
-    <p class="ol">Want your own <%= book ? 'photos, prices and booking link' : 'photos and prices' %> in it first? Text or email me and I&rsquo;ll put them in, free, before you decide anything.</p>
+    <p class="ol">Want your own <%= book ? 'photos, prices and booking link' : 'photos and prices' %> in it first? Tap &ldquo;Yes, make it mine&rdquo; below (or text me) and I&rsquo;ll put them in, free, before you decide anything.</p>
 <% if book -%>
     <div class="ocard adds"><p class="ah">What this adds to your booking page</p><ul>
       <li><b>Your own web address</b>, registered in your name.</li>
@@ -66,8 +66,22 @@
       <li><span><b>Only then, pay:</b> $20/month with nothing upfront (cancel any time), or $490 one time. Plus your web address (about $20/year), registered in your name.</span></li>
 <% end -%>
     </ol>
+    <form class="oyes" action="https://formsubmit.co/cornersiteco@gmail.com" method="POST" style="display:grid;grid-template-columns:minmax(0,1fr);gap:12px;width:100%;box-sizing:border-box;margin:26px 0 6px;padding:20px;border-radius:16px;background:#fff;color:#14181d;box-shadow:0 0 0 1px rgba(20,24,29,.08),0 14px 30px -18px rgba(20,24,29,.35)">
+      <input type="hidden" name="_subject" value="<%= e "YES from #{s['name']}: finish my draft" %>">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://cornersiteco.ca/thanks.html">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <input type="hidden" name="business" value="<%= e s['name'] %>">
+      <input type="hidden" name="draft" value="https://cornersiteco.ca/drafts/<%= e s['slug'] %>/">
+      <p style="margin:0;font-weight:600;font-size:17px">Want it? Tell me where to reach you.</p>
+      <label style="display:grid;gap:6px;font-size:14px;color:#4a525c">Your email or mobile number<input name="contact" required autocomplete="email" style="font:inherit;font-size:16px;padding:12px 14px;border:1px solid rgba(20,24,29,.2);border-radius:10px;background:#fff;color:#14181d"></label>
+      <label style="display:grid;gap:6px;font-size:14px;color:#4a525c">Anything you'd change? (optional)<textarea name="changes" rows="2" style="font:inherit;font-size:16px;padding:12px 14px;border:1px solid rgba(20,24,29,.2);border-radius:10px;background:#fff;color:#14181d"></textarea></label>
+      <button class="ob p" type="submit" style="grid-column:1/-1;justify-self:start;border:0;cursor:pointer;font:inherit;padding:0 26px">Yes, make it mine</button>
+      <p style="margin:0;font-size:13px;color:#4a525c">No payment details. I reply within 1 business day with the next steps.</p>
+    </form>
     <div class="oc">
-      <a class="ob p" href="sms:+16139002378?&amp;body=<%= ERB::Util.url_encode("Hi Michael, it's about the website draft for #{s['name']}.") %>">Text Michael</a>
+      <a class="ob" href="sms:+16139002378?&amp;body=<%= ERB::Util.url_encode("Hi Michael, it's about the website draft for #{s['name']}.") %>">Text Michael</a>
       <a class="ob" href="mailto:cornersiteco@gmail.com?subject=<%= ERB::Util.url_encode("Website draft for #{s['name']}") %>">Email</a>
       <a class="ob" href="tel:+16139002378">Call · (613) 900-2378</a>
     </div>
