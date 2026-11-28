@@ -759,6 +759,33 @@
     .gbox::after{display:none}
     .js .mi.lit .mw{opacity:1}
   }
+
+  /* speed, measured by Google (added 2026-11-27) */
+  .ps{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;margin-top:clamp(36px,5vw,56px)}
+  .ps-rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;background:#fff;border-radius:28px;box-shadow:var(--sh1);padding:clamp(22px,3vw,36px)}
+  .ring{text-align:center}
+  .ring svg{width:100%;max-width:132px;height:auto;display:block;margin:0 auto}
+  .ring .trk{fill:none;stroke:rgba(12,206,107,.14);stroke-width:7}
+  .ring .val{fill:none;stroke:#0cce6b;stroke-width:7;stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;stroke-dasharray:283;stroke-dashoffset:var(--off)}
+  .js .ps-rings:not(.in) .ring .val{stroke-dashoffset:283}
+  .ring .val{transition:stroke-dashoffset 1.6s var(--ease)}
+  .ring:nth-child(2) .val{transition-delay:.15s}.ring:nth-child(3) .val{transition-delay:.3s}
+  .ring text{font:600 30px var(--sans);fill:#008a3a;letter-spacing:-.02em}
+  .ring b{display:block;margin-top:10px;font-size:clamp(13px,1.4vw,15px);font-weight:600;overflow-wrap:anywhere}
+  .ps-facts{display:grid;gap:0;border-top:1px solid var(--line)}
+  .ps-facts div{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px}
+  .ps-facts span{color:var(--muted)}
+  .ps-facts b{font-weight:600;font-variant-numeric:tabular-nums}
+  .ps-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px;font-size:16px}
+  .ps .note{text-align:left;margin:18px 0 0}
+  @media (max-width:860px){.ps{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion:reduce){.ring .val{transition:none}.js .ps-rings:not(.in) .ring .val{stroke-dashoffset:var(--off)}}
+  .cn-stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;max-width:860px;margin:28px auto 0;background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-radius:22px;box-shadow:var(--sh1)}
+  .cn-stats div{padding:20px 18px;text-align:center}
+  .cn-stats div+div{border-left:1px solid var(--line)}
+  .cn-stats b{display:block;font-size:clamp(30px,3.6vw,44px);font-weight:600;letter-spacing:-.035em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+  .cn-stats span{display:block;margin-top:8px;font-size:14px;line-height:1.35;color:var(--muted)}
+  @media (max-width:560px){.cn-stats{grid-template-columns:1fr}.cn-stats div+div{border-left:0;border-top:1px solid var(--line)}}
 </style>
 <script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;var ref=document.referrer,own=false;try{own=!!ref&&new URL(ref).host===location.host}catch(x){}var seen=false;try{seen=localStorage.getItem('csc-intro')==='1';if(!seen)localStorage.setItem('csc-intro','1')}catch(z){}if(rm||own||seen){d.classList.add('no-intro')}else{d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
 </head>
@@ -978,6 +1005,22 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
   </div>
 </div></section>
 
+<section id="speed" class="bg-mist"><div class="w sec">
+  <div class="hd rv"><span class="kick">Speed, measured</span><h2>Fast on a real phone. <span>Checked by Google, not by us.</span></h2><p class="sub">We ran our Sharp &amp; Co. sample through Google&rsquo;s own PageSpeed test on November 27, 2026, on a mid-range phone over a slow 4G connection. Your site is built the same way.</p></div>
+  <div class="ps">
+    <div class="ps-rings rv"><div class="ring" style="--off:11.3"><svg viewBox="0 0 100 100" role="img" aria-label="Performance: 96 out of 100"><circle class="trk" cx="50" cy="50" r="45"/><circle class="val" cx="50" cy="50" r="45"/><text x="50" y="61" text-anchor="middle">96</text></svg><b>Performance</b></div><div class="ring" style="--off:11.3"><svg viewBox="0 0 100 100" role="img" aria-label="Accessibility: 96 out of 100"><circle class="trk" cx="50" cy="50" r="45"/><circle class="val" cx="50" cy="50" r="45"/><text x="50" y="61" text-anchor="middle">96</text></svg><b>Accessibility</b></div><div class="ring" style="--off:0.0"><svg viewBox="0 0 100 100" role="img" aria-label="Best practices: 100 out of 100"><circle class="trk" cx="50" cy="50" r="45"/><circle class="val" cx="50" cy="50" r="45"/><text x="50" y="61" text-anchor="middle">100</text></svg><b>Best practices</b></div></div>
+    <div class="rv d1">
+      <div class="ps-facts">
+        <div><span>First content on screen</span><b>1.5 s</b></div>
+        <div><span>Main image loaded</span><b>2.7 s</b></div>
+        <div><span>Page jumping while it loads</span><b>0.006</b></div>
+        <div><span>Time the page is frozen</span><b>20 ms</b></div>
+      </div>
+      <div class="ps-links"><a class="arrow" href="https://pagespeed.web.dev/analysis/https-cornersiteco-ca-samples-sharp-and-co/685a0elujkpy3186pf9zx6?form_factor=mobile" target="_blank" rel="noopener">See Google&rsquo;s report</a><a class="arrow" href="https://pagespeed.web.dev/" target="_blank" rel="noopener">Test your own site</a></div>
+      <p class="note">Scores move a little from run to run. Sample sites are hidden from Google search on purpose, so we leave out their search score; client sites are open to search.</p>
+    </div>
+  </div>
+</div></section>
 <section id="canada" class="cn" aria-labelledby="cn-h"><div class="cn-sky" aria-hidden="true"></div><div class="w sec">
   <div class="hd c rv"><span class="kick">Across Canada</span><h2 id="cn-h">From Ottawa to every corner of Canada. <span>One homepage draft at a time.</span></h2><p class="sub">Each line lands in a city where we&rsquo;ve already built a homepage draft for a local business. Wherever your shop is, yours starts the same way: free, and on your phone within 1 business day.</p></div>
 </div>
@@ -986,6 +1029,7 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
   <p class="hp">A map of Canada drawn in dots. Lines travel from Ottawa to cities where we have built homepage drafts, including Toronto, London, Sudbury, Thunder Bay, Winnipeg, Saskatoon, Edmonton, Surrey, Burnaby, Moncton and Fredericton.</p>
 </div>
 <div class="cn-foot">
+  <div class="cn-stats rv" aria-label="Drafts built so far"><div><b>154</b><span>homepage drafts built for real local businesses</span></div><div><b>6</b><span>provinces, from New Brunswick to B.C.</span></div><div><b>1 day</b><span>from request to draft, on your phone</span></div></div>
   <p class="note rv">Cities are taken from the addresses of homepage drafts we&rsquo;ve built. We don&rsquo;t name any business here, because they haven&rsquo;t agreed to be shown.</p>
   <a class="btn primary rv" href="#start">See your free draft</a>
 </div>
