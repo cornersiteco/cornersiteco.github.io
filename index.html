@@ -786,6 +786,17 @@
   .cn-stats b{display:block;font-size:clamp(30px,3.6vw,44px);font-weight:600;letter-spacing:-.035em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
   .cn-stats span{display:block;margin-top:8px;font-size:14px;line-height:1.35;color:var(--muted)}
   @media (max-width:560px){.cn-stats{grid-template-columns:1fr}.cn-stats div+div{border-left:0;border-top:1px solid var(--line)}}
+  .hc{z-index:3}
+  .hc .mc-i{padding:9px 16px 9px 9px}
+  .hc .hc-n{display:block;color:var(--ink);font-weight:600;font-size:13px}
+  .hc .hc-k{display:block;font-style:normal;color:var(--muted);font-size:12px;text-transform:none}
+  .plan.feat{overflow:hidden;overflow:clip;isolation:isolate;box-shadow:var(--sh2)}
+  .plan.feat::before{content:"";position:absolute;inset:-8%;z-index:-2;background:url(/assets/art/clouds.jpg) center/cover no-repeat;filter:saturate(1.6) contrast(1.06);animation:drift 40s ease-in-out infinite alternate}
+  .plan.feat::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.82) 42%,rgba(255,255,255,.35) 78%,rgba(255,255,255,.08) 100%)}
+  .plan.feat .plan-tag{background:var(--ink);color:#fff}
+  .plan.feat .btn{margin-top:auto;align-self:flex-start}
+  .plan.feat .ticks{margin-bottom:22px}
+  @media (prefers-reduced-motion:reduce){.plan.feat::before{animation:none}}
 </style>
 <script>(function(){var d=document.documentElement;try{var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;var ref=document.referrer,own=false;try{own=!!ref&&new URL(ref).host===location.host}catch(x){}var seen=false;try{seen=localStorage.getItem('csc-intro')==='1';if(!seen)localStorage.setItem('csc-intro','1')}catch(z){}if(rm||own||seen){d.classList.add('no-intro')}else{d.classList.add('intro-on')}}catch(e){d.classList.add('no-intro')}})();</script>
 </head>
@@ -1029,7 +1040,7 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
   <p class="hp">A map of Canada drawn in dots. Lines travel from Ottawa to cities where we have built homepage drafts, including Toronto, London, Sudbury, Thunder Bay, Winnipeg, Saskatoon, Edmonton, Surrey, Burnaby, Moncton and Fredericton.</p>
 </div>
 <div class="cn-foot">
-  <div class="cn-stats rv" aria-label="Drafts built so far"><div><b>154</b><span>homepage drafts built for real local businesses</span></div><div><b>6</b><span>provinces, from New Brunswick to B.C.</span></div><div><b>1 day</b><span>from request to draft, on your phone</span></div></div>
+  <div class="cn-stats rv" aria-label="Drafts built so far"><div><b>151</b><span>homepage drafts built for real local businesses</span></div><div><b>6</b><span>provinces, from New Brunswick to B.C.</span></div><div><b>1 day</b><span>from request to draft, on your phone</span></div></div>
   <p class="note rv">Cities are taken from the addresses of homepage drafts we&rsquo;ve built. We don&rsquo;t name any business here, because they haven&rsquo;t agreed to be shown.</p>
   <a class="btn primary rv" href="#start">See your free draft</a>
 </div>
@@ -1168,20 +1179,20 @@ setTimeout(function(){d.classList.remove('intro-on')},1600);})();</script>
 <section id="pricing" class="bg-mist"><div class="w sec">
   <div class="hd c rv"><span class="kick">Pricing</span><h2>Two simple ways to pay.</h2><p class="sub">Same website either way. You see it before you pay anything. Prices in CAD.</p></div>
   <div class="plans">
-    <div class="plan rv">
+    <div class="plan feat rv">
+      <div class="plan-top"><h3>Pay monthly</h3><span class="plan-tag">Launch price · nothing upfront</span></div>
+      <p class="amt"><b>$20</b><span> / month</span></p>
+      <p class="plus">+ your web address (about $20/year)</p>
+      <p class="plan-d">$0 to start. Launch price: join now and $20 is your rate for as long as you stay.</p>
+      <ul class="ticks"><li>Hosting included</li><li>Up to 2 small changes a month, done within 2 business days</li><li>The site is yours after 24 months</li><li>Cancel any time</li></ul>
+      <a class="btn primary" href="#contact">Start with a free draft</a>
+    </div>
+    <div class="plan rv d1">
       <div class="plan-top"><h3>Pay once</h3></div>
       <p class="amt"><b>$490</b><span> one time</span></p>
       <p class="plus">+ your web address (about $20/year)</p>
       <p class="plan-d">Own it outright. No monthly fees.</p>
       <ul class="ticks"><li>Hosting included, no monthly fees</li><li>Small fixes free for 30 days</li><li>Later changes: $49 each, only if you want one</li></ul>
-      <a class="more" href="#contact">Start with a free draft</a>
-    </div>
-    <div class="plan rv d1">
-      <div class="plan-top"><h3>Pay monthly</h3><span class="plan-tag">Nothing upfront</span></div>
-      <p class="amt"><b>$20</b><span> / month</span></p>
-      <p class="plus">+ your web address (about $20/year)</p>
-      <p class="plan-d">$0 to start. Launch price: join now and $20 is your rate for as long as you stay.</p>
-      <ul class="ticks"><li>Hosting included</li><li>Up to 2 small changes a month, done within 2 business days</li><li>The site is yours after 24 months</li><li>Cancel any time</li></ul>
       <a class="more" href="#contact">Start with a free draft</a>
     </div>
   </div>
@@ -1494,7 +1505,8 @@ if(bar){bar.classList.add('off');var bo=new IntersectionObserver(function(es){es
     for(j=0;j<M.h;j++){var lat=M.lat0+j*M.step,cl=Math.cos(lat*D);for(i=0;i<M.w;i++){k=j*M.w+i;var isC=bc[k>>3]>>(k&7)&1,isO=bo[k>>3]>>(k&7)&1;if(!isC&&!isO)continue;var v=V(lat,M.lon0+(-M.xm+i*M.step+(j%2?M.step/2:0))/cl);pts.push(v[0],v[1],v[2],isC?1:0)}}
     var P=new Float32Array(pts),NP=P.length/4;pts=null;
     var OT=V(45.42,-75.7);
-    var C=CT.map(function(c){var v=V(c[1],c[2]),dt=Math.min(1,v[0]*OT[0]+v[1]*OT[1]+v[2]*OT[2]);return {n:c[0],v:v,k:c[3],a:Math.acos(dt),w:c[2]<-85,q:0}});
+    var CN={"Burnaby": 1, "Surrey": 1, "Edmonton": 1, "Saskatoon": 1, "Winnipeg": 2, "Thunder Bay": 2, "Sault Ste. Marie": 1, "LaSalle": 1, "Windsor": 1, "Sarnia": 2, "Strathroy": 1, "London": 8, "Sudbury": 3, "Owen Sound": 1, "Waterloo": 1, "Kitchener": 1, "Brantford": 1, "Guelph": 2, "Caledonia": 2, "Hamilton": 2, "Brampton": 2, "Barrie": 1, "Oakville": 1, "Mississauga": 3, "York": 1, "North Bay": 1, "Newmarket": 1, "North York": 2, "Toronto": 7, "Scarborough": 1, "St. Catharines": 1, "Whitby": 1, "Oshawa": 1, "Bowmanville": 1, "Cobourg": 1, "Belleville": 1, "Pembroke": 1, "Kingston": 2, "Carleton Place": 1, "Nepean": 4, "Ottawa": 42, "Vanier": 5, "Gloucester": 6, "Orléans": 23, "Cornwall": 1, "Fredericton": 2, "Moncton": 1};
+    var C=CT.map(function(c){var v=V(c[1],c[2]),dt=Math.min(1,v[0]*OT[0]+v[1]*OT[1]+v[2]*OT[2]);return {n:c[0],v:v,k:c[3],a:Math.acos(dt),w:c[2]<-85,q:0,m:CN[c[0]]||1}});
     var W=0,H=0,dpr=1,cam={},yawU=0,yaw=0,tt=0,last=0,raf=0,vis=false,o={x:0,y:0,s:0},small=false;
     var arcs=[],rings=[],cards=[],seq=[],sq=0,nextAt=.4,tint=['#0a66e8','#0b8fb8','#e09a2b'],tn=0;
     function setCam(){
@@ -1561,7 +1573,14 @@ if(bar){bar.classList.add('off');var bo=new IntersectionObserver(function(es){es
       for(q=0;q<cards.length;q++){var k=cards[q];if(k.on){if(Math.abs(k.x-x)<(small?190:230)&&Math.abs(k.y-y)<70)return}else if(!free&&t>k.until+.7)free=k}
       if(!free)return;free.v=c.v;free.x=x;free.y=y;free.on=true;free.until=hold?1e9:t+3.4;free.b.textContent=c.k[c.q++%c.k.length]+' · '+c.n;free.g.style.setProperty('--mg',tint[tn++%3]);free.el.style.transform='translate3d('+x.toFixed(1)+'px,'+y.toFixed(1)+'px,0)';free.el.classList.add('on')}
     function place(t){for(var q=0;q<cards.length;q++){var k=cards[q];if(!k.on)continue;if(t>k.until){k.on=false;k.el.classList.remove('on');continue}var L=pj(k.v[0],k.v[1],k.v[2]);if(L<0)continue;k.x=o.x;k.y=o.y;k.el.style.transform='translate3d('+o.x.toFixed(1)+'px,'+o.y.toFixed(1)+'px,0)'}}
-    function render(t){setCam();g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,W,H);earth();dots(t);drawArcs(t);cities(t);place(t)}
+    var hc=document.createElement('div'),hv=-1,hvUntil=0;hc.className='mc hc';hc.setAttribute('aria-hidden','true');hc.innerHTML='<div class="mc-i"><span class="mc-g" style="--mg:#F2A93B"></span><span><b class="hc-n"></b><i class="hc-k"></i></span></div>';box.appendChild(hc);
+    function pick(ev){var b=box.getBoundingClientRect(),px=ev.clientX-b.left,py=ev.clientY-b.top,best=-1,bd=(ev.pointerType==='touch'?30:22),q;setCam();for(q=0;q<C.length;q++){var L=pj(C[q].v[0],C[q].v[1],C[q].v[2]);if(L<.02)continue;var dd=Math.hypot(o.x-px,o.y-py);if(dd<bd){bd=dd;best=q}}return best}
+    function showHv(q,hold){if(q<0){if(hv>=0&&!hold){hv=-1;hc.classList.remove('on');box.style.cursor=''}return}var c=C[q];if(hv!==q){hc.querySelector('.hc-n').textContent=c.n+(c.m>1?' · '+c.m+' homepage drafts':' · 1 homepage draft');hc.querySelector('.hc-k').textContent=c.k.slice(0,3).join(', ').toLowerCase();}hv=q;hvUntil=hold?tt+4:1e9;hc.classList.add('on');box.style.cursor='pointer';if(rm||!raf)render(tt)}
+    box.addEventListener('pointermove',function(ev){if(ev.pointerType==='touch'||box.classList.contains('drag'))return;showHv(pick(ev))});
+    box.addEventListener('pointerleave',function(){showHv(-1)});
+    box.addEventListener('click',function(ev){var q=pick(ev);if(q>=0)showHv(q,true)});
+    function hvPlace(){if(hv<0)return;if(tt>hvUntil){hv=-1;hc.classList.remove('on');return}var c=C[hv],L=pj(c.v[0],c.v[1],c.v[2]);if(L<.02){hc.classList.remove('on');return}hc.classList.add('on');hc.style.transform='translate3d('+o.x.toFixed(1)+'px,'+o.y.toFixed(1)+'px,0)'}
+    function render(t){setCam();g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,W,H);earth();dots(t);drawArcs(t);cities(t);place(t);hvPlace()}
     function frame(now){raf=0;if(!vis||document.hidden){last=0;return}
       var dt=last?Math.min(.05,(now-last)/1000):0;last=now;tt+=dt;yaw=yawU+3.2*Math.sin(tt*.11);
       if(tt>=nextAt&&arcs.length<9){mkArc(seq[sq++%seq.length],tt);nextAt=tt+(small?1.05:.78)}
